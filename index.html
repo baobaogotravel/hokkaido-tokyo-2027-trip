@@ -4,977 +4,686 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light" />
-<meta name="description" content="2027年2月7–16日 北海道＋東京行程：2/8 大通＋薄野白天後去 Tomamu；2/11 支笏湖氷濤まつり同薄野最終夜；2/12 小樽。JR 時刻為現行參考。" />
+<meta name="description" content="2027年2月7–16日 北海道＋東京行程。第一至十日總覽、交通、北海道每日、Tomamu 專頁、東京、待辦、JR。2/12 上午札幌、下午小樽夜燈。" />
 <title>2027年2月 北海道＋東京行程</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --ink: #141c2b;
-    --indigo: #1c3052;
-    --indigo-mid: #2a4570;
-    --paper: #e8e2d6;
-    --cream: #fbf7f0;
-    --card: #fffdf8;
-    --text: #1a2230;
-    --muted: #4e5664;
-    --line: #ddd2c0;
-    --line-strong: #cfc3ae;
-    --gold: #8d6b3a;
-    --gold-soft: #d9c7a4;
-    --gold-bright: #e4c98a;
-    --crimson: #8e3040;
-    --crimson-deep: #6e2430;
-    --crimson-soft: #f8eeea;
-    --ok: #1b5c40;
-    --ok-bg: #e5f2eb;
-    --warn: #7a5310;
-    --warn-bg: #f8f0dc;
-    --info: #1d3f72;
-    --info-bg: #eef3f8;
-    --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif TC", "Noto Serif CJK TC", "Songti TC", "PMingLiU", "Source Han Serif TC", serif;
-    --sans: "PingFang TC", "Hiragino Sans", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
-    --shadow: 0 1px 0 rgba(255,255,255,.75) inset, 0 12px 32px rgba(20, 28, 43, .05);
-    --max: 1180px;
+    --paper: #f3ece4;
+    --paper-deep: #efe4da;
+    --cream: #fbf7f2;
+    --card: rgba(255, 251, 247, .9);
+    --ink: #3e342e;
+    --cocoa: #5c463c;
+    --taupe: #8d7368;
+    --rose: #c48984;
+    --rose-deep: #9c5f5c;
+    --blush: #f6e7e3;
+    --frost: #dce8ea;
+    --frost-deep: #6e8b93;
+    --line: rgba(92, 70, 60, .14);
+    --line-strong: rgba(92, 70, 60, .22);
+    --shadow: 0 18px 40px rgba(92, 70, 60, .06);
+    --serif: "Noto Serif TC", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "Songti TC", "PMingLiU", serif;
+    --sans: "Noto Sans TC", "PingFang TC", "Hiragino Sans", "Yu Gothic", "Microsoft JhengHei", "WenQuanYi Micro Hei", sans-serif;
+    --max: 1080px;
+    --nav-h: 58px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: var(--sans);
+    color: var(--ink);
     background:
-      radial-gradient(ellipse at 0% 0%, rgba(255,255,255,.55), transparent 42%),
-      var(--paper);
-    color: var(--text);
-    line-height: 1.65;
+      radial-gradient(ellipse at 8% 0%, rgba(246, 231, 227, .95), transparent 36%),
+      radial-gradient(ellipse at 96% 4%, rgba(220, 232, 234, .85), transparent 32%),
+      linear-gradient(180deg, #f7f2eb 0%, var(--paper) 240px);
+    line-height: 1.75;
     font-size: 16.5px;
   }
   body::before {
     content: "";
-    display: block;
-    height: 7px;
-    background: linear-gradient(90deg, var(--crimson-deep), #a84b58 42%, var(--crimson-deep));
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    opacity: .35;
+    background-image: radial-gradient(rgba(92, 70, 60, .07) .6px, transparent .7px);
+    background-size: 3px 3px;
+    mix-blend-mode: multiply;
+    z-index: 0;
   }
-  a { color: var(--info); text-underline-offset: 3px; }
-  a:hover { color: var(--crimson); }
-  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  a { color: var(--rose-deep); text-underline-offset: 3px; }
+  a:hover { color: var(--cocoa); }
+  :focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
   .skip {
-    position: absolute;
-    left: 12px;
-    top: -40px;
-    background: var(--cream);
-    color: var(--ink);
-    padding: 8px 12px;
-    z-index: 50;
+    position: absolute; left: 12px; top: -48px; z-index: 80;
+    background: var(--cream); color: var(--ink); padding: 8px 12px;
   }
   .skip:focus { top: 10px; }
 
-  .hero {
+  .mast {
     position: relative;
-    color: #f6f0e6;
-    background:
-      radial-gradient(ellipse at 80% 0%, rgba(228, 201, 138, .16), transparent 46%),
-      linear-gradient(168deg, #10192c 0%, #1a3054 52%, #243f66 100%);
-    overflow: hidden;
-    padding: 42px 20px 78px;
-  }
-  .hero-snow, .hero-mountains { position: absolute; inset: auto 0 0 0; width: 100%; pointer-events: none; }
-  .hero-snow { top: 0; height: 100%; }
-  .hero-mountains { height: 92px; }
-  .hero-inner { position: relative; max-width: var(--max); margin: 0 auto; z-index: 1; }
-  .eyebrow {
-    margin: 0 0 10px;
-    font-family: var(--serif);
-    letter-spacing: .28em;
-    font-size: .78rem;
-    color: var(--gold-bright);
-  }
-  .hero-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
-  .hero h1 {
-    margin: 0 0 12px;
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(1.85rem, 4.2vw, 2.75rem);
-    letter-spacing: .06em;
-    line-height: 1.28;
-  }
-  .lede { margin: 0; max-width: 46rem; color: rgba(246, 240, 230, .9); font-size: 1.02rem; }
-  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; padding: 0; list-style: none; }
-  .hero-chips li {
-    border: 1px solid rgba(228, 201, 138, .45);
-    color: #f3e6cc;
-    padding: 4px 10px;
-    font-size: .84rem;
-    letter-spacing: .04em;
-    background: rgba(16, 25, 44, .25);
-  }
-  .seal {
-    flex: 0 0 auto;
-    width: 68px;
-    height: 68px;
-    margin-top: 6px;
-    display: grid;
-    place-items: center;
-    border: 2px solid rgba(212, 132, 138, .85);
-    color: #f0c4c4;
-    font-family: var(--serif);
-    font-size: 1.85rem;
-    letter-spacing: 0;
-    transform: rotate(-8deg);
-    background: rgba(142, 48, 64, .12);
-  }
-
-  .toc-bar {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    background: rgba(251, 247, 240, .94);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line-strong);
-    box-shadow: 0 8px 20px rgba(20, 28, 43, .04);
-  }
-  .toc {
+    z-index: 1;
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 36px 22px 18px;
   }
-  .toc summary {
-    cursor: pointer;
+  .mast-kicker {
+    margin: 0 0 8px;
+    font-family: var(--serif);
+    letter-spacing: .32em;
+    font-size: .74rem;
+    color: var(--rose-deep);
+  }
+  .mast-row { display: flex; justify-content: space-between; gap: 18px; align-items: flex-end; }
+  .mast h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 3.15rem);
+    letter-spacing: .04em;
+    line-height: 1.25;
+    color: var(--cocoa);
+  }
+  .lede { margin: 14px 0 0; max-width: 40rem; color: var(--cocoa); }
+  .stamp {
+    flex: 0 0 auto;
+    width: 74px; height: 74px;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(156, 95, 92, .45);
+    color: var(--rose-deep);
+    font-family: var(--serif);
+    font-size: 1.7rem;
+    background: rgba(246, 231, 227, .7);
+    transform: rotate(-8deg);
+  }
+  .hills { display: block; width: min(100%, var(--max)); margin: 8px auto 0; height: 54px; }
+
+  .section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(251, 247, 242, .92);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+  }
+  .section-nav ul {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 14px;
+    list-style: none;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .section-nav ul::-webkit-scrollbar { display: none; }
+  .section-nav a {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--taupe);
+    padding: 8px 8px 9px;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+  }
+  .section-nav a small {
     font-family: var(--serif);
     letter-spacing: .14em;
-    padding: 12px 0;
-    color: var(--indigo);
-    list-style: none;
+    font-size: .62rem;
+    color: var(--rose);
   }
-  .toc summary::-webkit-details-marker { display: none; }
-  .toc summary::after { content: " ＋"; color: var(--crimson); font-family: var(--sans); }
-  .toc[open] summary::after { content: " －"; }
-  .toc-links { display: flex; flex-wrap: wrap; gap: 6px 8px; padding: 0 0 12px; }
-  .toc-links a {
-    text-decoration: none;
-    color: var(--indigo);
-    background: transparent;
-    border: 1px solid var(--line-strong);
-    padding: 4px 10px;
-    font-size: .86rem;
-    line-height: 1.45;
-  }
-  .toc-links a:hover, .toc-links a.is-current {
-    background: var(--indigo);
-    color: #f6f0e6;
-    border-color: var(--indigo);
-  }
-  .toc-links a.toc-em { border-color: var(--crimson); color: var(--crimson); }
-  .toc-links a.toc-em:hover, .toc-links a.toc-em.is-current {
-    background: var(--crimson);
-    color: #fffaf6;
-    border-color: var(--crimson);
-  }
-  @media (min-width: 900px) {
-    .toc > summary { display: none; }
-    .toc-links { padding-top: 10px; }
+  .section-nav a span { font-size: .92rem; color: var(--cocoa); }
+  .section-nav a.is-current, .section-nav a:hover {
+    border-bottom-color: var(--rose);
+    background: linear-gradient(180deg, transparent, rgba(246, 231, 227, .65));
   }
 
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 22px 16px 72px; }
-  section {
-    background: linear-gradient(180deg, var(--card) 0%, var(--cream) 100%);
+  main { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 18px 16px 64px; }
+  .edition {
+    background: var(--card);
     border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 20px 18px 8px;
-    margin: 0 0 16px;
+    border-radius: 28px;
+    padding: 26px 22px 12px;
+    margin: 0 0 18px;
     box-shadow: var(--shadow);
-    scroll-margin-top: 96px;
+    scroll-margin-top: calc(var(--nav-h) + 12px);
   }
-  h2, h3, h4 { font-family: var(--serif); font-weight: 560; letter-spacing: .04em; color: var(--ink); }
-  h2 {
-    margin: 0 0 14px;
-    font-size: 1.42rem;
+  .folio {
+    margin: 0;
+    font-family: var(--serif);
+    letter-spacing: .22em;
+    font-size: .72rem;
+    color: var(--rose-deep);
+  }
+  .edition > h2, .block h3, .day h3, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    color: var(--cocoa);
+    letter-spacing: .04em;
+  }
+  .edition > h2 {
+    margin: 4px 0 16px;
+    font-size: clamp(1.45rem, 2.4vw, 1.9rem);
     line-height: 1.35;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--gold-soft);
-    position: relative;
   }
-  h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 46px;
-    height: 2px;
-    background: var(--crimson);
-  }
-  h3 { margin: 20px 0 8px; font-size: 1.12rem; }
+  .block { margin: 0 0 22px; padding-top: 4px; }
+  .block h3, .day h3 { margin: 0 0 8px; font-size: 1.18rem; }
   h4 { margin: 16px 0 8px; font-size: 1.02rem; }
-  p, li { color: var(--text); }
-  .muted { color: var(--muted); font-size: .95rem; }
-  .day-head { display: flex; gap: 14px; align-items: flex-start; }
-  .day-head h2 { flex: 1; min-width: 0; }
-  .hero-top h1 { min-width: 0; }
-  .date-badge {
-    flex: 0 0 auto;
-    width: 66px;
-    text-align: center;
-    background: var(--indigo);
-    color: #f6f0e6;
-    padding: 7px 4px 8px;
-    border-radius: 2px 12px 2px 12px;
-    box-shadow: inset 0 0 0 1px rgba(228, 201, 138, .45);
-    margin-top: 2px;
-  }
-  .date-badge .m, .date-badge .w { display: block; font-size: .68rem; letter-spacing: .08em; color: var(--gold-bright); white-space: nowrap; }
-  .date-badge .d { display: block; font-family: var(--serif); font-size: 1.55rem; line-height: 1.05; }
+  .muted, caption { color: var(--taupe); font-size: .92rem; }
+  caption { caption-side: bottom; text-align: left; padding-top: 8px; }
+  .rule { height: 1px; border: 0; margin: 8px 0 16px; background: linear-gradient(90deg, var(--rose), var(--frost), transparent); }
 
   .callout {
-    border: 1px solid var(--line);
-    border-left: 3px solid var(--indigo);
-    background: #f7f4ee;
-    border-radius: 0 12px 12px 0;
-    padding: 12px 14px;
+    border-radius: 18px;
+    padding: 12px 16px;
     margin: 12px 0;
+    background: var(--blush);
+    color: var(--cocoa);
   }
-  .callout strong { display: block; margin-bottom: 4px; color: var(--ink); }
-  .callout.warn { border-left-color: var(--gold); background: var(--warn-bg); }
-  .callout.danger { border-left-color: var(--crimson); background: var(--crimson-soft); }
-  .callout.info { border-left-color: var(--indigo-mid); background: var(--info-bg); }
-  .xref {
-    margin: 12px 0;
-    padding: 8px 12px;
+  .callout strong { display: block; font-family: var(--serif); letter-spacing: .03em; margin-bottom: 2px; }
+  .callout.frost { background: var(--frost); }
+  .callout.paper { background: var(--paper-deep); }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: .95rem; }
+  th, td { padding: 9px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+  th {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: .78rem;
+    letter-spacing: .08em;
+    color: var(--taupe);
     background: transparent;
-    border-top: 1px dashed var(--line-strong);
-    border-bottom: 1px dashed var(--line-strong);
-    font-size: .95rem;
   }
-  .xref a { font-family: var(--serif); letter-spacing: .03em; }
-
-  table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: .95rem; }
-  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-  th { background: #f3ecdf; color: var(--indigo); font-weight: 650; font-size: .84rem; letter-spacing: .04em; }
-  tbody tr:hover td { background: rgba(28, 48, 82, .035); }
-  table.facts th { width: 7.5rem; white-space: nowrap; background: #f6f1e7; }
-  caption { caption-side: bottom; text-align: left; color: var(--muted); font-size: .82rem; padding-top: 6px; }
-
   .tag {
     display: inline-block;
+    font-family: var(--serif);
     font-size: .75rem;
     letter-spacing: .06em;
-    padding: 1px 7px;
-    border-radius: 2px;
-    border: 1px solid transparent;
-    line-height: 1.5;
-    vertical-align: 1px;
-    font-family: var(--serif);
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: var(--frost);
+    color: var(--frost-deep);
   }
-  .tag.ok { background: var(--ok-bg); color: var(--ok); }
-  .tag.warn { background: var(--warn-bg); color: var(--warn); border-color: #e4d2a4; }
-  .tag.danger { background: var(--crimson-soft); color: var(--crimson); border-color: #e4c4c0; }
-  .tag.info { background: var(--info-bg); color: var(--info); }
+  .tag.warn { background: #f3e6d4; color: #8a6238; }
+  .tag.rose { background: var(--blush); color: var(--rose-deep); }
 
-  ol.steps { list-style: none; padding: 0; margin: 8px 0 14px; counter-reset: step; }
-  ol.steps li { position: relative; padding: 6px 0 10px 42px; margin: 0; }
+  .day {
+    padding: 8px 0 18px;
+    border-top: 1px solid var(--line);
+  }
+  .day-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 8px; }
+  .date-badge {
+    flex: 0 0 auto;
+    width: 78px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, var(--blush), var(--frost));
+    color: var(--cocoa);
+    text-align: center;
+    padding: 8px 2px 9px;
+  }
+  .date-badge .m, .date-badge .w { display: block; letter-spacing: 0; white-space: nowrap; word-break: keep-all; }
+  .date-badge .m { font-size: .68rem; color: var(--rose-deep); }
+  .date-badge .w { font-size: .72rem; color: var(--cocoa); }
+  .date-badge .d { display: block; font-family: var(--serif); font-size: 1.5rem; line-height: 1.05; }
+  @media (min-width: 721px) {
+    table.days td:first-child, table.days th:first-child { white-space: nowrap; width: 5.4rem; }
+  }
+  ol.steps { list-style: none; padding: 0; margin: 8px 0 4px; counter-reset: step; }
+  ol.steps li { position: relative; padding: 4px 0 10px 40px; }
   ol.steps li::before {
     counter-increment: step;
     content: counter(step);
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--gold-soft);
-    border-radius: 50%;
-    color: var(--indigo);
-    font-family: var(--serif);
-    display: grid;
-    place-items: center;
-    font-size: .9rem;
-    background: #fff;
+    position: absolute; left: 0; top: 6px;
+    width: 26px; height: 26px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--serif); font-size: .82rem;
+    color: var(--rose-deep);
+    background: var(--cream);
+    border: 1px solid rgba(196, 137, 132, .45);
   }
-  ul.check { list-style: none; padding: 0; margin: 8px 0 12px; }
-  ul.check li { padding: 9px 2px; border-bottom: 1px solid var(--line); }
-  ul.check li:last-child { border-bottom: 0; }
-  ul.decide { padding-left: 1.2rem; }
-  ul.decide li { margin: 6px 0; }
+  .xref { margin: 8px 0 0; font-size: .95rem; color: var(--taupe); }
 
-  .perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; padding: 0; margin: 12px 0; list-style: none; }
-  .perks li {
-    background: #fff;
-    border: 1px solid var(--line);
-    border-top: 2px solid var(--gold);
-    padding: 8px 10px;
-    font-size: .92rem;
-  }
-  .perks span { display: block; font-family: var(--serif); color: var(--crimson); font-size: .78rem; letter-spacing: .08em; margin-bottom: 2px; }
+  .perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; padding: 0; margin: 12px 0; list-style: none; }
+  .perks li { background: var(--cream); border-radius: 16px; padding: 10px 12px; border: 1px solid var(--line); font-size: .92rem; }
+  .perks span { display: block; font-family: var(--serif); color: var(--rose-deep); font-size: .78rem; letter-spacing: .08em; }
 
-  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 8px 0 4px; font-size: .9rem; color: var(--muted); }
   .act-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
-  .act-tools input[type="search"] {
-    font: inherit;
-    color: var(--text);
-    background: #fff;
-    border: 1px solid var(--line-strong);
-    border-radius: 999px;
-    padding: 8px 14px;
-    min-width: min(100%, 280px);
-    flex: 1 1 220px;
+  .act-tools input[type="search"], .act-tools button {
+    font: inherit; color: var(--ink); background: var(--cream);
+    border: 1px solid var(--line-strong); border-radius: 999px; padding: 8px 14px;
   }
-  .act-tools button {
-    font: inherit;
-    background: transparent;
-    border: 1px solid var(--line-strong);
-    color: var(--indigo);
-    border-radius: 999px;
-    padding: 8px 14px;
-    cursor: pointer;
-  }
-  .act-tools button:hover { border-color: var(--crimson); color: var(--crimson); }
-  .filter-meta { margin: 0; font-size: .88rem; color: var(--muted); flex: 1 1 100%; }
+  .act-tools input[type="search"] { min-width: min(100%, 260px); flex: 1 1 220px; }
+  .act-tools button { cursor: pointer; color: var(--cocoa); }
+  .filter-meta { margin: 0; flex: 1 1 100%; color: var(--taupe); font-size: .88rem; }
+  .count-note { margin: 0 0 8px; color: var(--taupe); font-size: .9rem; }
 
-  .tabs { position: relative; margin-top: 6px; }
+  .tabs { position: relative; }
   .tab-labels { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
   .tabs input[type="radio"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    pointer-events: none;
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
   }
   .tab-labels label {
     font-family: var(--serif);
-    letter-spacing: .06em;
+    letter-spacing: .04em;
     border: 1px solid var(--line-strong);
-    background: transparent;
-    color: var(--indigo);
+    background: var(--cream);
+    color: var(--cocoa);
     padding: 8px 14px;
     border-radius: 999px;
     cursor: pointer;
   }
-  .tab-labels label .count {
-    font-family: var(--sans);
-    font-size: .78rem;
-    letter-spacing: 0;
-    margin-left: 4px;
-    opacity: .75;
-  }
+  .tab-labels label .count { font-family: var(--sans); letter-spacing: 0; }
   #tab-morning:checked ~ .tab-labels label[for="tab-morning"],
   #tab-afternoon:checked ~ .tab-labels label[for="tab-afternoon"],
   #tab-evening:checked ~ .tab-labels label[for="tab-evening"] {
-    background: var(--indigo);
-    color: #f6f0e6;
-    border-color: var(--indigo);
-  }
-  #tab-morning:focus-visible ~ .tab-labels label[for="tab-morning"],
-  #tab-afternoon:focus-visible ~ .tab-labels label[for="tab-afternoon"],
-  #tab-evening:focus-visible ~ .tab-labels label[for="tab-evening"] {
-    outline: 2px solid var(--gold);
-    outline-offset: 2px;
+    background: var(--cocoa);
+    color: var(--cream);
+    border-color: var(--cocoa);
   }
   .panel { display: none; }
   #tab-morning:checked ~ .panel-morning,
   #tab-afternoon:checked ~ .panel-afternoon,
   #tab-evening:checked ~ .panel-evening { display: block; }
-  .panel h3 { margin-top: 4px; }
   .name { font-weight: 700; }
-  .ja { display: block; color: var(--muted); font-size: .88em; margin-top: 1px; }
+  .ja { display: block; color: var(--taupe); font-size: .88em; }
   .mark {
-    display: inline-block;
-    margin: 0 6px 2px 0;
-    vertical-align: 1px;
-    font-size: .72rem;
-    letter-spacing: .08em;
-    line-height: 1.4;
+    display: inline-block; margin: 0 6px 2px 0; vertical-align: 1px;
+    font-size: .72rem; letter-spacing: .06em;
   }
-  .mark.once {
-    font-family: var(--serif);
-    color: var(--crimson);
-    border: 1px solid var(--crimson);
-    padding: 0 6px;
-    background: #fff;
-  }
-  .mark.rep { letter-spacing: 0; font-size: .95rem; }
-  tr.row-once td { background: #fbf4f0; }
-  tr.row-once td:first-child { box-shadow: inset 3px 0 0 var(--crimson); }
-  td.price { font-variant-numeric: tabular-nums; font-weight: 650; white-space: normal; }
-  td.is-free { color: var(--ok); }
+  .mark.once, .mark.rep { font-family: var(--serif); border-radius: 999px; padding: 0 6px; letter-spacing: 0; font-size: .72rem; }
+  .mark.once { color: var(--rose-deep); border: 1px solid var(--rose); }
+  .mark.rep { color: var(--frost-deep); border: 1px solid var(--frost-deep); }
+  tr.row-once td { background: rgba(246, 231, 227, .45); }
+  td.price { font-variant-numeric: tabular-nums; }
+  td.is-free { color: var(--frost-deep); }
   tr.filtered-out { display: none !important; }
-  .filter-empty { display: none; margin: 8px 0 14px; color: var(--muted); }
+  .filter-empty { display: none; color: var(--taupe); }
   .panel.is-empty .filter-empty { display: block; }
+  ul.check, ul.decide { padding-left: 1.15rem; }
+  ul.check li, ul.decide li { margin: 6px 0; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--taupe); font-size: .9rem; }
 
   footer.site {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 16px 48px;
-    color: var(--muted);
-    font-size: .88rem;
+    position: relative; z-index: 1;
+    max-width: var(--max); margin: 0 auto; padding: 0 20px 48px;
+    color: var(--taupe); font-size: .9rem;
   }
-  footer.site h2 { font-size: 1rem; border: 0; padding: 0; margin: 0 0 8px; }
-  footer.site h2::after { display: none; }
+  footer.site h2 { font-family: var(--serif); font-size: 1rem; color: var(--cocoa); font-weight: 500; }
   .sources { padding-left: 1.1rem; }
-  .sources li { margin: 4px 0; }
-  code { font-size: .86em; overflow-wrap: anywhere; }
+  code { font-size: .86em; }
 
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-
-  @media (max-width: 980px) {
+  @media (max-width: 720px) {
     body { font-size: 16px; }
-    .hero { padding: 28px 16px 70px; }
-    .seal { width: 52px; height: 52px; font-size: 1.4rem; }
-    section { padding: 16px 12px 6px; border-radius: 12px; }
-    table.stack { border: 0; }
-    table.stack thead {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-    }
+    .section-nav a { padding: 7px 1px 8px; }
+    .section-nav a small { letter-spacing: 0; font-size: .62rem; }
+    .section-nav a span { font-size: .74rem; white-space: nowrap; }
+    .mast { padding: 24px 16px 8px; }
+    .stamp { width: 58px; height: 58px; font-size: 1.35rem; }
+    .edition { border-radius: 20px; padding: 18px 14px 8px; }
+    table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
     table.stack, table.stack tbody { display: block; width: 100%; }
     table.stack tr {
-      display: block;
-      margin: 0 0 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      padding: 4px 12px 8px;
+      display: block; margin: 0 0 12px; padding: 8px 12px;
+      border: 1px solid var(--line); border-radius: 16px; background: var(--cream);
     }
-    table.stack td {
-      display: block;
-      border: 0;
-      border-bottom: 1px dashed var(--line);
-      padding: 8px 0;
-    }
+    table.stack td { display: block; border: 0; border-bottom: 1px dashed var(--line); padding: 8px 0; }
     table.stack td:last-child { border-bottom: 0; }
     table.stack td::before {
       content: attr(data-label);
-      display: block;
-      color: var(--indigo);
-      font-size: .75rem;
-      letter-spacing: .05em;
-      font-weight: 700;
-      margin-bottom: 2px;
+      display: block; color: var(--rose-deep);
+      font-family: var(--serif); font-size: .72rem; letter-spacing: .08em;
     }
-    table.act td[data-label="活動"] { padding-top: 10px; }
     table.act td[data-label="活動"]::before { content: none; }
-    table.facts { display: block; }
-    table.facts tr { display: block; border-bottom: 1px solid var(--line); }
-    table.facts tr:last-child { border-bottom: 0; }
-    table.facts th, table.facts td { display: block; width: 100%; border: 0; padding: 6px 0; }
-    table.facts th { background: transparent; padding-bottom: 0; }
-    tr.row-once { box-shadow: inset 3px 0 0 var(--crimson); }
-    tr.row-once td:first-child { box-shadow: none; }
   }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   @media print {
-    body { background: #fff; }
-    body::before, .hero-snow, .hero-mountains, .seal, .act-tools, .tab-labels { display: none !important; }
-    .hero { background: #fff !important; color: var(--ink) !important; padding: 0 0 12px; }
-    .lede, .eyebrow { color: var(--ink) !important; }
-    .toc-bar { position: static; box-shadow: none; }
-    details.toc > .toc-links { display: flex !important; }
-    section { box-shadow: none; break-inside: auto; }
+    body::before, .section-nav, .hills, .stamp { display: none !important; }
+    .edition { box-shadow: none; break-inside: auto; }
     .panel { display: block !important; }
-    h2, h3 { break-after: avoid; }
-    tr, .callout, li { break-inside: avoid; }
-    a { color: var(--ink); }
-    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; word-break: break-all; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; word-break: break-all; }
   }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">跳至內容</a>
-<header class="hero">
-  <svg class="hero-snow" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g fill="#fff">
-      <circle cx="70" cy="48" r="1.4" opacity=".55"/>
-      <circle cx="150" cy="120" r="1.1" opacity=".35"/>
-      <circle cx="240" cy="64" r="1.6" opacity=".4"/>
-      <circle cx="360" cy="150" r="1.2" opacity=".3"/>
-      <circle cx="520" cy="40" r="1.5" opacity=".45"/>
-      <circle cx="680" cy="96" r="1.1" opacity=".35"/>
-      <circle cx="860" cy="54" r="1.7" opacity=".4"/>
-      <circle cx="980" cy="130" r="1.2" opacity=".28"/>
-      <circle cx="1100" cy="70" r="1.4" opacity=".4"/>
-      <circle cx="430" cy="210" r="1" opacity=".25"/>
-      <circle cx="760" cy="180" r="1.3" opacity=".3"/>
-    </g>
-    <g fill="none" stroke="#f6f0e6" stroke-width="1.2" opacity=".35">
-      <path d="M92 180v22M81 191h22M85 184l14 14M99 184L85 198"/>
-      <path d="M1040 200v18M1031 209h18M1034 203l12 12M1046 203l-12 12"/>
-    </g>
-  </svg>
-  <svg class="hero-mountains" viewBox="0 0 1200 92" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#162844" d="M0 92V58l150-28 130 22 150-40 140 34 160-46 150 38L1200 22v70H0z"/>
-    <path fill="#1d3358" d="M0 92V72l120-16 160 18 140-26 180 22 150-30 170 24L1200 48v44H0z"/>
-    <path fill="#e8e2d6" d="M0 92V80c80-10 160-6 240-12s170 4 250-6 180 2 270-8 190 6 280-4 120 0 160 4v38H0z"/>
-  </svg>
-  <div class="hero-inner">
-    <p class="eyebrow">北海道 · 冬 · 二〇二七</p>
-    <div class="hero-top">
-      <h1>2027年2月<br>北海道＋東京行程</h1>
-      <div class="seal" aria-hidden="true">冬</div>
-    </div>
-    <p class="lede">2月7–16日：羽田一夜 → 2/8 先到北海道（大通＋薄野白天）→ 星野 Tomamu → 2/11 支笏湖氷濤まつり同薄野最終夜 → 2/12 小樽 → 東京購物與 Shibuya Sky。JR／中央巴士未用 2027 冬期表，JR 以令和8年11月号（JR北海道頁面截至 2026-11-10）作參考；氷濤 BLUE LINER 用 2027 已公布時刻。出發前再核。其餘交通結論仍可對綠色窗口。</p>
-    <ul class="hero-chips">
-      <li>2/7–2/16</li>
-      <li>羽田一夜</li>
-      <li>札幌雪祭</li>
-      <li>星野 Tomamu</li>
-      <li>支笏湖</li>
-      <li>小樽</li>
-      <li>東京</li>
-    </ul>
+<a class="skip" href="#overview">跳至總覽</a>
+<header class="mast">
+  <p class="mast-kicker">北海道 · 東京 · 冬 · 二〇二七</p>
+  <div class="mast-row">
+    <h1>二月的十日</h1>
+    <div class="stamp" aria-hidden="true">雪</div>
   </div>
+  <p class="lede">2月7–16日，第一日羽田，第二日至第六日北海道，第七日至第十日東京。2/8 白天雪祭之後先到 Tomamu；2/11 支笏湖同薄野最終夜；2/12 上午留札幌，下午去小樽睇夜燈。JR 用現行時刻表參考（令和8年11月号／JR北海道截至 2026-11-10）。氷濤 BLUE LINER 用 2027 已公布時刻。</p>
 </header>
+<svg class="hills" viewBox="0 0 1080 54" preserveAspectRatio="none" aria-hidden="true">
+  <path fill="#e7d5cf" d="M0 54V28c80-16 140-8 220-14s150 10 230-4 160 6 250-8 180 4 250-6 90 2 130 4v54H0z"/>
+  <path fill="#d5e4e6" d="M0 54V38c90-10 160-4 250-12s170 8 260-6 190 4 280-8 160 6 290 2v40H0z"/>
+</svg>
 
-<div class="toc-bar">
-  <details class="toc" open>
-    <summary>目錄</summary>
-    <nav class="toc-links" aria-label="目錄">
-      <a href="#overview">總覽</a>
-      <a href="#flights">航班</a>
-      <a href="#hotels">酒店／voucher</a>
-      <a href="#lifts">霧氷／Tower Express</a>
-      <a class="toc-em" href="#tomamu-activities">Tomamu 活動</a>
-      <a href="#d07">2/7</a>
-      <a href="#d08">2/8</a>
-      <a href="#d09">2/9</a>
-      <a href="#d10">2/10</a>
-      <a href="#d11">2/11</a>
-      <a href="#d12">2/12</a>
-      <a href="#tokyo">東京</a>
-      <a href="#transport">交通</a>
-      <a href="#jr">JR／eki-net</a>
-      <a href="#todo">待辦</a>
-    </nav>
-  </details>
-</div>
-<script>
-  if (window.matchMedia("(max-width: 899px)").matches) {
-    document.querySelector("details.toc").open = false;
-  }
-</script>
-
-<main class="wrap" id="main">
-
-<section id="overview">
-  <h2>行程總覽</h2>
-  <table class="facts">
-    <tr><th>日期</th><td>2027年2月7日（日）– 16日（二）</td></tr>
-    <tr><th>路線</th><td>香港 → 羽田（2/7）→ 新千歲／札幌（2/8 北海道第一日）→ Tomamu → 支笏湖（2/11）→ 札幌薄野 → 小樽（2/12）→ 羽田／東京 → 成田 → 香港</td></tr>
-    <tr><th>住宿</th><td>羽田1晚 · Tomamu Tower 3晚（連早餐・Ice Village・霧氷往返券・Mina-Mina／木林の湯）· 札幌 METS 2晚 · 秋葉原 METS 3晚</td></tr>
-    <tr><th>取消</th><td>除星野外其餘酒店可 FREE CANCEL（以訂房條款為準）</td></tr>
-  </table>
-  <div class="callout warn"><strong>重要：JL735 由成田（NRT）起飛，唔係羽田</strong>參考 NRT 18:30 → HKG 22:55（T2）。秋葉原酒店建議 13:30–14:00 出發，15:30 前到機場；推 JR→日暮里→Skyliner。</div>
-  <div class="callout info"><strong>2/8 到 Tower：約 15:31</strong>北海道由 2/8 開始。おおぞら7 札幌 13:57→トマム 15:26 → 無料 shuttle ≈15:31。酒店 check-in 15:00。行李已寄 Tomamu 或已入ロッカー，就約 13:15 離場，13:45 前到 JR 札幌月台。大通／薄野／中島公園去札幌站：地鐵約 10 分鐘，行路約 20 分鐘。當日霧氷上り最終約 15:30，留 2/9–10；傍晚可 Ice Village。JR 時刻係現行參考。</div>
-  <div class="callout info"><strong>2/11 支笏湖、2/12 小樽</strong>2/11（建国記念の日）早上稍後 checkout，搭 とかち6 去南千歳，轉去千歳放ロッカー，BLUE LINER 14:50 去支笏湖氷濤まつり，夜返札幌睇薄野最終夜，住 METS。2/12 全日小樽（運河白天＋雪あかりの路），第二晚繼續住札幌 METS。</div>
-  <h3>活動對齊（2027）</h3>
-  <table class="stack">
-    <thead>
-      <tr><th>活動</th><th>2027 會期</th><th>同行程</th><th>狀態</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="活動">札幌雪祭</td>
-        <td data-label="2027 會期">2/4–2/11</td>
-        <td data-label="同行程">2/8 白天大通 highlights＋薄野短訪（白天，夜燈留 2/11）；2/11 最終夜薄野燈</td>
-        <td data-label="狀態"><span class="tag ok">對得上</span></td>
-      </tr>
-      <tr>
-        <td data-label="活動">小樽雪燈之路</td>
-        <td data-label="2027 會期">2/6–2/13（點燈時間未公布）</td>
-        <td data-label="同行程">2/12 全日：運河白天＋夜燈。2026 為 17:00–21:00，唔當 2027 時刻</td>
-        <td data-label="狀態"><span class="tag ok">對得上</span></td>
-      </tr>
-      <tr>
-        <td data-label="活動">支笏湖氷濤まつり</td>
-        <td data-label="2027 會期">1/30–2/23；10:00–20:00，燈 16:30–20:00</td>
-        <td data-label="同行程">2/11 午後 BLUE LINER。建国記念の日，中學生以上入場 ¥3,000</td>
-        <td data-label="狀態"><span class="tag ok">對得上</span></td>
-      </tr>
-      <tr>
-        <td data-label="活動">PokéPark KANTO</td>
-        <td data-label="2027 會期">2/14 抽籤中</td>
-        <td data-label="同行程">結果約 11 月底</td>
-        <td data-label="狀態"><span class="tag warn">待結果</span></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="flights">
-  <h2>航班一覽</h2>
-  <table class="stack">
-    <thead>
-      <tr><th>日</th><th>航班</th><th>航線（典型）</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="日">2/7</td>
-        <td data-label="航班">JL026</td>
-        <td data-label="航線（典型）">HKG 15:35 → HND 20:25（T3）</td>
-        <td data-label="備註"><span class="tag ok">已訂</span></td>
-      </tr>
-      <tr>
-        <td data-label="日">2/8</td>
-        <td data-label="航班">JL503</td>
-        <td data-label="航線（典型）">HND 07:30 → CTS 09:00</td>
-        <td data-label="備註"><span class="tag ok">已訂</span>；JAL 國內多為 T1</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/13</td>
-        <td data-label="航班">未買</td>
-        <td data-label="航線（典型）">CTS → HND 中午附近</td>
-        <td data-label="備註"><span class="tag danger">必須訂</span></td>
-      </tr>
-      <tr>
-        <td data-label="日">2/16</td>
-        <td data-label="航班">JL735</td>
-        <td data-label="航線（典型）">NRT 18:30 → HKG 22:55（T2）</td>
-        <td data-label="備註"><span class="tag warn">成田起飛</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>2/13 CTS→HND 短名單</h3>
-  <p class="muted">札幌酒店約 09:00 前出發（快速エアポート約 33–37 分＋國內線提前 60–90 分）。</p>
-  <table class="stack">
-    <thead>
-      <tr><th>優先</th><th>航空</th><th>起飛</th><th>到羽田</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="優先">1</td>
-        <td data-label="航空">ANA NH58</td>
-        <td data-label="起飛">11:30</td>
-        <td data-label="到羽田">13:10</td>
-        <td data-label="備註">真正中午</td>
-      </tr>
-      <tr>
-        <td data-label="優先">2</td>
-        <td data-label="航空">Skymark BC712</td>
-        <td data-label="起飛">11:35</td>
-        <td data-label="到羽田">13:20</td>
-        <td data-label="備註">通常較平；核行李額</td>
-      </tr>
-      <tr>
-        <td data-label="優先">3</td>
-        <td data-label="航空">JAL JL508</td>
-        <td data-label="起飛">11:40</td>
-        <td data-label="到羽田">13:25</td>
-        <td data-label="備註">同系銜接方便</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="hotels">
-  <h2>酒店（已訂）同 The Tower voucher</h2>
-  <table class="stack">
-    <thead>
-      <tr><th>酒店</th><th>日期</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="酒店">京急 EX INN 羽田 Innovation City</td>
-        <td data-label="日期">2/7</td>
-        <td data-label="備註">可 FREE CANCEL</td>
-      </tr>
-      <tr>
-        <td data-label="酒店">星野 Tomamu The Tower</td>
-        <td data-label="日期">2/8–11</td>
-        <td data-label="備註">連早餐；取消條款較嚴</td>
-      </tr>
-      <tr>
-        <td data-label="酒店">JR東日本 METS PREMIERS SAPPORO</td>
-        <td data-label="日期">2/11–13</td>
-        <td data-label="備註">駅徒歩約2分；可 FREE CANCEL。2/11 夜入住、2/12 續住；唔搬去千歳酒店</td>
-      </tr>
-      <tr>
-        <td data-label="酒店">JR東日本 METS PREMIERS 秋葉原</td>
-        <td data-label="日期">2/13–16</td>
-        <td data-label="備註">可 FREE CANCEL</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="callout info"><strong>Voucher 原文</strong>Free Use of the MINA-MINA BEACH &amp; KIRIN NO YU throughout stay · 1 time round-trip ticket for “Terrace of Frost Tree” per night · Free Wifi in guest room</div>
-  <table class="stack">
-    <thead>
-      <tr><th>項目</th><th>意思</th><th>注意</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="項目">MINA-MINA BEACH</td>
-        <td data-label="意思">室內常溫海灘／波池</td>
-        <td data-label="注意">滯在中免費</td>
-      </tr>
-      <tr>
-        <td data-label="項目">KIRIN NO YU（木林の湯）</td>
-        <td data-label="意思">露天風呂＋サウナ（非天然溫泉）</td>
-        <td data-label="注意">全程免費</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Terrace of Frost Tree 往返</td>
-        <td data-label="意思">霧氷テラス＝雲海ゴンドラ往返</td>
-        <td data-label="注意">per night；住3晚最多3次；每人／每房以入住發券為準</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Free Wifi</td>
-        <td data-label="意思">客房＋ロビー</td>
-        <td data-label="注意">—</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Ice Village</td>
-        <td data-label="意思">多數 Tower 客滯在免費</td>
-        <td data-label="注意">行程當作已包</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。要滑一日＝另買 1 日リフト券（2026–27 窗口大人約¥9,500；住宿者優待約¥9,000）。</p>
-</section>
-
-<section id="lifts">
-  <h2>霧氷ゴンドラ vs Tower Express</h2>
-  <table class="stack">
-    <thead>
-      <tr><th>設施</th><th>係咩</th><th>去邊</th><th>同住宿券</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="設施">雲海ゴンドラ（霧氷用）</td>
-        <td data-label="係咩">4人封閉ゴンドラ；約13分到山頂</td>
-        <td data-label="去邊">霧氷テラス（約1,088m）</td>
-        <td data-label="同住宿券">住宿「霧氷往返券」＝呢條</td>
-      </tr>
-      <tr>
-        <td data-label="設施">Tower Express</td>
-        <td data-label="係咩">高速クワッド（有罩）椅式リフト</td>
-        <td data-label="去邊">Tower 山區雪道</td>
-        <td data-label="同住宿券">滑雪用；需リフト券；唔係去霧氷</td>
-      </tr>
-      <tr>
-        <td data-label="設施">其他 Express／リフト</td>
-        <td data-label="係咩">高速／固定椅式</td>
-        <td data-label="去邊">各區雪道</td>
-        <td data-label="同住宿券">滑雪用；唔包喺霧氷每晚一張</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="callout warn"><strong>用券上霧氷 ≠ 全日滑雪</strong>Tower Express 12/26–3/31 可至約 18:00；霧氷上り最終多數約 15:30。</div>
-</section>
-
-<section id="d07">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">7</span><span class="w">日</span></div>
-    <h2>2月7日（日）香港 → 羽田</h2>
-  </div>
-  <ol class="steps">
-    <li><strong>JL026</strong>：參考 HKG 15:35 → HND 20:25（T3）</li>
-    <li><strong>機場 → 京急 EX INN</strong>：推 東京モノレール T3→天空橋（約¥180）→ HICity口→ゾーンJ徒歩約2分。酒店無機場→酒店免費接駁。</li>
-    <li><strong>準備</strong>：翌日手提（雪祭暖衣）；大行李可考慮運送 Tomamu；早瞓，翌朝 shuttle 6:00／6:20。</li>
-  </ol>
-</section>
-
-<section id="d08">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">8</span><span class="w">一</span></div>
-    <h2>2月8日（一）北海道第一日 · 大通＋薄野（白天）→ Tomamu</h2>
-  </div>
-  <div class="callout warn"><strong>Tower 約 15:31，當日霧氷留低</strong>2/7 只係羽田。おおぞら7 札幌 13:57 → トマム 15:26，shuttle ≈15:31。酒店 check-in 15:00。霧氷上り最終約 15:30，15:31 先到 Tower，霧氷留 2/9–10。傍晚仍然可以去 Ice Village。</div>
-  <ol class="steps">
-    <li><strong>酒店 → JL503 → CTS</strong>：免費 shuttle 6:00／6:20；JL503 HND 07:30 → CTS 09:00（已訂）</li>
-    <li><strong>CTS → 札幌站</strong>：快速エアポート約 33–37 分；約¥1,230。大件未寄去 Tomamu 就放札幌ロッカー</li>
-    <li><strong>壓縮白天</strong>：大通雪祭會場 highlights，再短訪薄野／すすきの。今日只算白天，夜燈留到 2/11 薄野最終夜。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></li>
-    <li><strong>約 13:15 離場</strong>：行李已經寄去 Tomamu，或者已經放入ロッカー，就約 13:15 離開會場，13:45 前到 JR 札幌月台。大通／薄野／中島公園去 JR 札幌：地鐵約 10 分鐘，行路約 20 分鐘，唔好預一小時車程</li>
-    <li><strong>おおぞら7 → トマム</strong>：現行參考 札幌 13:57 → トマム 15:26；全指定席；正價約¥5,880；Tower 無料 shuttle ≈15:31。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・おおぞら／とかち 下り</a>，資料係 JR時刻表 令和8年11月号（頁面截至 2026-11-10）。2027 冬期表未公布，出發前再核。同樣係現行參考：太早 おおぞら5 11:46→13:22；太晚 とかち5 15:51→17:39</li>
-    <li><strong>check-in</strong>：取 Mina-Mina／木林の湯、霧氷往返券、Ice Village</li>
-    <li><strong>15:31 之後</strong>：當日霧氷留 2/9–10。傍晚用現有晚上表去 Ice Village（17:00–22:00）</li>
-  </ol>
-  <p class="xref">2/8 傍晚可睇 <a href="#tomamu-evening">晚上活動</a>；全日清單見 <a href="#tomamu-activities">Tomamu 活動・早午晚</a>。</p>
-</section>
-
-<section id="d09">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">9</span><span class="w">二</span></div>
-    <h2>2月9日（二）Tomamu · Snowboard 上堂日（推）</h2>
-  </div>
-  <div class="callout info"><strong>唔會一日 Ski 一日 Board</strong>一日集中新手 Snowboard 課；另一日活動。9／10 可對調。上堂日若要全日練板＝另買リフト券。</div>
-  <ol class="steps">
-    <li>早餐後去 Adventure Base 3F Ski &amp; Snowboard Academy</li>
-    <li><strong>新手 Snowboard Lesson（要預約）</strong>：Group 120分主要日語 ¥7,800–8,800；Private 英／日約¥26,300–27,800；可加中文認證雪校</li>
-    <li>租賃＋當日リフト券（住宿者優待約¥9,000）；霧氷券≠全日 pass</li>
-    <li>午後 Debut Park／初級區練板（Tower Express 等）</li>
-    <li>晚：Ice Village 或 Mina-Mina／木林の湯</li>
-  </ol>
-  <p class="xref">滑雪／滑雪板課堂唔喺活動表。非滑雪項目見 <a href="#tomamu-activities">Tomamu 活動・早午晚（2/8–11）</a>。</p>
-</section>
-
-<section id="d10">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">10</span><span class="w">三</span></div>
-    <h2>2月10日（三）Tomamu · 活動日（推）</h2>
-  </div>
-  <p>用每晚霧氷往返券玩非滑雪項目。2/10 仍喺「シバレタイム」期內（至 2/10）。</p>
-  <table class="stack">
-    <thead>
-      <tr><th>活動</th><th>內容</th><th>預約</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="活動"><span class="tag ok">推</span> 霧氷テラス</td>
-        <td data-label="內容">上り約7:45–15:30；用住宿往返券</td>
-        <td data-label="預約">一般唔使約</td>
-      </tr>
-      <tr>
-        <td data-label="活動">シバレタイム</td>
-        <td data-label="內容">7:45–9:00；免費；至2/10</td>
-        <td data-label="預約">唔使約</td>
-      </tr>
-      <tr>
-        <td data-label="活動"><span class="tag ok">推</span> スノーモービル 3km</td>
-        <td data-label="內容">約¥3,000；約10分；16歲+</td>
-        <td data-label="預約">唔使約</td>
-      </tr>
-      <tr>
-        <td data-label="活動">其他 GAO</td>
-        <td data-label="內容">スノーシュー／ラフティング等</td>
-        <td data-label="預約">部分要約</td>
-      </tr>
-      <tr>
-        <td data-label="活動">Mina-Mina／木林の湯／Ice Village</td>
-        <td data-label="內容">全程免費權益</td>
-        <td data-label="預約">—</td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="xref">場次、價錢、🔁 同每日一場標記見 <a href="#tomamu-morning">早上</a>／<a href="#tomamu-afternoon">中午～下午</a>／<a href="#tomamu-evening">晚上</a>。</p>
-</section>
-
-<section id="d11">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">11</span><span class="w">四</span></div>
-    <h2>2月11日（四・建国記念の日）Tomamu → 支笏湖 → 薄野最終夜</h2>
-  </div>
-  <div class="callout warn"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>2/11 係建国記念の日，支笏湖氷濤まつり按土日祝收費，會較逼。先放 JR 千歳ロッカー，再去支笏湖。唔好先繞札幌酒店，亦唔搬去千歳酒店。當晚入住 JR東日本 METS PREMIERS SAPPORO。</div>
-  <div class="callout info"><strong>雪祭最終日</strong>會期去到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></div>
-  <ol class="steps">
-    <li><strong>早上稍後 checkout</strong>：星野 Tomamu。2/11 纜車 9:00 開，霧氷只可以排上午。12:15 的列車趕唔切下午活動。去トマム站的 shuttle 向酒店核，呢度唔寫死班次</li>
-    <li><strong>とかち6（札幌行）</strong>：現行參考 トマム 12:15 → 南千歳 13:38，列車續開 新札幌 14:01／札幌 14:10。<strong>唔停千歳</strong>。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道・上り</a>（令和8年11月号，截至 2026-11-10）。2027 冬期表未公布</li>
-    <li><strong>南千歳轉快速エアポート，用 91</strong>：現行參考 エアポート91 南千歳 14:02 → 千歳 14:06，緩衝約 24 分。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート時刻</a>。エアポート87 13:42→13:46 只剩約 4 分，帶行李趕唔切。エアポート89 13:53 通過千歳，停唔到</li>
-    <li><strong>行李放 JR 千歳 coin locker</strong>：西口 1 階、改札外。小／中／大都有；使用開始日起計最多 3 日。<a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道ロッカー</a>（<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">一覽 PDF</a>）。千歳観光案内所的手荷物預かり 9:00–17:00，回程 19:00 之後已經收檔，用唔到。<a href="https://www.welcome-to-chitose.jp/guide.html">千歳市案内</a></li>
-    <li><strong>行去東口 7 番搭 BLUE LINER</strong>：官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。去程 14:50 同回程 18:15 要前日 20:30 前分別訂好。當日不可訂；不可改班；取消收費 100%；自由席；10 分鐘前到站。官方寫明巴士不代存行李箱，大件留喺千歳ロッカー。<a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス・氷濤 BLUE LINER</a></li>
-    <li><strong>去程用 14:50</strong>：2027 官方 東口 14:50 → 支笏湖温泉約 15:35。13:20 那班喺 とかち6 到南千歳之前已經開出。14:20→15:05 由 14:06 到站計太趕，放櫃再行去東口唔穩陣，唔做主計劃。官方話 15 時之後的開出同到達可能延遲</li>
-    <li><strong>支笏湖氷濤まつり</strong>：2027 官方 1 月 30 日–2 月 23 日，10:00–20:00，ライトアップ 16:30–20:00。平日中學生以上 ¥1,000；土日祝 ¥3,000（小學生以下免費）。2/11 係祝日，所以 ¥3,000。巴士票唔包含入場，入場喺會場買。15:35 到場，16:30 開燈前大約得 55 分鐘日光，之後留燈約 1–1.5 小時。總共仍然約 1–2 小時，比重偏夜，日相同夜相都影到。會場喺支笏湖温泉。<a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市公式</a></li>
-    <li><strong>回程最穩 18:15</strong>：2027 官方 18:15 → JR 千歳東口 19:00（機場 19:20，今次唔去機場）。取西口ロッカー之後轉札幌。現行參考：千歳 19:14→札幌 19:45（エアポート157）取行李太貼；用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。計劃按大約 20:00 到札幌、薄野約 20:10–20:20。18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌</li>
-    <li><strong>最遲 19:30，跳過 20:30</strong>：2027 官方 19:30 → 千歳 20:15（機場 20:35）。現行參考 エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。落雪若延遲，會逼近最終日 22:00。20:30 官方只到千歳 21:15，而且唔去機場，趕唔切薄野收燈</li>
-    <li><strong>入住 METS，再去薄野最終夜</strong>：METS 離札幌站約 2 分鐘，行李先放酒店。南北線さっぽろ→すすきの約 3 分鐘，再加行路。小樽留 2/12</li>
-  </ol>
-  <table class="stack">
-    <caption>JR＝現行時刻表參考（令和8年11月号／JR北海道截至 2026-11-10）。BLUE LINER＝2027 官方時刻。</caption>
-    <thead>
-      <tr><th>判斷</th><th>班次</th><th>時刻</th><th>說明</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="判斷"><span class="tag ok">搭</span> とかち6</td>
-        <td data-label="班次">トマム → 南千歳（續開札幌）</td>
-        <td data-label="時刻">12:15 → 13:38；新札幌 14:01／札幌 14:10</td>
-        <td data-label="說明">唔停千歳。現行參考</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag danger">跳過</span> エアポート87</td>
-        <td data-label="班次">南千歳 → 千歳</td>
-        <td data-label="時刻">13:42 → 13:46</td>
-        <td data-label="說明">緩衝約 4 分，行李太趕</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag danger">用唔到</span> エアポート89</td>
-        <td data-label="班次">南千歳通過千歳</td>
-        <td data-label="時刻">13:53 開，千歳不停</td>
-        <td data-label="說明">落唔到千歳</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag ok">搭</span> エアポート91</td>
-        <td data-label="班次">南千歳 → 千歳</td>
-        <td data-label="時刻">14:02 → 14:06</td>
-        <td data-label="說明">緩衝約 24 分。現行參考</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag ok">主計劃</span> BLUE LINER</td>
-        <td data-label="班次">千歳東口 7 番 → 支笏湖温泉</td>
-        <td data-label="時刻">14:50 → 約 15:35</td>
-        <td data-label="說明">2027 官方。13:20 趕唔上；14:20 太趕</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag ok">回程</span> 18:15／18:30</td>
-        <td data-label="班次">支笏湖温泉 → 千歳東口</td>
-        <td data-label="時刻">19:00／19:15 到千歳</td>
-        <td data-label="說明">最穩。之後大約 20:00 札幌、薄野約 20:10–20:20</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag warn">最遲</span> 19:30</td>
-        <td data-label="班次">再到 エアポート171</td>
-        <td data-label="時刻">千歳 20:15；JR 20:39 → 札幌 21:12</td>
-        <td data-label="說明">薄野約 21:20。落雪延遲會逼近 22:00</td>
-      </tr>
-      <tr>
-        <td data-label="判斷"><span class="tag danger">跳過</span> 20:30</td>
-        <td data-label="班次">支笏湖温泉 → 千歳</td>
-        <td data-label="時刻">21:15 到千歳；唔去機場</td>
-        <td data-label="說明">趕唔切最終日薄野 22:00</td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="xref">早上若留 resort，只排上午。活動同 2/11 纜車 9:00 見 <a href="#tomamu-activities">Tomamu 活動・早午晚</a>。</p>
-</section>
-
-<section id="tomamu-activities">
-  <h2>Tomamu 活動・早午晚（2/8–11）</h2>
-  <div class="callout info"><strong>唔包滑雪／滑雪板</strong>粗體／標記＝每日只有1場／1組／1晚；🔁＝一日2場或以上。價錢跟星野 snowtomamu.jp 26/27冬官網。</div>
-  <div class="callout warn"><strong>2/8 同 2/11 都排唔到下午霧氷</strong>2/8 約 15:31 先到 Tower，上り最終約 15:30。2/11 搭 とかち6，現行參考 トマム 12:15 開，只排得到上午。霧氷留 2/9–10。</div>
-  <ul class="perks">
-    <li><span>住客免費</span>Mina-Mina、木林の湯</li>
-    <li><span>霧氷券</span>每晚一張往返券</li>
-    <li><span>纜車 2/8–10</span>7:45 開</li>
-    <li><span>纜車 2/11</span>改 9:00</li>
-    <li><span>シバレ</span>至 2/10</li>
+<nav class="section-nav" aria-label="七個版面">
+  <ul>
+    <li><a href="#overview"><small>01</small><span>總覽</span></a></li>
+    <li><a href="#transport"><small>02</small><span>交通</span></a></li>
+    <li><a href="#hokkaido"><small>03</small><span>北海道</span></a></li>
+    <li><a href="#tomamu"><small>04</small><span>Tomamu</span></a></li>
+    <li><a href="#tokyo"><small>05</small><span>東京</span></a></li>
+    <li><a href="#todo"><small>06</small><span>待辦</span></a></li>
+    <li><a href="#jr"><small>07</small><span>JR</span></a></li>
   </ul>
-  <p class="legend">
-    <span><span class="mark once">每日1場</span>當日只有 1 場／1 組／1 晚</span>
-    <span><span class="mark rep">🔁</span>一日 2 場或以上</span>
-  </p>
-  <div class="act-tools">
-    <label class="search">
-      <span class="sr-only">搜尋活動</span>
-      <input id="act-filter" type="search" placeholder="搜尋活動、場次或價錢" autocomplete="off" />
-    </label>
-    <button type="button" id="act-clear">清除</button>
-    <p class="filter-meta" id="filter-meta" aria-live="polite"></p>
+</nav>
+
+<main id="main">
+
+<section class="edition" id="overview">
+  <p class="folio">第一版</p>
+  <h2>總覽</h2>
+  <hr class="rule" />
+
+  <div class="block" id="days">
+    <h3>行程總覽</h3>
+    <p class="muted">第一日＝2月7日，第十日＝2月16日。住宿：羽田 1 晚 · Tomamu Tower 3 晚 · 札幌 METS 2 晚 · 秋葉原 METS 3 晚。除星野外其餘酒店可 FREE CANCEL（以訂房條款為準）。</p>
+    <table class="stack days">
+      <thead><tr><th>日</th><th>日期</th><th>去邊／住邊</th><th>一句</th></tr></thead>
+      <tbody>
+        <tr><td data-label="日">第一日</td><td data-label="日期">2/7（日）</td><td data-label="去邊／住邊">香港 → 羽田 · 京急 EX INN</td><td data-label="一句">JL026。北海道由第二日開始。</td></tr>
+        <tr><td data-label="日">第二日</td><td data-label="日期">2/8（一）</td><td data-label="去邊／住邊">札幌白天 → Tomamu Tower</td><td data-label="一句">JL503 07:30。大通＋薄野白天，約 13:15 離場。おおぞら7 13:57，トマム 15:26 到站。</td></tr>
+        <tr><td data-label="日">第三日</td><td data-label="日期">2/9（二）</td><td data-label="去邊／住邊">Tomamu</td><td data-label="一句">Snowboard 上堂日（推）。同第四日可對調。</td></tr>
+        <tr><td data-label="日">第四日</td><td data-label="日期">2/10（三）</td><td data-label="去邊／住邊">Tomamu</td><td data-label="一句">霧氷＋GAO（推）。シバレタイム到今日為止。</td></tr>
+        <tr><td data-label="日">第五日</td><td data-label="日期">2/11（四・祝）</td><td data-label="去邊／住邊">Tomamu → 支笏湖 → 札幌 METS</td><td data-label="一句">とかち6、BLUE LINER 14:50。薄野最終夜。建国記念の日。</td></tr>
+        <tr><td data-label="日">第六日</td><td data-label="日期">2/12（五）</td><td data-label="去邊／住邊">上午札幌 · 下午小樽 · 夜返 METS</td><td data-label="一句">下午先去小樽，晚上雪あかりの路。唔搬去千歳。</td></tr>
+        <tr><td data-label="日">第七日</td><td data-label="日期">2/13（六）</td><td data-label="去邊／住邊">札幌 → 羽田 → 秋葉原 METS</td><td data-label="一句">中午附近飛東京。機票未買。</td></tr>
+        <tr><td data-label="日">第八日</td><td data-label="日期">2/14（日）</td><td data-label="去邊／住邊">東京</td><td data-label="一句">PokéPark 抽籤，未中就秋葉原。</td></tr>
+        <tr><td data-label="日">第九日</td><td data-label="日期">2/15（一）</td><td data-label="去邊／住邊">東京</td><td data-label="一句">澀谷購物，傍晚 Shibuya Sky。</td></tr>
+        <tr><td data-label="日">第十日</td><td data-label="日期">2/16（二）</td><td data-label="去邊／住邊">秋葉原 → 成田 → 香港</td><td data-label="一句">JL735 由成田起飛。</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>第十日由成田起飛</strong>JL735 參考 NRT 18:30 → HKG 22:55（T2）。秋葉原酒店 13:30–14:00 出發，15:30 前到機場。推 JR → 日暮里 → Skyliner。</div>
   </div>
 
-  <div class="tabs">
-    <input type="radio" name="tomamu-slot" id="tab-morning" checked />
-    <input type="radio" name="tomamu-slot" id="tab-afternoon" />
-    <input type="radio" name="tomamu-slot" id="tab-evening" />
-    <div class="tab-labels">
-      <label for="tab-morning" data-hash="#tomamu-morning">早上 <span class="count" data-count="morning">21</span></label>
-      <label for="tab-afternoon" data-hash="#tomamu-afternoon">中午～下午 <span class="count" data-count="afternoon">16</span></label>
-      <label for="tab-evening" data-hash="#tomamu-evening">晚上 <span class="count" data-count="evening">16</span></label>
-    </div>
+  <div class="block" id="flights">
+    <h3>航班一覽</h3>
+    <table class="stack">
+      <thead><tr><th>日</th><th>航班</th><th>航線（典型）</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td data-label="日">2/7</td><td data-label="航班">JL026</td><td data-label="航線（典型）">HKG 15:35 → HND 20:25（T3）</td><td data-label="備註"><span class="tag">已訂</span></td></tr>
+        <tr><td data-label="日">2/8</td><td data-label="航班">JL503</td><td data-label="航線（典型）">HND 07:30 → CTS 09:00</td><td data-label="備註"><span class="tag">已訂</span>；JAL 國內多為 T1</td></tr>
+        <tr><td data-label="日">2/13</td><td data-label="航班">未買</td><td data-label="航線（典型）">CTS → HND 中午附近</td><td data-label="備註"><span class="tag rose">必須訂</span></td></tr>
+        <tr><td data-label="日">2/16</td><td data-label="航班">JL735</td><td data-label="航線（典型）">NRT 18:30 → HKG 22:55（T2）</td><td data-label="備註"><span class="tag warn">成田起飛</span></td></tr>
+      </tbody>
+    </table>
+    <h4>2/13 CTS→HND 短名單</h4>
+    <p class="muted">札幌酒店約 09:00 前出發（快速エアポート約 33–37 分＋國內線提前 60–90 分）。</p>
+    <table class="stack">
+      <thead><tr><th>優先</th><th>航空</th><th>起飛</th><th>到羽田</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td data-label="優先">1</td><td data-label="航空">ANA NH58</td><td data-label="起飛">11:30</td><td data-label="到羽田">13:10</td><td data-label="備註">真正中午</td></tr>
+        <tr><td data-label="優先">2</td><td data-label="航空">Skymark BC712</td><td data-label="起飛">11:35</td><td data-label="到羽田">13:20</td><td data-label="備註">通常較平；核行李額</td></tr>
+        <tr><td data-label="優先">3</td><td data-label="航空">JAL JL508</td><td data-label="起飛">11:40</td><td data-label="到羽田">13:25</td><td data-label="備註">同系銜接方便</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="panel panel-morning" id="tomamu-morning" role="tabpanel">
-      <h3>早上</h3>
+  <div class="block" id="hotels">
+    <h3>酒店</h3>
+    <table class="stack">
+      <thead><tr><th>酒店</th><th>日期</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td data-label="酒店">京急 EX INN 羽田 Innovation City</td><td data-label="日期">2/7</td><td data-label="備註">可 FREE CANCEL</td></tr>
+        <tr><td data-label="酒店">星野 Tomamu The Tower</td><td data-label="日期">2/8–11</td><td data-label="備註">連早餐；取消條款較嚴。券同纜車見 <a href="#tomamu">Tomamu 專頁</a></td></tr>
+        <tr><td data-label="酒店">JR東日本 METS PREMIERS SAPPORO</td><td data-label="日期">2/11–13</td><td data-label="備註">駅徒歩約 2 分；可 FREE CANCEL。2/11 夜入住、2/12 續住；唔搬去千歳酒店</td></tr>
+        <tr><td data-label="酒店">JR東日本 METS PREMIERS 秋葉原</td><td data-label="日期">2/13–16</td><td data-label="備註">可 FREE CANCEL</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="block" id="align">
+    <h3>活動對齊</h3>
+    <table class="stack days">
+      <thead><tr><th>日</th><th>日期</th><th>當日活動</th><th>對齊</th></tr></thead>
+      <tbody>
+        <tr><td data-label="日">第一日</td><td data-label="日期">2/7</td><td data-label="當日活動">夜抵羽田</td><td data-label="對齊">雪祭未開始玩</td></tr>
+        <tr><td data-label="日">第二日</td><td data-label="日期">2/8</td><td data-label="當日活動">大通會場 highlights＋薄野短訪（白天）</td><td data-label="對齊">札幌雪祭 2/4–2/11。夜燈留第五日。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a></td></tr>
+        <tr><td data-label="日">第三日</td><td data-label="日期">2/9</td><td data-label="當日活動">Snowboard 新手課</td><td data-label="對齊">Tomamu 住客日</td></tr>
+        <tr><td data-label="日">第四日</td><td data-label="日期">2/10</td><td data-label="當日活動">霧氷テラス、シバレタイム、GAO</td><td data-label="對齊">シバレ到 2/10</td></tr>
+        <tr><td data-label="日">第五日</td><td data-label="日期">2/11・祝</td><td data-label="當日活動">支笏湖氷濤まつり（午後到夜燈）＋薄野最終夜</td><td data-label="對齊">會期 1/30–2/23。祝日中學生以上 ¥3,000。<a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市</a></td></tr>
+        <tr><td data-label="日">第六日</td><td data-label="日期">2/12</td><td data-label="當日活動">上午札幌；下午去小樽，晚上雪あかりの路</td><td data-label="對齊">官方會期 2/6–2/13。2027 點燈時間未公布。<a href="https://otaru.gr.jp/event/yukiakari2027">2027</a></td></tr>
+        <tr><td data-label="日">第七日</td><td data-label="日期">2/13</td><td data-label="當日活動">飛東京，秋葉原輕量</td><td data-label="對齊">—</td></tr>
+        <tr><td data-label="日">第八日</td><td data-label="日期">2/14</td><td data-label="當日活動">PokéPark KANTO 或秋葉原</td><td data-label="對齊"><span class="tag warn">抽籤待結果</span></td></tr>
+        <tr><td data-label="日">第九日</td><td data-label="日期">2/15</td><td data-label="當日活動">購物＋Shibuya Sky</td><td data-label="對齊">日落約 17:08–17:22</td></tr>
+        <tr><td data-label="日">第十日</td><td data-label="日期">2/16</td><td data-label="當日活動">成田回港</td><td data-label="對齊">JL735</td></tr>
+      </tbody>
+    </table>
+    <h4>會期對照</h4>
+    <table class="stack">
+      <thead><tr><th>活動</th><th>2027</th><th>同邊日</th></tr></thead>
+      <tbody>
+        <tr><td data-label="活動">札幌雪祭</td><td data-label="2027">2/4–2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00</td><td data-label="同邊日">第二日白天；第五日薄野最終夜</td></tr>
+        <tr><td data-label="活動">小樽雪あかりの路</td><td data-label="2027">2/6–2/13。點燈時間未公布。2026 為 17:00–21:00</td><td data-label="同邊日">第六日下午去、晚上睇</td></tr>
+        <tr><td data-label="活動">支笏湖氷濤まつり</td><td data-label="2027">1/30–2/23；10:00–20:00，燈 16:30–20:00</td><td data-label="同邊日">第五日 BLUE LINER。平日 ¥1,000，土日祝 ¥3,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="edition" id="transport">
+  <p class="folio">第二版</p>
+  <h2>交通選項（重點）</h2>
+  <hr class="rule" />
+  <p class="muted">JR 同中央巴士的 2027 年 2 月班次未公布。下面 JR 時刻全部係現行時刻表參考（JR時刻表 令和8年11月号／JR北海道頁面截至 2026-11-10）。氷濤 BLUE LINER 係 2027 已公布時刻。支笏湖用 BLUE LINER，呢頁唔寫未公布的中央巴士班次。</p>
+  <table class="stack">
+    <thead><tr><th>日</th><th>路段</th><th>推薦</th><th>重點</th></tr></thead>
+    <tbody>
+      <tr><td data-label="日">2/7</td><td data-label="路段">HND→酒店</td><td data-label="推薦">モノレール→天空橋</td><td data-label="重點">約 ¥180</td></tr>
+      <tr><td data-label="日">2/8 早</td><td data-label="路段">酒店→HND</td><td data-label="推薦">免費 shuttle 6:00／6:20</td><td data-label="重點">定員 20</td></tr>
+      <tr><td data-label="日">2/8 午後</td><td data-label="路段">雪祭→トマム</td><td data-label="推薦">おおぞら7 札幌 13:57 → トマム 15:26</td><td data-label="重點">約 13:15 離場、13:45 到月台。15:26 到站，轉車之後先 check-in。指定席。現行參考</td></tr>
+      <tr><td data-label="日">2/11</td><td data-label="路段">トマム→支笏湖→札幌</td><td data-label="推薦">とかち6 12:15→南千歳 13:38，エアポート91，BLUE LINER 14:50／回 18:15</td><td data-label="重點">JR 現行參考，巴士 2027 官方。住札幌 METS。見 <a href="#d11">第五日</a></td></tr>
+      <tr><td data-label="日">2/12</td><td data-label="路段">札幌下午→小樽→札幌</td><td data-label="推薦">上午留札幌；下午 JR 去小樽</td><td data-label="重點">晚上雪あかりの路，夜返 METS。2027 班次未公布，出發前再核</td></tr>
+      <tr><td data-label="日">2/13</td><td data-label="路段">HND→秋葉原</td><td data-label="推薦">京急→品川→JR</td><td data-label="重點">約 35–45 分</td></tr>
+      <tr><td data-label="日">2/16</td><td data-label="路段">秋葉原→NRT</td><td data-label="推薦">日暮里→Skyliner</td><td data-label="重點">13:30–14:00 離酒店</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2/8 去 Tomamu 揀邊班</h3>
+  <table class="stack">
+    <caption>時刻來源：<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・おおぞら／とかち 下り</a>（令和8年11月号）。</caption>
+    <thead><tr><th>判斷</th><th>列車</th><th>到トマム</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td data-label="判斷"><span class="tag">用這班</span></td><td data-label="列車">おおぞら7 札幌 13:57</td><td data-label="到トマム">15:26</td><td data-label="備註">站到 Tower 的免費 shuttle，舊頁估算約 15:31 先到酒店。Check-in 排喺轉車之後。正價約 ¥5,880；約 1 個月前訂。現行參考</td></tr>
+      <tr><td data-label="判斷">太早</td><td data-label="列車">おおぞら5 札幌 11:46</td><td data-label="到トマム">13:22</td><td data-label="備註">雪祭時間大砍</td></tr>
+      <tr><td data-label="判斷">太晚</td><td data-label="列車">とかち5 札幌 15:51</td><td data-label="到トマム">17:39</td><td data-label="備註">當日霧氷更排唔到</td></tr>
+      <tr><td data-label="判斷">巴士</td><td data-label="列車">リゾートライナー（多由 CTS 發）</td><td data-label="到トマム">例 16:35 到 Tower</td><td data-label="備註">雪祭後繞 CTS 不划算；¥7,000・要約</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2/11 南千歳 → 支笏湖温泉</h3>
+  <table class="stack">
+    <caption>來源：<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">とかち 上り</a>、<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート</a>、<a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a>。</caption>
+    <thead><tr><th>段</th><th>用邊班</th><th>時刻</th></tr></thead>
+    <tbody>
+      <tr><td data-label="段">トマム → 南千歳</td><td data-label="用邊班">とかち6（唔停千歳）</td><td data-label="時刻">12:15 → 13:38。現行參考</td></tr>
+      <tr><td data-label="段">南千歳 → 千歳</td><td data-label="用邊班">エアポート91</td><td data-label="時刻">14:02 → 14:06。現行參考</td></tr>
+      <tr><td data-label="段">千歳東口 → 支笏湖温泉</td><td data-label="用邊班">BLUE LINER 14:50</td><td data-label="時刻">約 15:35 到會場。2027 官方</td></tr>
+      <tr><td data-label="段">支笏湖温泉 → 千歳</td><td data-label="用邊班">BLUE LINER 18:15</td><td data-label="時刻">19:00 到千歳。2027 官方。最遲可 19:30，唔搭 20:30</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="edition" id="hokkaido">
+  <p class="folio">第三版</p>
+  <h2>第一日 &amp; 北海道（2月7–12日）</h2>
+  <hr class="rule" />
+  <p class="muted">Tomamu 的券、纜車同活動表喺 <a href="#tomamu">第四版</a>，唔再夾喺日子中間。</p>
+
+  <article class="day" id="d07">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第一日</span><span class="d">7</span><span class="w">週日</span></div>
+      <h3>2月7日（日）香港 → 羽田</h3>
+    </div>
+    <ol class="steps">
+      <li><strong>JL026</strong>：參考 HKG 15:35 → HND 20:25（T3）</li>
+      <li><strong>機場 → 京急 EX INN</strong>：推 東京モノレール T3→天空橋（約 ¥180）→ HICity口→ゾーンJ徒歩約 2 分。酒店無機場→酒店免費接駁。</li>
+      <li><strong>準備</strong>：翌日手提（雪祭暖衣）；大行李可考慮運送 Tomamu；早瞓，翌朝 shuttle 6:00／6:20。</li>
+    </ol>
+  </article>
+
+  <article class="day" id="d08">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第二日</span><span class="d">8</span><span class="w">週一</span></div>
+      <h3>2月8日（一）大通＋薄野白天 → Tomamu</h3>
+    </div>
+    <div class="callout"><strong>15:26 先到トマム站</strong>北海道由今日開始。列車到站之後先轉 shuttle、先 check-in。霧氷上り最終約 15:30，同到站撞在一起，留第三、四日。傍晚到酒店之後可以去 Ice Village。</div>
+    <ol class="steps">
+      <li><strong>酒店 → JL503 → CTS</strong>：免費 shuttle 6:00／6:20；JL503 HND 07:30 → CTS 09:00（已訂）</li>
+      <li><strong>CTS → 札幌站</strong>：快速エアポート約 33–37 分；約 ¥1,230。大件未寄去 Tomamu 就放札幌ロッカー</li>
+      <li><strong>壓縮白天</strong>：大通雪祭會場 highlights，再短訪薄野／すすきの。今日只算白天，夜燈留到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></li>
+      <li><strong>約 13:15 離場</strong>：行李已經寄去 Tomamu，或者已經放入ロッカー，就約 13:15 離開會場，13:45 前到 JR 札幌月台。大通／薄野／中島公園去 JR 札幌：地鐵約 10 分鐘，行路約 20 分鐘，唔好預一小時車程</li>
+      <li><strong>おおぞら7</strong>：現行參考 札幌 13:57 → トマム 15:26；全指定席；正價約 ¥5,880。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・下り</a>（令和8年11月号，截至 2026-11-10）。2027 冬期表未公布。太早係 おおぞら5 11:46→13:22；太晚係 とかち5 15:51→17:39</li>
+      <li><strong>到站之後</strong>：免費 shuttle 舊頁估算約 15:31 先到 Tower。Check-in、取券，同任何當日活動，都排喺到站同轉車之後</li>
+      <li><strong>晚上</strong>：當日霧氷留低。到酒店之後按 <a href="#tomamu-evening">晚上活動</a> 去 Ice Village（17:00–22:00）</li>
+    </ol>
+  </article>
+
+  <article class="day" id="d09">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第三日</span><span class="d">9</span><span class="w">週二</span></div>
+      <h3>2月9日（二）Tomamu · Snowboard 上堂日（推）</h3>
+    </div>
+    <div class="callout frost"><strong>一日集中板，唔會一日 Ski 一日 Board</strong>另一日做活動。9／10 可對調。泳池同溫泉唔當今日主線。</div>
+    <ol class="steps">
+      <li>早餐後去 Adventure Base 3F Ski &amp; Snowboard Academy</li>
+      <li><strong>新手 Snowboard Lesson（要預約）</strong>：Group 120 分主要日語 ¥7,800–8,800；Private 英／日約 ¥26,300–27,800；可加中文認證雪校</li>
+      <li>租賃＋當日リフト券（住宿者優待約 ¥9,000）。霧氷券唔等於全日 pass</li>
+      <li>午後 Debut Park／初級區練板（Tower Express 等）</li>
+      <li>晚：Ice Village。場次見 <a href="#tomamu">Tomamu 專頁</a></li>
+    </ol>
+  </article>
+
+  <article class="day" id="d10">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第四日</span><span class="d">10</span><span class="w">週三</span></div>
+      <h3>2月10日（三）Tomamu · 霧氷同活動日（推）</h3>
+    </div>
+    <p>用每晚霧氷往返券。2/10 仍喺シバレタイム期內（至 2/10）。主線係霧氷同 GAO，晚上 Ice Village。</p>
+    <table class="stack">
+      <thead><tr><th>活動</th><th>內容</th><th>預約</th></tr></thead>
+      <tbody>
+        <tr><td data-label="活動"><span class="tag">推</span> 霧氷テラス</td><td data-label="內容">上り約 7:45–15:30；用住宿往返券</td><td data-label="預約">一般唔使約</td></tr>
+        <tr><td data-label="活動">シバレタイム</td><td data-label="內容">7:45–9:00；免費；至 2/10</td><td data-label="預約">唔使約</td></tr>
+        <tr><td data-label="活動"><span class="tag">推</span> スノーモービル 3km</td><td data-label="內容">約 ¥3,000；約 10 分；16 歲+</td><td data-label="預約">唔使約</td></tr>
+        <tr><td data-label="活動">其他 GAO</td><td data-label="內容">スノーシュー／ラフティング等</td><td data-label="預約">部分要約。全表見專頁</td></tr>
+        <tr><td data-label="活動">Ice Village</td><td data-label="內容">17:00–22:00</td><td data-label="預約">住客當已包</td></tr>
+      </tbody>
+    </table>
+    <p class="xref">價錢同場次見 <a href="#tomamu-morning">早上</a>／<a href="#tomamu-afternoon">中午～下午</a>／<a href="#tomamu-evening">晚上</a>。</p>
+  </article>
+
+  <article class="day" id="d11">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第五日</span><span class="d">11</span><span class="w">祝日</span></div>
+      <h3>2月11日（四・建国記念の日）Tomamu → 支笏湖 → 薄野最終夜</h3>
+    </div>
+    <div class="callout"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>先放 JR 千歳ロッカー，再去支笏湖。唔好先繞札幌酒店，亦唔搬去千歳酒店。當晚入住 JR東日本 METS PREMIERS SAPPORO。</div>
+    <div class="callout frost"><strong>雪祭最終日</strong>會期去到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></div>
+    <ol class="steps">
+      <li><strong>早上稍後 checkout</strong>：星野 Tomamu。2/11 纜車 9:00 開，霧氷只可以排上午。12:15 的列車趕唔切下午活動。去トマム站的 shuttle 向酒店核，呢度唔寫死班次</li>
+      <li><strong>とかち6（札幌行）</strong>：現行參考 トマム 12:15 → 南千歳 13:38，列車續開 新札幌 14:01／札幌 14:10。<strong>唔停千歳</strong>。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道・上り</a>（令和8年11月号，截至 2026-11-10）</li>
+      <li><strong>南千歳轉快速エアポート，用 91</strong>：現行參考 エアポート91 南千歳 14:02 → 千歳 14:06，緩衝約 24 分。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート時刻</a>。エアポート87 13:42→13:46 只剩約 4 分。エアポート89 13:53 通過千歳，停唔到</li>
+      <li><strong>行李放 JR 千歳 coin locker</strong>：西口 1 階、改札外。小／中／大都有；使用開始日起計最多 3 日。<a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道ロッカー</a>（<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">一覽 PDF</a>）。千歳観光案内所的手荷物預かり 9:00–17:00，回程 19:00 之後已經收檔。<a href="https://www.welcome-to-chitose.jp/guide.html">千歳市案内</a></li>
+      <li><strong>行去東口 7 番搭 BLUE LINER</strong>：官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。去程 14:50 同回程 18:15 要前日 20:30 前分別訂好。當日不可訂；不可改班；取消收費 100%；自由席；10 分鐘前到站。官方寫明巴士不代存行李箱。<a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス</a></li>
+      <li><strong>去程用 14:50</strong>：2027 官方 東口 14:50 → 支笏湖温泉約 15:35。13:20 那班喺 とかち6 到南千歳之前已經開出。14:20→15:05 由 14:06 到站計太趕，唔做主計劃。官方話 15 時之後的開出同到達可能延遲</li>
+      <li><strong>支笏湖氷濤まつり</strong>：2027 官方 1 月 30 日–2 月 23 日，10:00–20:00，ライトアップ 16:30–20:00。平日中學生以上 ¥1,000；土日祝 ¥3,000（小學生以下免費）。2/11 係祝日，所以 ¥3,000。巴士票唔包含入場。15:35 到場，16:30 開燈前大約得 55 分鐘日光，之後留燈約 1–1.5 小時。會場喺支笏湖温泉</li>
+      <li><strong>回程最穩 18:15</strong>：2027 官方 18:15 → JR 千歳東口 19:00。取西口ロッカー之後轉札幌。現行參考：千歳 19:14→札幌 19:45（エアポート157）取行李太貼；用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。計劃按大約 20:00 到札幌、薄野約 20:10–20:20。18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌</li>
+      <li><strong>最遲 19:30，跳過 20:30</strong>：2027 官方 19:30 → 千歳 20:15。現行參考 エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。落雪若延遲，會逼近最終日 22:00。20:30 官方只到千歳 21:15，而且唔去機場</li>
+      <li><strong>入住 METS，再去薄野最終夜</strong>：METS 離札幌站約 2 分鐘，行李先放酒店。南北線さっぽろ→すすきの約 3 分鐘，再加行路。2/12 上午留札幌，下午先去小樽</li>
+    </ol>
+  </article>
+
+  <article class="day" id="d12">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第六日</span><span class="d">12</span><span class="w">週五</span></div>
+      <h3>2月12日（五）上午札幌 · 下午小樽雪あかりの路</h3>
+    </div>
+    <div class="callout frost"><strong>第二晚繼續住札幌 METS</strong>支笏湖已喺 2/11 去完。上午留札幌，下午先出發去小樽，晚上睇燈，之後返同一間酒店。唔搬去千歳酒店。2/13 仍然中午附近由 CTS 飛東京。</div>
+    <ol class="steps">
+      <li><strong>上午札幌</strong>：由 METS PREMIERS SAPPORO 出發，留喺札幌，近酒店慢行，留力下午坐車</li>
+      <li><strong>下午去小樽</strong>：JR 札幌→小樽。2027 冬期時刻未公布，具體班次出發前再核，呢度唔寫死某一班</li>
+      <li><strong>晚上：小樽雪あかりの路</strong>：官方 2027 會期 2 月 6–13 日，點燈時間未公布。<a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会・2027</a>。2026 年（第 28 回，2 月 7–14 日）係 17:00–21:00，<a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 官方頁</a>。呢個係舊年時間</li>
+      <li><strong>夜返札幌</strong>：燈後返 METS PREMIERS SAPPORO，過第二晚。回程 JR 同樣未有 2027 冬期表</li>
+    </ol>
+  </article>
+</section>
+
+<section class="edition" id="tomamu">
+  <p class="folio">第四版</p>
+  <h2>Tomamu 專頁</h2>
+  <hr class="rule" />
+  <p>住 2/8 夜至 2/11 早上。第二日 15:26 先到トマム站，當日下午霧氷排唔到。第五日 とかち6 現行參考 12:15 開，只排到上午。霧氷留第三、四日。泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
+
+  <div class="block" id="lifts">
+    <h3>霧氷ゴンドラ vs Tower Express</h3>
+    <table class="stack">
+      <thead><tr><th>設施</th><th>係咩</th><th>去邊</th><th>同住宿券</th></tr></thead>
+      <tbody>
+        <tr><td data-label="設施">雲海ゴンドラ（霧氷用）</td><td data-label="係咩">4 人封閉ゴンドラ；約 13 分到山頂</td><td data-label="去邊">霧氷テラス（約 1,088m）</td><td data-label="同住宿券">住宿「霧氷往返券」＝呢條</td></tr>
+        <tr><td data-label="設施">Tower Express</td><td data-label="係咩">高速クワッド（有罩）椅式リフト</td><td data-label="去邊">Tower 山區雪道</td><td data-label="同住宿券">滑雪用；需リフト券；唔係去霧氷</td></tr>
+        <tr><td data-label="設施">其他 Express／リフト</td><td data-label="係咩">高速／固定椅式</td><td data-label="去邊">各區雪道</td><td data-label="同住宿券">滑雪用；唔包喺霧氷每晚一張</td></tr>
+      </tbody>
+    </table>
+    <div class="callout paper"><strong>用券上霧氷，唔等於全日滑雪</strong>Tower Express 12/26–3/31 可至約 18:00；霧氷上り最終多數約 15:30。</div>
+  </div>
+
+  <div class="block" id="voucher">
+    <h3>The Tower voucher</h3>
+    <div class="callout frost"><strong>Voucher 原文</strong>Free Use of the MINA-MINA BEACH &amp; KIRIN NO YU throughout stay · 1 time round-trip ticket for “Terrace of Frost Tree” per night · Free Wifi in guest room</div>
+    <table class="stack">
+      <thead><tr><th>項目</th><th>意思</th><th>注意</th></tr></thead>
+      <tbody>
+        <tr><td data-label="項目">MINA-MINA BEACH</td><td data-label="意思">室內常溫海灘／波池</td><td data-label="注意">滯在中免費。行程主線唔排游泳</td></tr>
+        <tr><td data-label="項目">KIRIN NO YU（木林の湯）</td><td data-label="意思">露天風呂＋サウナ（非天然溫泉）</td><td data-label="注意">全程免費。行程主線唔排溫泉</td></tr>
+        <tr><td data-label="項目">Terrace of Frost Tree 往返</td><td data-label="意思">霧氷テラス＝雲海ゴンドラ往返</td><td data-label="注意">per night；住 3 晚最多 3 次；每人／每房以入住發券為準</td></tr>
+        <tr><td data-label="項目">Free Wifi</td><td data-label="意思">客房＋ロビー</td><td data-label="注意">—</td></tr>
+        <tr><td data-label="項目">Ice Village</td><td data-label="意思">多數 Tower 客滯在免費</td><td data-label="注意">行程當作已包</td></tr>
+      </tbody>
+    </table>
+    <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。要滑一日＝另買 1 日リフト券（2026–27 窗口大人約 ¥9,500；住宿者優待約 ¥9,000）。</p>
+  </div>
+
+  <div class="block" id="tomamu-activities">
+    <h3>活動・早午晚（2/8–11）</h3>
+    <p class="count-note">下面圓點入面的數字係<strong>活動場數</strong>，例如「早上・21 場」＝早上表有 21 項。唔係時間，亦唔係價錢。搜尋之後，場數會跟住篩選結果變。</p>
+    <div class="callout paper"><strong>唔包滑雪／滑雪板課堂</strong>粗體標記＝每日只有 1 場／1 組／1 晚；多場＝一日 2 場或以上。價錢跟星野 snowtomamu.jp 26/27 冬官網。第二日同第五日排唔到下午霧氷。</div>
+    <ul class="perks">
+      <li><span>住客免費</span>Mina-Mina、木林の湯（券內有，主線唔排）</li>
+      <li><span>霧氷券</span>每晚一張往返券</li>
+      <li><span>纜車 2/8–10</span>7:45 開</li>
+      <li><span>纜車 2/11</span>改 9:00，中午要走</li>
+      <li><span>シバレ</span>至 2/10</li>
+    </ul>
+    <p class="legend"><span><span class="mark once">每日1場</span>當日只有 1 場／1 組／1 晚</span><span><span class="mark rep">多場</span>一日 2 場或以上</span></p>
+    <div class="act-tools">
+      <label><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">搜尋活動</span>
+        <input id="act-filter" type="search" placeholder="搜尋活動、場次或價錢" autocomplete="off" />
+      </label>
+      <button type="button" id="act-clear">清除</button>
+      <p class="filter-meta" id="filter-meta" aria-live="polite"></p>
+    </div>
+    <div class="tabs">
+      <input type="radio" name="tomamu-slot" id="tab-morning" checked />
+      <input type="radio" name="tomamu-slot" id="tab-afternoon" />
+      <input type="radio" name="tomamu-slot" id="tab-evening" />
+      <div class="tab-labels">
+        <label for="tab-morning" data-hash="#tomamu-morning">早上・<span class="count" data-count="morning">21 場</span></label>
+        <label for="tab-afternoon" data-hash="#tomamu-afternoon">中午～下午・<span class="count" data-count="afternoon">16 場</span></label>
+        <label for="tab-evening" data-hash="#tomamu-evening">晚上・<span class="count" data-count="evening">16 場</span></label>
+      </div>
+<div class="panel panel-morning" id="tomamu-morning" role="tabpanel">
+      <h3>早上活動</h3>
       <p class="filter-empty">呢個時段冇符合嘅活動。</p>
       <table class="stack act">
         <thead>
@@ -1003,77 +712,77 @@
             <td data-label="人數／備註">全日開放</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪鞋森林漫步</span><span class="ja" lang="ja">スノーシュー</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪鞋森林漫步</span><span class="ja" lang="ja">スノーシュー</span></td>
             <td data-label="開場／場次">8:30–9:15｜15:30–16:15</td>
             <td data-label="所需時間">約45分鐘</td>
             <td data-label="價錢" class="price">¥4,000／人</td>
             <td data-label="人數／備註">每日2場・3歲+・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">Fun★冰壺</span><span class="ja" lang="ja">Fun★カーリング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">Fun★冰壺</span><span class="ja" lang="ja">Fun★カーリング</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（9–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">家庭冰壺（3歲起）</span><span class="ja" lang="ja">ファミリーカーリング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">家庭冰壺（3歲起）</span><span class="ja" lang="ja">ファミリーカーリング</span></td>
             <td data-label="開場／場次">8:30–12:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（3–11）</td>
             <td data-label="人數／備註">要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冬季家庭森林探險</span><span class="ja" lang="ja">冬の森たんけん</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冬季家庭森林探險</span><span class="ja" lang="ja">冬の森たんけん</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（3–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪鞋行山＋森林咖啡</span><span class="ja" lang="ja">スノーシュー＆森カフェ</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪鞋行山＋森林咖啡</span><span class="ja" lang="ja">スノーシュー＆森カフェ</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（7–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">樺木匙手作</span><span class="ja" lang="ja">白樺のスプーンづくり</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">樺木匙手作</span><span class="ja" lang="ja">白樺のスプーンづくり</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,000／人</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪地組合遊覽</span><span class="ja" lang="ja">スノーコンボクルージング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪地組合遊覽</span><span class="ja" lang="ja">スノーコンボクルージング</span></td>
             <td data-label="開場／場次">8:45｜10:45｜12:15｜13:45｜15:15</td>
             <td data-label="所需時間">約1小時</td>
             <td data-label="價錢" class="price">¥24,000／組（2–4人）；¥30,000（5人）</td>
             <td data-label="人數／備註">每日5場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">家庭雪地野餐</span><span class="ja" lang="ja">ファミリースノーピクニック</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">家庭雪地野餐</span><span class="ja" lang="ja">ファミリースノーピクニック</span></td>
             <td data-label="開場／場次">9:00–10:30｜13:00–14:30</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥8,000／¥7,000（2–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">年輪蛋糕製作</span><span class="ja" lang="ja">バウムクーヘン作り</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">年輪蛋糕製作</span><span class="ja" lang="ja">バウムクーヘン作り</span></td>
             <td data-label="開場／場次">9:30｜11:30｜13:30</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥5,500／¥5,000</td>
             <td data-label="人數／備註">每日3場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">魔法雪板・度假村路線</span><span class="ja" lang="ja">スロースキー リゾート</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">魔法雪板・度假村路線</span><span class="ja" lang="ja">スロースキー リゾート</span></td>
             <td data-label="開場／場次">9:30｜11:00｜13:00｜15:30</td>
             <td data-label="所需時間">約1小時</td>
             <td data-label="價錢" class="price">¥4,500／人</td>
             <td data-label="人數／備註">每日4場・8歲+・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">魔法雪板・森林山丘</span><span class="ja" lang="ja">フォレストヒル</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">魔法雪板・森林山丘</span><span class="ja" lang="ja">フォレストヒル</span></td>
             <td data-label="開場／場次">9:00–11:30｜13:00–15:30</td>
             <td data-label="所需時間">約2.5小時</td>
             <td data-label="價錢" class="price">¥8,000／¥7,000（8–11）</td>
@@ -1133,7 +842,7 @@
     </div>
 
     <div class="panel panel-afternoon" id="tomamu-afternoon" role="tabpanel">
-      <h3>中午～下午</h3>
+      <h3>中午～下午活動</h3>
       <p class="filter-empty">呢個時段冇符合嘅活動。</p>
       <table class="stack act">
         <thead>
@@ -1211,14 +920,14 @@
             <td data-label="人數／備註">5–12／12–15歲</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冰上釣虹鱒</span><span class="ja" lang="ja">トマムポンド</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冰上釣虹鱒</span><span class="ja" lang="ja">トマムポンド</span></td>
             <td data-label="開場／場次">10:00｜12:00｜14:00</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥6,000／¥5,500（2–11）</td>
             <td data-label="人數／備註">每日3場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">湖上野餐釣魚</span><span class="ja" lang="ja">レイクピクニック</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">湖上野餐釣魚</span><span class="ja" lang="ja">レイクピクニック</span></td>
             <td data-label="開場／場次">9:00–12:30｜12:45–16:15</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,000／¥6,000（6–11）</td>
@@ -1239,14 +948,14 @@
             <td data-label="人數／備註">18歲+・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">家庭雪地野餐（第二場）</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">家庭雪地野餐（第二場）</span></td>
             <td data-label="開場／場次">13:00–14:30</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥8,000／¥7,000</td>
             <td data-label="人數／備註">同早場共2場</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪鞋漫步（第二場）</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪鞋漫步（第二場）</span></td>
             <td data-label="開場／場次">15:30–16:15</td>
             <td data-label="所需時間">約45分鐘</td>
             <td data-label="價錢" class="price">¥4,000</td>
@@ -1257,7 +966,7 @@
     </div>
 
     <div class="panel panel-evening" id="tomamu-evening" role="tabpanel">
-      <h3>晚上</h3>
+      <h3>晚上活動</h3>
       <p class="filter-empty">呢個時段冇符合嘅活動。</p>
       <table class="stack act">
         <thead>
@@ -1272,7 +981,7 @@
             <td data-label="人數／備註">每晚開放</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">夜間雪橇車廂遊</span><span class="ja" lang="ja">ナイトキャビンクルージング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">夜間雪橇車廂遊</span><span class="ja" lang="ja">ナイトキャビンクルージング</span></td>
             <td data-label="開場／場次">2月：17:15–18:00｜18:30–19:15</td>
             <td data-label="所需時間">約45分鐘</td>
             <td data-label="價錢" class="price">¥24,000／組（2–4）；¥30,000（5）</td>
@@ -1286,14 +995,14 @@
             <td data-label="人數／備註">—</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冰之酒店參觀</span><span class="ja" lang="ja">氷のホテル見学</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冰之酒店參觀</span><span class="ja" lang="ja">氷のホテル見学</span></td>
             <td data-label="開場／場次">17:00–17:20｜18:20–19:20｜20:20–21:00</td>
             <td data-label="所需時間">每段約20–60分</td>
             <td data-label="價錢" class="price is-free">免費</td>
             <td data-label="人數／備註">每日3時段</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冰之下午茶</span><span class="ja" lang="ja">氷のアフタヌーンティー</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冰之下午茶</span><span class="ja" lang="ja">氷のアフタヌーンティー</span></td>
             <td data-label="開場／場次">17:30｜19:30</td>
             <td data-label="所需時間">約40分鐘</td>
             <td data-label="價錢" class="price">¥7,500／人</td>
@@ -1379,202 +1088,54 @@
         </tbody>
       </table>
     </div>
+
+    </div>
   </div>
 </section>
 
-<section id="d12">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">12</span><span class="w">五</span></div>
-    <h2>2月12日（五）全日小樽 · 運河白天＋雪あかりの路</h2>
-  </div>
-  <div class="callout info"><strong>第二晚繼續住札幌 METS</strong>支笏湖已喺 2/11 去完。今日由 METS PREMIERS SAPPORO 出返小樽，夜燈之後返同一間酒店。唔搬去千歳酒店。2/13 仍然中午附近由 CTS 飛東京。</div>
-  <ol class="steps">
-    <li><strong>白天小樽運河</strong>：朝由札幌去小樽，行運河一帶。JR 札幌↔小樽的 2027 冬期時刻未公布，具體班次出發前再核，呢度唔寫死某一班</li>
-    <li><strong>夜：小樽雪あかりの路</strong>：官方 2027 會期 2 月 6–13 日，詳細（包括點燈時間）未公布。<a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会・2027</a></li>
-    <li><strong>點燈時間只可參考 2026</strong>：2026 年（第 28 回，2 月 7–14 日）係 17:00–21:00。<a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 官方頁</a>。呢個係舊年時間，2027 公布後先至當準</li>
-    <li><strong>返札幌過第二晚</strong>：夜燈後返 METS PREMIERS SAPPORO。2/12 的 JR 時刻同樣未有 2027 冬期表，出發前對一次</li>
-  </ol>
+<section class="edition" id="tokyo">
+  <p class="folio">第五版</p>
+  <h2>東京（2月13–16日）</h2>
+  <hr class="rule" />
+
+  <article class="day" id="d13">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第七日</span><span class="d">13</span><span class="w">週六</span></div>
+      <h3>2月13日（六）札幌 → 東京</h3>
+    </div>
+    <ol class="steps">
+      <li>約 09:00 前由札幌 METS 去 CTS。短名單 NH58 11:30、BC712 11:35、JL508 11:40</li>
+      <li>HND→秋葉原：推 京急→品川→JR（約 35–45 分；約 ¥500–540）</li>
+      <li>入住秋葉原 METS，傍晚輕量購物</li>
+    </ol>
+  </article>
+  <article class="day" id="d14">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第八日</span><span class="d">14</span><span class="w">週日</span></div>
+      <h3>2月14日（日）PokéPark／備案</h3>
+    </div>
+    <p>抽籤結果約 11 月底。若不中：秋葉原電器／角色店／藥妝半天。</p>
+  </article>
+  <article class="day" id="d15">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第九日</span><span class="d">15</span><span class="w">週一</span></div>
+      <h3>2月15日（一）購物＋Shibuya Sky</h3>
+    </div>
+    <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO；BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。日落約 17:08–17:22 → Shibuya Sky 建議 16:10–16:30 入場（開售＝到訪日前 14 日 0:00 JST）。</p>
+  </article>
+  <article class="day" id="d16">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第十日</span><span class="d">16</span><span class="w">週二</span></div>
+      <h3>2月16日（二）成田回港</h3>
+    </div>
+    <p>去<strong>成田</strong>。推 Skyliner；13:30–14:00 離酒店；JL735 參考 NRT 18:30 → HKG 22:55。</p>
+  </article>
 </section>
 
-<section id="tokyo">
-  <h2>東京（2/13–16）</h2>
-  <h3>2/13 抵京</h3>
-  <ol class="steps">
-    <li>約09:00前去 CTS；建議 NH58／BC712／JL508</li>
-    <li>HND→秋葉原：推 京急→品川→JR（約35–45分；約¥500–540）</li>
-    <li>傍晚秋葉原輕量購物</li>
-  </ol>
-  <h3>2/14 PokéPark／備案</h3>
-  <p>抽籤結果約11月底。若不中：秋葉原電器／角色店／藥妝半天。</p>
-  <h3>2/15 購物＋Shibuya Sky</h3>
-  <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO；BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。日落約17:08–17:22 → Shibuya Sky 建議16:10–16:30入場（開售＝到訪日前14日 0:00 JST）。</p>
-  <h3>2/16 回港</h3>
-  <p>去<strong>成田</strong>。推 Skyliner；13:30–14:00離酒店；JL735 參考 NRT 18:30 → HKG 22:55。</p>
-</section>
-
-<section id="transport">
-  <h2>交通選項（重點）</h2>
-  <p class="muted">JR 同中央巴士的 2027 年 2 月班次未公布。下面 JR 時刻全部係現行時刻表參考（JR時刻表 令和8年11月号／JR北海道頁面截至 2026-11-10），出發前再核。氷濤 BLUE LINER 係 2027 已公布時刻。支笏湖用 BLUE LINER，呢頁唔寫未公布的中央巴士班次。</p>
-  <h3>推薦速覽</h3>
-  <table class="stack">
-    <thead>
-      <tr><th>日</th><th>路段</th><th>推薦</th><th>重點</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="日">2/7</td>
-        <td data-label="路段">HND→酒店</td>
-        <td data-label="推薦">モノレール→天空橋</td>
-        <td data-label="重點">約¥180</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/8早</td>
-        <td data-label="路段">酒店→HND</td>
-        <td data-label="推薦">免費 shuttle 6:00／6:20</td>
-        <td data-label="重點">定員20</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/8午後</td>
-        <td data-label="路段">雪祭→トマム</td>
-        <td data-label="推薦">おおぞら7 13:57→15:26</td>
-        <td data-label="重點">Tower≈15:31；約 13:15 離場、13:45 到月台；指定席必訂。現行參考</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/11</td>
-        <td data-label="路段">トマム→札幌</td>
-        <td data-label="推薦">とかち6 12:15→南千歳 13:38，再エアポート91、BLUE LINER 14:50</td>
-        <td data-label="重點">支笏湖後返札幌薄野；住 METS。JR 現行參考，巴士係 2027 官方。見 <a href="#d11">2/11</a></td>
-      </tr>
-      <tr>
-        <td data-label="日">2/12</td>
-        <td data-label="路段">札幌↔小樽</td>
-        <td data-label="推薦">JR 朝去晚返（班次出發前再核）</td>
-        <td data-label="重點">運河白天＋雪あかりの路；晚返札幌 METS</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/13</td>
-        <td data-label="路段">HND→秋葉原</td>
-        <td data-label="推薦">京急→品川→JR</td>
-        <td data-label="重點">約35–45分</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/16</td>
-        <td data-label="路段">秋葉原→NRT</td>
-        <td data-label="推薦">日暮里→Skyliner</td>
-        <td data-label="重點">13:30–14:00離酒店</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>2/8 雪祭→Tower 詳細 options</h3>
-  <table class="stack">
-    <thead>
-      <tr><th>Option</th><th>內容</th><th>到 Tower</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Option"><span class="tag ok">推 ≈15:30</span></td>
-        <td data-label="內容">おおぞら7 13:57→15:26＋shuttle</td>
-        <td data-label="到 Tower">≈15:31</td>
-        <td data-label="備註">正價約¥5,880；約1ヶ月前訂。13:15 離場。現行參考，2027 再核</td>
-      </tr>
-      <tr>
-        <td data-label="Option">太早</td>
-        <td data-label="內容">おおぞら5 11:46→13:22</td>
-        <td data-label="到 Tower">≈13:30</td>
-        <td data-label="備註">雪祭時間大砍</td>
-      </tr>
-      <tr>
-        <td data-label="Option">太晚</td>
-        <td data-label="內容">とかち5 15:51→17:39</td>
-        <td data-label="到 Tower">≈17:45</td>
-        <td data-label="備註">錯過當日ゴンドラ</td>
-      </tr>
-      <tr>
-        <td data-label="Option">巴士直達</td>
-        <td data-label="內容">リゾートライナー（多由CTS發）</td>
-        <td data-label="到 Tower">例16:35</td>
-        <td data-label="備註">雪祭後繞CTS不划算；¥7,000・要約</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>2/11 南千歳 → 支笏湖温泉</h3>
-  <p class="muted">JR 係現行參考。BLUE LINER 係 2027 官方。點解跳過 87／89／13:20／14:20／20:30，見 <a href="#d11">2/11</a>。</p>
-  <table class="stack">
-    <caption>來源：<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">とかち 上り</a>、<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート</a>、<a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a>。</caption>
-    <thead>
-      <tr><th>段</th><th>用邊班</th><th>參考／官方時刻</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="段">トマム → 南千歳</td>
-        <td data-label="用邊班">とかち6（唔停千歳）</td>
-        <td data-label="參考／官方時刻">12:15 → 13:38。現行參考</td>
-      </tr>
-      <tr>
-        <td data-label="段">南千歳 → 千歳</td>
-        <td data-label="用邊班">エアポート91</td>
-        <td data-label="參考／官方時刻">14:02 → 14:06。現行參考</td>
-      </tr>
-      <tr>
-        <td data-label="段">千歳東口 → 支笏湖温泉</td>
-        <td data-label="用邊班">BLUE LINER 14:50</td>
-        <td data-label="參考／官方時刻">約 15:35 到會場。2027 官方</td>
-      </tr>
-      <tr>
-        <td data-label="段">支笏湖温泉 → 千歳</td>
-        <td data-label="用邊班">BLUE LINER 18:15（最穩）</td>
-        <td data-label="參考／官方時刻">19:00 到千歳。2027 官方</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="jr">
-  <h2>JR／eki-net（外國人）</h2>
-  <div class="callout warn"><strong>訪日／海外居住：基本上買正價</strong>えきねっと＝日本國內居住者用；海外居住者不能註冊。訪日用 <strong>JR-EAST Train Reservation</strong>：可買おおぞら／とかち指定席，但係正價（普通車指定席片道約¥5,880），無外國人專屬價，亦無特急トクだ値。</div>
-  <table class="stack">
-    <thead>
-      <tr><th>項目</th><th>做法</th><th>注意</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="項目">訪日／海外</td>
-        <td data-label="做法">JR-EAST Train Reservation</td>
-        <td data-label="注意">正價。札幌↔トマム直通參考約¥5,880；2/11 喺南千歳落車，以購票頁為準</td>
-      </tr>
-      <tr>
-        <td data-label="項目">えきねっと</td>
-        <td data-label="做法">海外居住者不能用</td>
-        <td data-label="注意">トクだ値基本無緣</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Hokkaido Rail Pass</td>
-        <td data-label="做法">5日約¥22,000</td>
-        <td data-label="注意">只為往返トマム多半不划算</td>
-      </tr>
-      <tr>
-        <td data-label="項目">何時買</td>
-        <td data-label="做法">約1ヶ月前10:00</td>
-        <td data-label="注意">訂 2/8 おおぞら7（札幌→トマム）＋ 2/11 とかち6（トマム→南千歳）。時刻係現行參考，2027 冬期表出咗再核</td>
-      </tr>
-      <tr>
-        <td data-label="項目">改班</td>
-        <td data-label="做法">取消後再買正價</td>
-        <td data-label="注意">受取前後規則不同；出發前再核</td>
-      </tr>
-      <tr>
-        <td data-label="項目">發車後</td>
-        <td data-label="做法">指定券無效</td>
-        <td data-label="注意">當日後續或可立席／空席</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>トマム駅無售票；回程可 Tower 指定席售票機（不收現金）或事先網上買。2/11 喺南千歳落車，指定席買到南千歳。</p>
-</section>
-
-<section id="todo">
+<section class="edition" id="todo">
+  <p class="folio">第六版 · 尾二</p>
   <h2>待辦 Checklist</h2>
+  <hr class="rule" />
   <ul class="check">
     <li>✅ JL026／JL503／JL735 已持有</li>
     <li>⬜ <strong>2/13 CTS→HND 機票</strong>（優先）</li>
@@ -1590,25 +1151,44 @@
     <li>⬜ Shibuya Sky 日落時段票</li>
     <li>⬜ 2/8 行李運送（可選）</li>
   </ul>
-  <h3>已定（2/8・2/11・2/12）</h3>
+  <h3>已定</h3>
   <ul class="decide">
-    <li>2/8：大通 highlights＋薄野短訪（白天）→ おおぞら7 → Tomamu；霧氷留 2/9–10</li>
+    <li>2/8：大通 highlights＋薄野短訪（白天）→ おおぞら7，15:26 到トマム；霧氷留 2/9–10</li>
     <li>2/11：とかち6 → 千歳ロッカー → BLUE LINER 14:50 去支笏湖；夜返札幌薄野；住 METS</li>
-    <li>2/12：全日小樽（運河白天＋雪あかりの路）；第二晚繼續札幌 METS</li>
+    <li>2/12：上午札幌，下午去小樽睇雪あかりの路；第二晚繼續札幌 METS</li>
   </ul>
   <h3>要你決定</h3>
   <ul class="decide">
     <li>2/13 選 ANA NH58／Skymark BC712／JAL JL508</li>
-    <li>9／10：Board 日 vs 活動日邊日先（推 9=Board、10=霧氷＋GAO）</li>
+    <li>9／10：Board 日 vs 活動日邊日先（推 9＝Board、10＝霧氷＋GAO）</li>
     <li>Snowboard：官方 Group（日）vs Private／中文校</li>
   </ul>
+</section>
+
+<section class="edition" id="jr">
+  <p class="folio">第七版 · 最後</p>
+  <h2>JR／eki-net（外國人）</h2>
+  <hr class="rule" />
+  <div class="callout"><strong>訪日／海外居住：基本上買正價</strong>えきねっと＝日本國內居住者用；海外居住者不能註冊。訪日用 <strong>JR-EAST Train Reservation</strong>：可買おおぞら／とかち指定席，但係正價（普通車指定席片道約 ¥5,880），無外國人專屬價，亦無特急トクだ値。</div>
+  <table class="stack">
+    <thead><tr><th>項目</th><th>做法</th><th>注意</th></tr></thead>
+    <tbody>
+      <tr><td data-label="項目">訪日／海外</td><td data-label="做法">JR-EAST Train Reservation</td><td data-label="注意">正價。札幌↔トマム直通參考約 ¥5,880；2/11 喺南千歳落車，以購票頁為準</td></tr>
+      <tr><td data-label="項目">えきねっと</td><td data-label="做法">海外居住者不能用</td><td data-label="注意">トクだ値基本無緣</td></tr>
+      <tr><td data-label="項目">Hokkaido Rail Pass</td><td data-label="做法">5 日約 ¥22,000</td><td data-label="注意">只為往返トマム多半不划算</td></tr>
+      <tr><td data-label="項目">何時買</td><td data-label="做法">約 1 個月前 10:00</td><td data-label="注意">訂 2/8 おおぞら7（札幌→トマム）＋ 2/11 とかち6（トマム→南千歳）。時刻係現行參考，2027 冬期表出咗再核</td></tr>
+      <tr><td data-label="項目">改班</td><td data-label="做法">取消後再買正價</td><td data-label="注意">受取前後規則不同；出發前再核</td></tr>
+      <tr><td data-label="項目">發車後</td><td data-label="做法">指定券無效</td><td data-label="注意">當日後續或可立席／空席</td></tr>
+    </tbody>
+  </table>
+  <p>トマム駅無售票；回程可 Tower 指定席售票機（不收現金）或事先網上買。2/11 喺南千歳落車，指定席買到南千歳。</p>
 </section>
 
 </main>
 
 <footer class="site">
-  <p>2027年2月 北海道＋東京行程，呢頁就係本站 <code>index.html</code>。2/8、2/11、2/12 已按最新計劃更新。出發前再核航班、JR 冬期時刻、BLUE LINER 預約同星野預約。</p>
-  <h2>2/8・2/11・2/12 來源</h2>
+  <p>2027年2月 北海道＋東京行程，呢頁就係本站 <code>index.html</code>。出發前再核航班、JR 冬期時刻、BLUE LINER 預約同星野預約。</p>
+  <h2>來源</h2>
   <ul class="sources">
     <li><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道 おおぞら・とかち 下り</a>（令和8年11月号）</li>
     <li><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道 おおぞら・とかち 上り</a>（令和8年11月号）</li>
@@ -1619,9 +1199,6 @@
     <li><a href="https://www.welcome-to-chitose.jp/guide.html">千歳駅観光案内所（手荷物預かり 9:00–17:00）</a></li>
     <li><a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></li>
     <li><a href="https://otaru.gr.jp/event/yukiakari2027">2027 小樽雪あかりの路</a>／<a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 點燈 17:00–21:00</a></li>
-  </ul>
-  <h2>Tomamu 活動來源（26/27 冬官網）</h2>
-  <ul class="sources">
     <li><a href="https://www.snowtomamu.jp/winter/icevillage/">Ice Village</a></li>
     <li><a href="https://www.snowtomamu.jp/winter/frosttree/">霧氷テラス</a></li>
     <li><a href="https://www.snowtomamu.jp/winter/minamina/">Mina-Mina</a></li>
@@ -1636,46 +1213,34 @@
     "#tomamu-afternoon": "tab-afternoon",
     "#tomamu-evening": "tab-evening"
   };
-
   function syncTabFromHash() {
     var id = hashToTab[location.hash];
     if (!id) return;
     var input = document.getElementById(id);
     if (input) input.checked = true;
     var target = document.querySelector(location.hash);
-    if (target) {
-      requestAnimationFrame(function () { target.scrollIntoView(); });
-    }
+    if (target) requestAnimationFrame(function () { target.scrollIntoView(); });
   }
-
   document.querySelectorAll(".tab-labels label").forEach(function (label) {
     label.addEventListener("click", function () {
       if (label.dataset.hash) history.replaceState(null, "", label.dataset.hash);
     });
   });
-
   var filter = document.getElementById("act-filter");
   var clearBtn = document.getElementById("act-clear");
   var meta = document.getElementById("filter-meta");
   var panels = document.querySelectorAll(".panel");
-
   var tabInputs = {
     morning: document.getElementById("tab-morning"),
     afternoon: document.getElementById("tab-afternoon"),
     evening: document.getElementById("tab-evening")
   };
-  var tabHash = {
-    morning: "#tomamu-morning",
-    afternoon: "#tomamu-afternoon",
-    evening: "#tomamu-evening"
-  };
-
+  var tabHash = { morning: "#tomamu-morning", afternoon: "#tomamu-afternoon", evening: "#tomamu-evening" };
   function activeKey() {
     if (tabInputs.afternoon.checked) return "afternoon";
     if (tabInputs.evening.checked) return "evening";
     return "morning";
   }
-
   function applyFilter() {
     var q = (filter && filter.value || "").trim().toLowerCase();
     var counts = { morning: 0, afternoon: 0, evening: 0 };
@@ -1690,7 +1255,7 @@
       counts[key] = n;
       panel.classList.toggle("is-empty", n === 0);
       var badge = document.querySelector('[data-count="' + key + '"]');
-      if (badge) badge.textContent = String(n);
+      if (badge) badge.textContent = n + " 場";
     });
     if (q && !counts[activeKey()]) {
       ["morning", "afternoon", "evening"].some(function (key) {
@@ -1701,9 +1266,8 @@
       });
     }
     var total = counts.morning + counts.afternoon + counts.evening;
-    if (meta) meta.textContent = q ? ("搵到 " + total + " 項") : "";
+    if (meta) meta.textContent = q ? ("搵到 " + total + " 場活動") : "";
   }
-
   if (filter) filter.addEventListener("input", applyFilter);
   if (clearBtn) clearBtn.addEventListener("click", function () {
     if (!filter) return;
@@ -1711,12 +1275,8 @@
     applyFilter();
     filter.focus();
   });
-
-  var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".toc-links a"));
-  var sections = tocLinks.map(function (a) {
-    return document.querySelector(a.getAttribute("href"));
-  }).filter(Boolean);
-
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".section-nav a"));
+  var sections = tocLinks.map(function (a) { return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -1725,16 +1285,11 @@
           link.classList.toggle("is-current", link.getAttribute("href") === "#" + en.target.id);
         });
       });
-    }, { rootMargin: "-20% 0px -65% 0px", threshold: 0.01 });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0.01 });
     sections.forEach(function (sec) { io.observe(sec); });
   }
-
   window.addEventListener("hashchange", syncTabFromHash);
   syncTabFromHash();
-  window.addEventListener("beforeprint", function () {
-    var toc = document.querySelector("details.toc");
-    if (toc) toc.open = true;
-  });
 })();
 </script>
 </body>
