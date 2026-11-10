@@ -174,6 +174,36 @@
     line-height: 1.35;
   }
   .block { margin: 0 0 22px; padding-top: 4px; }
+  .unit {
+    margin: 20px 0 8px;
+    padding: 18px 16px 8px;
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+  }
+  .unit + .unit { margin-top: 26px; }
+  .unit-kicker {
+    margin: 0 0 4px;
+    font-family: var(--serif);
+    letter-spacing: .18em;
+    font-size: .72rem;
+    color: var(--rose-deep);
+  }
+  .hotel-list { display: grid; gap: 14px; margin: 8px 0 4px; }
+  .hotel-card {
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 16px 16px 14px;
+    border-top: 3px solid var(--rose);
+  }
+  .hotel-card h4 { margin: 0; font-size: 1.08rem; line-height: 1.45; }
+  .hotel-card .gloss { margin: 2px 0 10px; color: var(--taupe); font-size: .9rem; }
+  .hotel-card dl { margin: 0; display: grid; grid-template-columns: 4.5rem 1fr; gap: 6px 10px; }
+  .hotel-card dt { margin: 0; font-family: var(--serif); color: var(--rose-deep); font-size: .84rem; }
+  .hotel-card dd { margin: 0; }
+  .hotel-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; }
+  .hotel-note { margin: 8px 0 0; color: var(--cocoa); font-size: .92rem; }
   .block h3, .day h3 { margin: 0 0 8px; font-size: 1.18rem; }
   h4 { margin: 16px 0 8px; font-size: 1.02rem; }
   .muted, caption { color: var(--taupe); font-size: .92rem; }
@@ -371,8 +401,8 @@
     <li><a href="#overview"><small>01</small><span>總覽</span></a></li>
     <li><a href="#transport"><small>02</small><span>交通</span></a></li>
     <li><a href="#hokkaido"><small>03</small><span>北海道</span></a></li>
-    <li><a href="#tomamu"><small>04</small><span>Tomamu</span></a></li>
-    <li><a href="#tokyo"><small>05</small><span>東京</span></a></li>
+    <li><a href="#tokyo"><small>04</small><span>東京</span></a></li>
+    <li><a href="#tomamu"><small>05</small><span>Tomamu</span></a></li>
     <li><a href="#todo"><small>06</small><span>待辦</span></a></li>
     <li><a href="#jr"><small>07</small><span>JR</span></a></li>
   </ul>
@@ -387,23 +417,22 @@
 
   <div class="block" id="days">
     <h3>行程總覽</h3>
-    <p class="muted">第一日＝2月7日，第十日＝2月16日。住宿：羽田 1 晚 · Tomamu Tower 3 晚 · 札幌 METS 2 晚 · 秋葉原 METS 3 晚。除星野外其餘酒店可 FREE CANCEL（以訂房條款為準）。</p>
+    <p class="muted">第一日＝2月7日，第十日＝2月16日。這裡只列當日行程重點。航班、車次同轉車細節見下面的航班一覽同交通版。</p>
     <table class="stack days">
-      <thead><tr><th>日</th><th>日期</th><th>去邊／住邊</th><th>一句</th></tr></thead>
+      <thead><tr><th>日</th><th>日期</th><th>當日行程重點</th></tr></thead>
       <tbody>
-        <tr><td data-label="日">第一日</td><td data-label="日期">2/7（日）</td><td data-label="去邊／住邊">香港 → 羽田 · 京急 EX INN</td><td data-label="一句">JL026。北海道由第二日開始。</td></tr>
-        <tr><td data-label="日">第二日</td><td data-label="日期">2/8（一）</td><td data-label="去邊／住邊">札幌白天 → Tomamu Tower</td><td data-label="一句">JL503 07:30。大通＋薄野白天，約 13:15 離場。おおぞら7 13:57，トマム 15:26 到站。</td></tr>
-        <tr><td data-label="日">第三日</td><td data-label="日期">2/9（二）</td><td data-label="去邊／住邊">Tomamu</td><td data-label="一句">Snowboard 上堂日（推）。同第四日可對調。</td></tr>
-        <tr><td data-label="日">第四日</td><td data-label="日期">2/10（三）</td><td data-label="去邊／住邊">Tomamu</td><td data-label="一句">霧氷＋GAO（推）。シバレタイム到今日為止。</td></tr>
-        <tr><td data-label="日">第五日</td><td data-label="日期">2/11（四・祝）</td><td data-label="去邊／住邊">Tomamu → 支笏湖 → 札幌 METS</td><td data-label="一句">とかち6、BLUE LINER 14:50。薄野最終夜。建国記念の日。</td></tr>
-        <tr><td data-label="日">第六日</td><td data-label="日期">2/12（五）</td><td data-label="去邊／住邊">上午札幌 · 下午小樽 · 夜返 METS</td><td data-label="一句">下午先去小樽，晚上雪あかりの路。唔搬去千歳。</td></tr>
-        <tr><td data-label="日">第七日</td><td data-label="日期">2/13（六）</td><td data-label="去邊／住邊">札幌 → 羽田 → 秋葉原 METS</td><td data-label="一句">中午附近飛東京。機票未買。</td></tr>
-        <tr><td data-label="日">第八日</td><td data-label="日期">2/14（日）</td><td data-label="去邊／住邊">東京</td><td data-label="一句">PokéPark 抽籤，未中就秋葉原。</td></tr>
-        <tr><td data-label="日">第九日</td><td data-label="日期">2/15（一）</td><td data-label="去邊／住邊">東京</td><td data-label="一句">澀谷購物，傍晚 Shibuya Sky。</td></tr>
-        <tr><td data-label="日">第十日</td><td data-label="日期">2/16（二）</td><td data-label="去邊／住邊">秋葉原 → 成田 → 香港</td><td data-label="一句">JL735 由成田起飛。</td></tr>
+        <tr><td data-label="日">第一日</td><td data-label="日期">2/7（日）</td><td data-label="當日行程重點">香港飛羽田，住京急 EXイン</td></tr>
+        <tr><td data-label="日">第二日</td><td data-label="日期">2/8（一）</td><td data-label="當日行程重點">大通＋薄野白天 → Tomamu</td></tr>
+        <tr><td data-label="日">第三日</td><td data-label="日期">2/9（二）</td><td data-label="當日行程重點">Tomamu（Snowboard 推，可與第四日對調）</td></tr>
+        <tr><td data-label="日">第四日</td><td data-label="日期">2/10（三）</td><td data-label="當日行程重點">Tomamu（霧氷＋GAO 推）</td></tr>
+        <tr><td data-label="日">第五日</td><td data-label="日期">2/11（四・祝）</td><td data-label="當日行程重點">支笏湖氷濤まつり → 薄野最終夜</td></tr>
+        <tr><td data-label="日">第六日</td><td data-label="日期">2/12（五）</td><td data-label="當日行程重點">上午札幌，下午小樽雪あかりの路</td></tr>
+        <tr><td data-label="日">第七日</td><td data-label="日期">2/13（六）</td><td data-label="當日行程重點">飛東京，住秋葉原メッツ</td></tr>
+        <tr><td data-label="日">第八日</td><td data-label="日期">2/14（日）</td><td data-label="當日行程重點">PokéPark（抽籤）</td></tr>
+        <tr><td data-label="日">第九日</td><td data-label="日期">2/15（一）</td><td data-label="當日行程重點">澀谷購物，傍晚 Shibuya Sky</td></tr>
+        <tr><td data-label="日">第十日</td><td data-label="日期">2/16（二）</td><td data-label="當日行程重點">成田回香港</td></tr>
       </tbody>
     </table>
-    <div class="callout"><strong>第十日由成田起飛</strong>JL735 參考 NRT 18:30 → HKG 22:55（T2）。秋葉原酒店 13:30–14:00 出發，15:30 前到機場。推 JR → 日暮里 → Skyliner。</div>
   </div>
 
   <div class="block" id="flights">
@@ -431,15 +460,55 @@
 
   <div class="block" id="hotels">
     <h3>酒店</h3>
-    <table class="stack">
-      <thead><tr><th>酒店</th><th>日期</th><th>備註</th></tr></thead>
-      <tbody>
-        <tr><td data-label="酒店">京急 EX INN 羽田 Innovation City</td><td data-label="日期">2/7</td><td data-label="備註">可 FREE CANCEL</td></tr>
-        <tr><td data-label="酒店">星野 Tomamu The Tower</td><td data-label="日期">2/8–11</td><td data-label="備註">連早餐；取消條款較嚴。券同纜車見 <a href="#tomamu">Tomamu 專頁</a></td></tr>
-        <tr><td data-label="酒店">JR東日本 METS PREMIERS SAPPORO</td><td data-label="日期">2/11–13</td><td data-label="備註">駅徒歩約 2 分；可 FREE CANCEL。2/11 夜入住、2/12 續住；唔搬去千歳酒店</td></tr>
-        <tr><td data-label="酒店">JR東日本 METS PREMIERS 秋葉原</td><td data-label="日期">2/13–16</td><td data-label="備註">可 FREE CANCEL</td></tr>
-      </tbody>
-    </table>
+    <p class="muted">日文名、地址、電話同官網都對過各酒店官方頁。除星野外其餘可 FREE CANCEL（以訂房條款為準）。</p>
+    <div class="hotel-list">
+      <article class="hotel-card">
+        <h4 lang="ja">京急 EXイン 羽田イノベーションシティ</h4>
+        <p class="gloss">住 2/7 · 羽田機場旁。可 FREE CANCEL。唔好搵成另一間「京急 EXイン 羽田」。</p>
+        <dl>
+          <dt>住所</dt>
+          <dd lang="ja">〒144-0041 東京都大田区羽田空港 1-1-4 羽田イノベーションシティ内 ゾーンJ（2階）</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81355797230">03-5579-7230</a></dd>
+        </dl>
+        <p class="hotel-note">官方受付：check-in 15:00／check-out 10:00。呢個係羽田酒店的入住時間。</p>
+        <p class="hotel-links"><a href="https://www.keikyu-exinn.co.jp/hotel/innovation-city/">官方網站</a></p>
+      </article>
+      <article class="hotel-card">
+        <h4 lang="ja">トマム ザ・タワー by 星野リゾート</h4>
+        <p class="gloss">住 2/8–11 · 連早餐；取消條款較嚴。券同纜車見 <a href="#tomamu">第五版 Tomamu</a>。</p>
+        <dl>
+          <dt>住所</dt>
+          <dd lang="ja">〒079-2204 北海道勇払郡占冠村中トマム</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81167581122">0167-58-1122</a>（予約電話）</dd>
+        </dl>
+        <p class="hotel-note">官方連絡先：受付 10:00–18:00。電話予約有追加料金。</p>
+        <p class="hotel-links"><a href="https://hoshinoresorts.com/ja/hotels/tomamuthetower/">官方網站</a><a href="https://hoshinoresorts.com/ja/hotels/tomamuthetower/contact/">連絡先</a></p>
+      </article>
+      <article class="hotel-card">
+        <h4 lang="ja">JR東日本ホテルメッツ プレミア 札幌</h4>
+        <p class="gloss">住 2/11–13 · 可 FREE CANCEL。2/11 夜入住、2/12 續住；唔搬去千歳酒店。</p>
+        <dl>
+          <dt>住所</dt>
+          <dd lang="ja">〒060-0807 北海道札幌市北区北7条西2-5-3</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81117290011">011-729-0011</a>（代表）</dd>
+        </dl>
+        <p class="hotel-links"><a href="https://www.hotelmets.jp/sapporo/">官方網站</a><a href="https://www.hotelmets.jp/sapporo/access.html">アクセス</a></p>
+      </article>
+      <article class="hotel-card">
+        <h4 lang="ja">JR東日本ホテルメッツ プレミア 秋葉原</h4>
+        <p class="gloss">住 2/13–16 · 可 FREE CANCEL。</p>
+        <dl>
+          <dt>住所</dt>
+          <dd lang="ja">〒101-0021 東京都千代田区外神田1-17-4</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81352941011">03-5294-1011</a>（代表）</dd>
+        </dl>
+        <p class="hotel-links"><a href="https://www.hotelmets.jp/akihabara/">官方網站</a><a href="https://www.hotelmets.jp/akihabara/access.html">アクセス</a></p>
+      </article>
+    </div>
   </div>
 
   <div class="block" id="align">
@@ -518,7 +587,7 @@
   <p class="folio">第三版</p>
   <h2>第一日 &amp; 北海道（2月7–12日）</h2>
   <hr class="rule" />
-  <p class="muted">Tomamu 的券、纜車同活動表喺 <a href="#tomamu">第四版</a>，唔再夾喺日子中間。</p>
+  <p class="muted">Tomamu 的券、纜車同活動表喺 <a href="#tomamu">第五版</a>，放喺東京之後。</p>
 
   <article class="day" id="d07">
     <div class="day-head">
@@ -588,7 +657,7 @@
       <div class="date-badge" aria-hidden="true"><span class="m">第五日</span><span class="d">11</span><span class="w">祝日</span></div>
       <h3>2月11日（四・建国記念の日）Tomamu → 支笏湖 → 薄野最終夜</h3>
     </div>
-    <div class="callout"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>先放 JR 千歳ロッカー，再去支笏湖。唔好先繞札幌酒店，亦唔搬去千歳酒店。當晚入住 JR東日本 METS PREMIERS SAPPORO。</div>
+    <div class="callout"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>先放 JR 千歳ロッカー，再去支笏湖。唔好先繞札幌酒店，亦唔搬去千歳酒店。當晚入住 JR東日本ホテルメッツ プレミア 札幌。</div>
     <div class="callout frost"><strong>雪祭最終日</strong>會期去到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></div>
     <ol class="steps">
       <li><strong>早上稍後 checkout</strong>：星野 Tomamu。2/11 纜車 9:00 開，霧氷只可以排上午。12:15 的列車趕唔切下午活動。去トマム站的 shuttle 向酒店核，呢度唔寫死班次</li>
@@ -611,21 +680,61 @@
     </div>
     <div class="callout frost"><strong>第二晚繼續住札幌 METS</strong>支笏湖已喺 2/11 去完。上午留札幌，下午先出發去小樽，晚上睇燈，之後返同一間酒店。唔搬去千歳酒店。2/13 仍然中午附近由 CTS 飛東京。</div>
     <ol class="steps">
-      <li><strong>上午札幌</strong>：由 METS PREMIERS SAPPORO 出發，留喺札幌，近酒店慢行，留力下午坐車</li>
+      <li><strong>上午札幌</strong>：由 JR東日本ホテルメッツ プレミア 札幌出發，留喺札幌，近酒店慢行，留力下午坐車</li>
       <li><strong>下午去小樽</strong>：JR 札幌→小樽。2027 冬期時刻未公布，具體班次出發前再核，呢度唔寫死某一班</li>
       <li><strong>晚上：小樽雪あかりの路</strong>：官方 2027 會期 2 月 6–13 日，點燈時間未公布。<a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会・2027</a>。2026 年（第 28 回，2 月 7–14 日）係 17:00–21:00，<a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 官方頁</a>。呢個係舊年時間</li>
-      <li><strong>夜返札幌</strong>：燈後返 METS PREMIERS SAPPORO，過第二晚。回程 JR 同樣未有 2027 冬期表</li>
+      <li><strong>夜返札幌</strong>：燈後返 JR東日本ホテルメッツ プレミア 札幌，過第二晚。回程 JR 同樣未有 2027 冬期表</li>
     </ol>
   </article>
 </section>
 
-<section class="edition" id="tomamu">
+<section class="edition" id="tokyo">
   <p class="folio">第四版</p>
+  <h2>東京（2月13–16日）</h2>
+  <hr class="rule" />
+
+  <article class="day" id="d13">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第七日</span><span class="d">13</span><span class="w">週六</span></div>
+      <h3>2月13日（六）札幌 → 東京</h3>
+    </div>
+    <ol class="steps">
+      <li>約 09:00 前由札幌 METS 去 CTS。短名單 NH58 11:30、BC712 11:35、JL508 11:40</li>
+      <li>HND→秋葉原：推 京急→品川→JR（約 35–45 分；約 ¥500–540）</li>
+      <li>入住秋葉原 METS，傍晚輕量購物</li>
+    </ol>
+  </article>
+  <article class="day" id="d14">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第八日</span><span class="d">14</span><span class="w">週日</span></div>
+      <h3>2月14日（日）PokéPark／備案</h3>
+    </div>
+    <p>抽籤結果約 11 月底。若不中：秋葉原電器／角色店／藥妝半天。</p>
+  </article>
+  <article class="day" id="d15">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第九日</span><span class="d">15</span><span class="w">週一</span></div>
+      <h3>2月15日（一）購物＋Shibuya Sky</h3>
+    </div>
+    <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO；BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。日落約 17:08–17:22 → Shibuya Sky 建議 16:10–16:30 入場（開售＝到訪日前 14 日 0:00 JST）。</p>
+  </article>
+  <article class="day" id="d16">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">第十日</span><span class="d">16</span><span class="w">週二</span></div>
+      <h3>2月16日（二）成田回港</h3>
+    </div>
+    <p>去<strong>成田</strong>。推 Skyliner；13:30–14:00 離酒店；JL735 參考 NRT 18:30 → HKG 22:55。</p>
+  </article>
+</section>
+
+<section class="edition" id="tomamu">
+  <p class="folio">第五版</p>
   <h2>Tomamu 專頁</h2>
   <hr class="rule" />
   <p>住 2/8 夜至 2/11 早上。第二日 15:26 先到トマム站，當日下午霧氷排唔到。第五日 とかち6 現行參考 12:15 開，只排到上午。霧氷留第三、四日。泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
 
-  <div class="block" id="lifts">
+  <div class="block unit" id="lifts">
+    <p class="unit-kicker">A</p>
     <h3>霧氷ゴンドラ vs Tower Express</h3>
     <table class="stack">
       <thead><tr><th>設施</th><th>係咩</th><th>去邊</th><th>同住宿券</th></tr></thead>
@@ -638,7 +747,8 @@
     <div class="callout paper"><strong>用券上霧氷，唔等於全日滑雪</strong>Tower Express 12/26–3/31 可至約 18:00；霧氷上り最終多數約 15:30。</div>
   </div>
 
-  <div class="block" id="voucher">
+  <div class="block unit" id="voucher">
+    <p class="unit-kicker">B</p>
     <h3>The Tower voucher</h3>
     <div class="callout frost"><strong>Voucher 原文</strong>Free Use of the MINA-MINA BEACH &amp; KIRIN NO YU throughout stay · 1 time round-trip ticket for “Terrace of Frost Tree” per night · Free Wifi in guest room</div>
     <table class="stack">
@@ -654,7 +764,8 @@
     <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。要滑一日＝另買 1 日リフト券（2026–27 窗口大人約 ¥9,500；住宿者優待約 ¥9,000）。</p>
   </div>
 
-  <div class="block" id="tomamu-activities">
+  <div class="block unit" id="tomamu-activities">
+    <p class="unit-kicker">C</p>
     <h3>活動・早午晚（2/8–11）</h3>
     <p class="count-note">下面圓點入面的數字係<strong>活動場數</strong>，例如「早上・21 場」＝早上表有 21 項。唔係時間，亦唔係價錢。搜尋之後，場數會跟住篩選結果變。</p>
     <div class="callout paper"><strong>唔包滑雪／滑雪板課堂</strong>粗體標記＝每日只有 1 場／1 組／1 晚；多場＝一日 2 場或以上。價錢跟星野 snowtomamu.jp 26/27 冬官網。第二日同第五日排唔到下午霧氷。</div>
@@ -1091,45 +1202,6 @@
 
     </div>
   </div>
-</section>
-
-<section class="edition" id="tokyo">
-  <p class="folio">第五版</p>
-  <h2>東京（2月13–16日）</h2>
-  <hr class="rule" />
-
-  <article class="day" id="d13">
-    <div class="day-head">
-      <div class="date-badge" aria-hidden="true"><span class="m">第七日</span><span class="d">13</span><span class="w">週六</span></div>
-      <h3>2月13日（六）札幌 → 東京</h3>
-    </div>
-    <ol class="steps">
-      <li>約 09:00 前由札幌 METS 去 CTS。短名單 NH58 11:30、BC712 11:35、JL508 11:40</li>
-      <li>HND→秋葉原：推 京急→品川→JR（約 35–45 分；約 ¥500–540）</li>
-      <li>入住秋葉原 METS，傍晚輕量購物</li>
-    </ol>
-  </article>
-  <article class="day" id="d14">
-    <div class="day-head">
-      <div class="date-badge" aria-hidden="true"><span class="m">第八日</span><span class="d">14</span><span class="w">週日</span></div>
-      <h3>2月14日（日）PokéPark／備案</h3>
-    </div>
-    <p>抽籤結果約 11 月底。若不中：秋葉原電器／角色店／藥妝半天。</p>
-  </article>
-  <article class="day" id="d15">
-    <div class="day-head">
-      <div class="date-badge" aria-hidden="true"><span class="m">第九日</span><span class="d">15</span><span class="w">週一</span></div>
-      <h3>2月15日（一）購物＋Shibuya Sky</h3>
-    </div>
-    <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO；BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。日落約 17:08–17:22 → Shibuya Sky 建議 16:10–16:30 入場（開售＝到訪日前 14 日 0:00 JST）。</p>
-  </article>
-  <article class="day" id="d16">
-    <div class="day-head">
-      <div class="date-badge" aria-hidden="true"><span class="m">第十日</span><span class="d">16</span><span class="w">週二</span></div>
-      <h3>2月16日（二）成田回港</h3>
-    </div>
-    <p>去<strong>成田</strong>。推 Skyliner；13:30–14:00 離酒店；JL735 參考 NRT 18:30 → HKG 22:55。</p>
-  </article>
 </section>
 
 <section class="edition" id="todo">
