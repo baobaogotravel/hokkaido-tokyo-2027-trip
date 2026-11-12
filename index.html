@@ -734,7 +734,44 @@
     letter-spacing: .03em;
     line-height: 1.4;
   }
-  .t-copy { margin: 0; font-size: .92rem; color: var(--ink); line-height: 1.7; }
+  .t-copy, .copy-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 0;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .t-copy {
+    font-size: .92rem;
+    color: var(--ink);
+    line-height: 1.68;
+  }
+  .t-copy p, .copy-stack p { margin: 0; }
+  .copy-stack {
+    margin: 0 0 14px;
+    line-height: 1.68;
+  }
+  .callout .copy-stack { margin: 0; color: inherit; font-size: inherit; }
+  .day-aside .t-copy { font-size: inherit; color: inherit; line-height: 1.68; }
+  .t-src {
+    font-size: .8rem;
+    color: var(--taupe);
+    letter-spacing: .04em;
+    line-height: 1.65;
+    padding-top: 1px;
+  }
+  .t-src::before {
+    content: "◇";
+    font-size: .58em;
+    color: var(--rose);
+    margin-right: .45em;
+    letter-spacing: 0;
+    opacity: .8;
+    vertical-align: 0.12em;
+  }
+  .t-src a { white-space: nowrap; }
+  .t-keep { white-space: nowrap; }
   .t-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .tag-mode { background: var(--blush); color: var(--rose-deep); }
   .t-card.is-train .tag-mode { background: var(--frost); color: var(--frost-deep); }
@@ -1125,8 +1162,8 @@
       <tr><td data-label="日"><span class="day-cell"><small>Day 1</small>2/7</span></td><td data-label="路段">HND→酒店</td><td data-label="推薦">モノレール→天空橋</td><td data-label="重點">約 ¥180</td></tr>
       <tr><td data-label="日"><span class="day-cell"><small>Day 2</small>2/8 早</span></td><td data-label="路段">酒店→HND</td><td data-label="推薦">免費 shuttle 6:00／6:20</td><td data-label="重點">定員 20</td></tr>
       <tr><td data-label="日"><span class="day-cell"><small>Day 2</small>2/8 午後</span></td><td data-label="路段">雪祭→トマム</td><td data-label="推薦">おおぞら7 札幌 13:57 → トマム 15:26</td><td data-label="重點">約 13:15 離場、13:45 到月台。15:26 到站，轉車之後先 check-in。指定席</td></tr>
-      <tr><td data-label="日"><span class="day-cell"><small>Day 5</small>2/11</span></td><td data-label="路段">トマム→支笏湖→札幌</td><td data-label="推薦">とかち6 12:15→南千歳 13:38，エアポート91，BLUE LINER 14:50／回 18:15</td><td data-label="重點">住札幌 METS。見 <a href="#d11">Day 5</a></td></tr>
-      <tr><td data-label="日"><span class="day-cell"><small>Day 6</small>2/12</span></td><td data-label="路段">札幌下午→小樽→札幌</td><td data-label="推薦">上午留札幌；下午 JR 去小樽</td><td data-label="重點">晚上雪あかりの路，夜返 METS</td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 5</small>2/11</span></td><td data-label="路段">トマム→支笏湖→札幌</td><td data-label="推薦">とかち6 12:15→南千歳 13:38，エアポート91，BLUE LINER 14:50／回 18:15</td><td data-label="重點">JR 現行參考，巴士 2027 官方。住札幌 METS。見 <a href="#d11">Day 5</a></td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 6</small>2/12</span></td><td data-label="路段">札幌下午→小樽→札幌</td><td data-label="推薦">上午留札幌；下午 JR 去小樽</td><td data-label="重點">晚上雪あかりの路，夜返 METS。2027 班次未公布，出發前再核</td></tr>
       <tr><td data-label="日"><span class="day-cell"><small>Day 7</small>2/13</span></td><td data-label="路段">札幌→CTS→HND→秋葉原</td><td data-label="推薦">約 08:00 離酒店；NH56 10:30→12:10（T2）；京急→品川→JR</td><td data-label="重點">快速エアポート約 33–37 分，國內線提前 60–90 分。ANA 到第2航廈；京急喺第3航廈（航廈間免費接駁），或東京モノレール有第2航廈站。秋葉原約 35–45 分</td></tr>
       <tr><td data-label="日"><span class="day-cell"><small>Day 10</small>2/16</span></td><td data-label="路段">秋葉原→NRT</td><td data-label="推薦">日暮里→Skyliner</td><td data-label="重點">13:30–14:00 離酒店</td></tr>
     </tbody>
@@ -1181,7 +1218,9 @@
       <div class="t-body">
         <p class="t-time">15:35</p>
         <h4>香港起飛 · JL026</h4>
-        <p class="t-copy">參考 HKG 15:35 → HND 20:25（T3）</p>
+                <div class="t-copy">
+          <p>參考 HKG 15:35 → HND 20:25（T3）</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">飛機</span></div>
       </div>
     </article>
@@ -1190,7 +1229,10 @@
       <div class="t-body">
         <p class="t-time">約 20:25 後</p>
         <h4>機場 → 京急 EX INN</h4>
-        <p class="t-copy">推 東京モノレール T3→天空橋（約 ¥180）→ HICity口→ゾーンJ徒歩約 2 分。酒店無機場→酒店免費接駁。</p>
+                <div class="t-copy">
+          <p>推 東京モノレール T3→天空橋（約 ¥180）→ HICity口→ゾーンJ徒歩約 2 分。</p>
+          <p>酒店無機場→酒店免費接駁。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1199,7 +1241,11 @@
       <div class="t-body">
         <p class="t-time">晚上</p>
         <h4>準備</h4>
-        <p class="t-copy">翌日手提（雪祭暖衣）；大行李可考慮運送 Tomamu；早瞓，翌朝 shuttle 6:00／6:20。</p>
+                <div class="t-copy">
+          <p>翌日手提（雪祭暖衣）</p>
+          <p>大行李可考慮運送 Tomamu</p>
+          <p>早瞓，翌朝 shuttle 6:00／6:20。</p>
+        </div>
         
       </div>
     </article>
@@ -1219,7 +1265,9 @@
       <div class="t-body">
         <p class="t-time">6:00／6:20</p>
         <h4>免費 shuttle 酒店 → 羽田</h4>
-        <p class="t-copy">免費 shuttle 6:00／6:20。</p>
+                <div class="t-copy">
+          <p>免費 shuttle 6:00／6:20。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
       </div>
     </article>
@@ -1228,7 +1276,9 @@
       <div class="t-body">
         <p class="t-time">07:30</p>
         <h4>JL503 羽田 → 新千歲</h4>
-        <p class="t-copy">JL503 HND 07:30 → CTS 09:00。</p>
+                <div class="t-copy">
+          <p>JL503 HND 07:30 → CTS 09:00。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">飛機</span><span class="tag">已訂</span></div>
       </div>
     </article>
@@ -1237,7 +1287,11 @@
       <div class="t-body">
         <p class="t-time">上午</p>
         <h4>CTS → 札幌站</h4>
-        <p class="t-copy">快速エアポート約 33–37 分；約 ¥1,230。大件未寄去 Tomamu 就放札幌ロッカー。</p>
+                <div class="t-copy">
+          <p>快速エアポート約 33–37 分</p>
+          <p>約 ¥1,230。</p>
+          <p>大件未寄去 Tomamu 就放札幌ロッカー。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1246,7 +1300,12 @@
       <div class="t-body">
         <p class="t-time">白天</p>
         <h4>大通＋薄野短訪</h4>
-        <p class="t-copy">大通雪祭會場 highlights，再短訪薄野／すすきの。今日只算白天，夜燈留到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></p>
+                <div class="t-copy">
+          <p>大通雪祭會場 highlights，再短訪薄野／すすきの。</p>
+          <p>今日只算白天，夜燈留到 2/11。</p>
+          <p>大通燈至 22:00；薄野通常至 23:00，最終日 22:00。</p>
+          <p class="t-src"><a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></p>
+        </div>
         
       </div>
     </article>
@@ -1255,7 +1314,11 @@
       <div class="t-body">
         <p class="t-time">約 13:15</p>
         <h4>離開會場</h4>
-        <p class="t-copy">行李已經寄去 Tomamu，或者已經放入ロッカー，就約 13:15 離開會場，13:45 前到 JR 札幌月台。大通／薄野／中島公園去 JR 札幌：地鐵約 10 分鐘，行路約 20 分鐘，唔好預一小時車程。</p>
+                <div class="t-copy">
+          <p>行李已經寄去 Tomamu，或者已經放入ロッカー，就約 13:15 離開會場，13:45 前到 JR 札幌月台。</p>
+          <p>大通／薄野／中島公園去 JR 札幌：地鐵約 10 分鐘，行路約 20 分鐘</p>
+          <p>唔好預一小時車程。</p>
+        </div>
         
       </div>
     </article>
@@ -1264,7 +1327,15 @@
       <div class="t-body">
         <p class="t-time">13:57</p>
         <h4>おおぞら7 札幌 → トマム</h4>
-        <p class="t-copy">札幌 13:57 → トマム 15:26；全指定席；正價約 ¥5,880。太早係 おおぞら5 11:46→13:22；太晚係 とかち5 15:51→17:39。</p>
+                <div class="t-copy">
+          <p>現行參考 札幌 13:57 → トマム 15:26</p>
+          <p>全指定席</p>
+          <p>正價約 ¥5,880。</p>
+          <p>2027 冬期表未公布。</p>
+          <p>太早係 おおぞら5 11:46→13:22</p>
+          <p>太晚係 とかち5 15:51→17:39。</p>
+          <p class="t-src"><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・下り</a>（令和8年11月号，截至 2026-11-10）</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span><span class="tag">指定席</span></div>
       </div>
     </article>
@@ -1273,7 +1344,10 @@
       <div class="t-body">
         <p class="t-time">到站之後</p>
         <h4>免費 shuttle 到 Tower</h4>
-        <p class="t-copy">免費 shuttle 去 Tower。Check-in 同當日活動排喺到站同轉車之後。</p>
+                <div class="t-copy">
+          <p>免費 shuttle 去 Tower。</p>
+          <p>Check-in 同當日活動排喺到站同轉車之後。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
       </div>
     </article>
@@ -1282,13 +1356,23 @@
       <div class="t-body">
         <p class="t-time">17:00–22:00</p>
         <h4>Ice Village</h4>
-        <p class="t-copy">當日霧氷留低。到酒店之後按 <a href="#tomamu-evening">晚上活動</a> 去 Ice Village（17:00–22:00）。</p>
+                <div class="t-copy">
+          <p>當日霧氷留低。</p>
+          <p>到酒店之後按 <a href="#tomamu-evening">晚上活動</a> 去 Ice Village（17:00–22:00）。</p>
+        </div>
         
       </div>
     </article>
       </div>
       <div class="day-asides">
-      <aside class="day-aside"><strong>15:26 先到トマム站</strong>北海道由今日開始。列車到站之後先轉 shuttle、先 check-in。霧氷上り最終約 15:30，同到站撞在一起，留 Day 3、Day 4。傍晚到酒店之後可以去 Ice Village。</aside>
+      <aside class="day-aside"><strong>15:26 先到トマム站</strong>
+        <div class="t-copy">
+          <p>北海道由今日開始。</p>
+          <p>列車到站之後先轉 shuttle、先 check-in。</p>
+          <p>霧氷上り最終約 15:30，同到站撞在一起，留 Day 3、Day 4。</p>
+          <p>傍晚到酒店之後可以去 Ice Village。</p>
+        </div>
+      </aside>
       </div>
     </div>
   </article>
@@ -1305,7 +1389,9 @@
       <div class="t-body">
         <p class="t-time">早餐後</p>
         <h4>去 Snowboard Academy</h4>
-        <p class="t-copy">早餐後去 Adventure Base 3F Ski &amp; Snowboard Academy。</p>
+                <div class="t-copy">
+          <p>早餐後去 Adventure Base 3F Ski &amp; Snowboard Academy。</p>
+        </div>
         
       </div>
     </article>
@@ -1313,9 +1399,12 @@
       <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
       <div class="t-body">
         
-        <p class="t-time">上午</p>
         <h4>新手 Snowboard Lesson（要預約）</h4>
-        <p class="t-copy">Group 120 分主要日語 ¥7,800–8,800；Private 英／日約 ¥26,300–27,800；可加中文認證雪校。</p>
+                <div class="t-copy">
+          <p>Group 120 分主要日語 ¥7,800–8,800</p>
+          <p>Private 英／日約 ¥26,300–27,800</p>
+          <p>可加中文認證雪校。</p>
+        </div>
         <div class="t-tags"><span class="tag warn">要預約</span></div>
       </div>
     </article>
@@ -1323,9 +1412,11 @@
       <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
       <div class="t-body">
         
-        <p class="t-time">上午</p>
         <h4>租賃＋當日リフト券</h4>
-        <p class="t-copy">住宿者優待約 ¥9,000。霧氷券唔等於全日 pass。</p>
+                <div class="t-copy">
+          <p>住宿者優待約 ¥9,000。</p>
+          <p>霧氷券唔等於全日 pass。</p>
+        </div>
         
       </div>
     </article>
@@ -1334,7 +1425,9 @@
       <div class="t-body">
         <p class="t-time">午後</p>
         <h4>Debut Park／初級區練板</h4>
-        <p class="t-copy">午後 Debut Park／初級區練板（Tower Express 等）。</p>
+                <div class="t-copy">
+          <p>午後 Debut Park／初級區練板（Tower Express 等）。</p>
+        </div>
         
       </div>
     </article>
@@ -1343,13 +1436,20 @@
       <div class="t-body">
         <p class="t-time">晚上</p>
         <h4>Ice Village</h4>
-        <p class="t-copy">場次見 <a href="#tomamu">Tomamu 專頁</a>。</p>
+                <div class="t-copy">
+          <p>場次見 <a href="#tomamu">Tomamu 專頁</a>。</p>
+        </div>
         
       </div>
     </article>
       </div>
       <div class="day-asides">
-      <aside class="day-aside frost"><strong>一日集中板，唔會一日 Ski 一日 Board</strong>另一日做活動。9／10 可對調。泳池同溫泉唔當今日主線。</aside>
+      <aside class="day-aside frost"><strong>一日集中板，唔會一日 Ski 一日 Board</strong>
+        <div class="t-copy">
+          <p>另一日做活動。9／10 可對調。</p>
+          <p>泳池同溫泉唔當今日主線。</p>
+        </div>
+      </aside>
       </div>
     </div>
   </article>
@@ -1367,7 +1467,11 @@
       <div class="t-body">
         <p class="t-time">7:45–15:30</p>
         <h4>霧氷テラス</h4>
-        <p class="t-copy">上り約 7:45–15:30；用住宿往返券。一般唔使約。</p>
+                <div class="t-copy">
+          <p>上り約 7:45–15:30</p>
+          <p>用住宿往返券。</p>
+          <p>一般唔使約。</p>
+        </div>
         <div class="t-tags"><span class="tag">推</span></div>
       </div>
     </article>
@@ -1376,7 +1480,10 @@
       <div class="t-body">
         <p class="t-time">7:45–9:00</p>
         <h4>シバレタイム</h4>
-        <p class="t-copy">免費；至 2/10。唔使約。</p>
+                <div class="t-copy">
+          <p>免費；至 2/10。</p>
+          <p>唔使約。</p>
+        </div>
         
       </div>
     </article>
@@ -1384,9 +1491,13 @@
       <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
       <div class="t-body">
         
-        <p class="t-time">午後</p>
         <h4>スノーモービル 3km</h4>
-        <p class="t-copy">約 ¥3,000；約 10 分；16 歲+。唔使約。</p>
+                <div class="t-copy">
+          <p>約 ¥3,000</p>
+          <p>約 10 分</p>
+          <p>16 歲+。</p>
+          <p>唔使約。</p>
+        </div>
         <div class="t-tags"><span class="tag">推</span></div>
       </div>
     </article>
@@ -1394,9 +1505,12 @@
       <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
       <div class="t-body">
         
-        <p class="t-time">午後</p>
         <h4>其他 GAO</h4>
-        <p class="t-copy">スノーシュー／ラフティング等。部分要約。全表見專頁。</p>
+                <div class="t-copy">
+          <p>スノーシュー／ラフティング等。</p>
+          <p>部分要約。</p>
+          <p>全表見專頁。</p>
+        </div>
         
       </div>
     </article>
@@ -1405,7 +1519,9 @@
       <div class="t-body">
         <p class="t-time">17:00–22:00</p>
         <h4>Ice Village</h4>
-        <p class="t-copy">住客當已包。</p>
+                <div class="t-copy">
+          <p>住客當已包。</p>
+        </div>
         
       </div>
     </article>
@@ -1426,7 +1542,10 @@
       <div class="t-body">
         <p class="t-time">早上稍後</p>
         <h4>Checkout 星野 Tomamu</h4>
-        <p class="t-copy">2/11 纜車 9:00 開，霧氷只可以排上午。12:15 的列車趕唔切下午活動。</p>
+                <div class="t-copy">
+          <p>2/11 纜車 9:00 開，霧氷只可以排上午。</p>
+          <p>12:15 的列車趕唔切下午活動。</p>
+        </div>
         
       </div>
     </article>
@@ -1434,9 +1553,10 @@
       <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
       <div class="t-body">
         
-        <p class="t-time">早上</p>
         <h4>Shuttle 去トマム站</h4>
-        <p class="t-copy">去トマム站的 shuttle 向酒店核，呢度唔寫死班次。</p>
+                <div class="t-copy">
+          <p>去トマム站的 shuttle 向酒店核，呢度唔寫死班次。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
       </div>
     </article>
@@ -1445,7 +1565,12 @@
       <div class="t-body">
         <p class="t-time">12:15</p>
         <h4>とかち6（札幌行）</h4>
-        <p class="t-copy">トマム 12:15 → 南千歳 13:38，列車續開 新札幌 14:01／札幌 14:10。<strong>唔停千歳</strong>。</p>
+                <div class="t-copy">
+          <p>現行參考 トマム 12:15 → <span class="t-keep">南千歳 13:38</span></p>
+          <p>列車續開 新札幌 14:01／札幌 14:10</p>
+          <p><strong>唔停千歳</strong></p>
+          <p class="t-src"><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道・上り</a>（令和8年11月号，截至 2026-11-10）</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1454,7 +1579,13 @@
       <div class="t-body">
         <p class="t-time">14:02</p>
         <h4>南千歳轉快速エアポート91</h4>
-        <p class="t-copy">エアポート91 南千歳 14:02 → 千歳 14:06，緩衝約 24 分。エアポート87 13:42→13:46 只剩約 4 分。エアポート89 13:53 通過千歳，停唔到。</p>
+                <div class="t-copy">
+          <p>現行參考 エアポート91 南千歳 14:02 → 千歳 14:06</p>
+          <p>緩衝約 24 分。</p>
+          <p>エアポート87 13:42→13:46 只剩<span class="t-keep">約 4 分</span>。</p>
+          <p>エアポート89 13:53 通過千歳，停唔到。</p>
+          <p class="t-src"><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート時刻</a></p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1462,9 +1593,14 @@
       <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
       <div class="t-body">
         
-        <p class="t-time">午後</p>
         <h4>行李放 JR 千歳 coin locker</h4>
-        <p class="t-copy">西口 1 階、改札外。小／中／大都有；使用開始日起計最多 3 日。<a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道ロッカー</a>（<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">一覽 PDF</a>）。千歳観光案内所的手荷物預かり 9:00–17:00，回程 19:00 之後已經收檔。<a href="https://www.welcome-to-chitose.jp/guide.html">千歳市案内</a>。</p>
+                <div class="t-copy">
+          <p>西口 1 階、改札外。</p>
+          <p>小／中／大都有；使用開始日起計最多 3 日。</p>
+          <p class="t-src"><a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道ロッカー</a>（<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">一覽 PDF</a>）</p>
+          <p>千歳観光案内所的手荷物預かり 9:00–17:00，回程 19:00 之後已經收檔。</p>
+          <p class="t-src"><a href="https://www.welcome-to-chitose.jp/guide.html">千歳市案内</a></p>
+        </div>
         
       </div>
     </article>
@@ -1473,7 +1609,19 @@
       <div class="t-body">
         <p class="t-time">14:50</p>
         <h4>BLUE LINER 去支笏湖</h4>
-        <p class="t-copy">行去東口 7 番。官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。去程 14:50、回程 18:15。自由席；10 分鐘前到站。巴士不代存行李箱。<a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス</a>。2027 官方 東口 14:50 → 支笏湖温泉約 15:35。13:20 那班喺 とかち6 到南千歳之前已經開出。14:20→15:05 由 14:06 到站計太趕，唔做主計劃。官方話 15 時之後的開出同到達可能延遲。</p>
+                <div class="t-copy">
+          <p>行去東口 7 番。</p>
+          <p>官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。</p>
+          <p>單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。</p>
+          <p>去程 14:50 同回程 18:15 要前日 20:30 前分別訂好。</p>
+          <p>當日不可訂；不可改班；取消收費 100%；自由席；10 分鐘前到站。</p>
+          <p>官方寫明巴士不代存行李箱。</p>
+          <p>2027 官方 東口 14:50 → 支笏湖温泉約 15:35。</p>
+          <p>13:20 那班喺 とかち6 到南千歳之前已經開出。</p>
+          <p>14:20→15:05 由 14:06 到站計太趕，唔做主計劃。</p>
+          <p>官方話 <span class="t-keep">15 時</span>之後的開出同到達可能延遲。</p>
+          <p class="t-src"><a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス</a></p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
       </div>
     </article>
@@ -1482,7 +1630,14 @@
       <div class="t-body">
         <p class="t-time">15:35</p>
         <h4>支笏湖氷濤まつり</h4>
-        <p class="t-copy">2027 官方 1 月 30 日–2 月 23 日，10:00–20:00，ライトアップ 16:30–20:00。平日中學生以上 ¥1,000；土日祝 ¥3,000（小學生以下免費）。2/11 係祝日，所以 ¥3,000。巴士票唔包含入場。15:35 到場，16:30 開燈前大約得 55 分鐘日光，之後留燈約 1–1.5 小時。會場喺支笏湖温泉。</p>
+                <div class="t-copy">
+          <p>2027 官方 1 月 30 日–2 月 23 日，10:00–20:00，ライトアップ 16:30–20:00。</p>
+          <p>平日中學生以上 ¥1,000；土日祝 ¥3,000（小學生以下免費）。</p>
+          <p>2/11 係祝日，所以 ¥3,000。</p>
+          <p>巴士票唔包含入場。</p>
+          <p>15:35 到場，16:30 開燈前大約得 <span class="t-keep">55 分鐘</span>日光，之後留燈約 1–1.5 小時。</p>
+          <p>會場喺支笏湖温泉。</p>
+        </div>
         
       </div>
     </article>
@@ -1491,7 +1646,13 @@
       <div class="t-body">
         <p class="t-time">18:15</p>
         <h4>BLUE LINER 回千歳</h4>
-        <p class="t-copy">2027 官方 18:15 → JR 千歳東口 19:00。取西口ロッカー之後轉札幌：千歳 19:14→札幌 19:45（エアポート157）取行李太貼；用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。計劃按大約 20:00 到札幌、薄野約 20:10–20:20。18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌。</p>
+                <div class="t-copy">
+          <p>2027 官方 18:15 → JR 千歳東口 19:00。</p>
+          <p>取西口ロッカー之後轉札幌：千歳 19:14→札幌 19:45（エアポート157）取行李太貼</p>
+          <p>用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。</p>
+          <p>計劃按大約 20:00 到札幌、薄野約 20:10–20:20。</p>
+          <p>18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
       </div>
     </article>
@@ -1500,7 +1661,12 @@
       <div class="t-body">
         <p class="t-time">最遲 19:30</p>
         <h4>跳過 20:30 那班</h4>
-        <p class="t-copy">2027 官方 19:30 → 千歳 20:15，エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。落雪若延遲，會逼近最終日 22:00。20:30 官方只到千歳 21:15，而且唔去機場。</p>
+                <div class="t-copy">
+          <p>2027 官方 19:30 → 千歳 20:15</p>
+          <p>エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。</p>
+          <p>落雪若延遲，會逼近最終日 22:00。</p>
+          <p>20:30 官方只到千歳 21:15，而且唔去機場。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
       </div>
     </article>
@@ -1509,14 +1675,30 @@
       <div class="t-body">
         <p class="t-time">約 20:00</p>
         <h4>入住 METS，再去薄野最終夜</h4>
-        <p class="t-copy">METS 離札幌站約 2 分鐘，行李先放酒店。南北線さっぽろ→すすきの約 3 分鐘，再加行路。2/12 上午留札幌，下午先去小樽。</p>
+                <div class="t-copy">
+          <p>METS 離札幌站約 2 分鐘，行李先放酒店。</p>
+          <p>南北線さっぽろ→すすきの約 3 分鐘，再加行路。</p>
+          <p>2/12 上午留札幌，下午先去小樽。</p>
+        </div>
         
       </div>
     </article>
       </div>
       <div class="day-asides">
-      <aside class="day-aside"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>先放 JR 千歳ロッカー，再去支笏湖。唔好先繞札幌酒店，亦唔搬去千歳酒店。當晚入住 JR東日本ホテルメッツ プレミア 札幌。</aside>
-      <aside class="day-aside frost"><strong>雪祭最終日</strong>會期去到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></aside>
+      <aside class="day-aside"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>
+        <div class="t-copy">
+          <p>先放 JR 千歳ロッカー，再去支笏湖。</p>
+          <p>唔好先繞札幌酒店，亦唔搬去千歳酒店。</p>
+          <p>當晚入住 JR東日本ホテルメッツ プレミア 札幌。</p>
+        </div>
+      </aside>
+      <aside class="day-aside frost"><strong>雪祭最終日</strong>
+        <div class="t-copy">
+          <p>會期去到 2/11。</p>
+          <p>大通燈至 22:00；薄野通常至 23:00，最終日 22:00。</p>
+          <p class="t-src"><a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></p>
+        </div>
+      </aside>
       </div>
     </div>
   </article>
@@ -1533,7 +1715,9 @@
       <div class="t-body">
         <p class="t-time">上午</p>
         <h4>札幌慢行</h4>
-        <p class="t-copy">由 JR東日本ホテルメッツ プレミア 札幌出發，留喺札幌，近酒店慢行，留力下午坐車。</p>
+                <div class="t-copy">
+          <p>由 JR東日本ホテルメッツ プレミア 札幌出發，留喺札幌，近酒店慢行，留力下午坐車。</p>
+        </div>
         
       </div>
     </article>
@@ -1542,7 +1726,10 @@
       <div class="t-body">
         <p class="t-time">下午</p>
         <h4>JR 札幌 → 小樽</h4>
-        <p class="t-copy">JR 札幌→小樽。</p>
+                <div class="t-copy">
+          <p>JR 札幌→小樽。</p>
+          <p>2027 冬期時刻未公布，具體班次出發前再核，呢度唔寫死某一班。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1551,7 +1738,13 @@
       <div class="t-body">
         <p class="t-time">晚上</p>
         <h4>小樽雪あかりの路</h4>
-        <p class="t-copy">2027 會期 2 月 6–13 日。<a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会</a>。2026 年點燈 17:00–21:00。</p>
+                <div class="t-copy">
+          <p>官方 2027 會期 2 月 6–13 日，點燈時間未公布。</p>
+          <p class="t-src"><a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会・2027</a></p>
+          <p>2026 年（第 28 回，2 月 7–14 日）係 17:00–21:00。</p>
+          <p>呢個係舊年時間。</p>
+          <p class="t-src"><a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 官方頁</a></p>
+        </div>
         
       </div>
     </article>
@@ -1560,13 +1753,23 @@
       <div class="t-body">
         <p class="t-time">夜返</p>
         <h4>返札幌 METS</h4>
-        <p class="t-copy">燈後返 JR東日本ホテルメッツ プレミア 札幌，過第二晚。</p>
+                <div class="t-copy">
+          <p>燈後返 JR東日本ホテルメッツ プレミア 札幌，過第二晚。</p>
+          <p>回程 JR 同樣未有 2027 冬期表。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
       </div>
       <div class="day-asides">
-      <aside class="day-aside frost"><strong>第二晚繼續住札幌 METS</strong>支笏湖已喺 2/11 去完。上午留札幌，下午先出發去小樽，晚上睇燈，之後返同一間酒店。唔搬去千歳酒店。2/13 早上 NH56 10:30 由新千歲國內線飛羽田。</aside>
+      <aside class="day-aside frost"><strong>第二晚繼續住札幌 METS</strong>
+        <div class="t-copy">
+          <p>支笏湖已喺 2/11 去完。</p>
+          <p>上午留札幌，下午先出發去小樽，晚上睇燈，之後返同一間酒店。</p>
+          <p>唔搬去千歳酒店。</p>
+          <p>2/13 早上 NH56 10:30 由新千歲國內線飛羽田。</p>
+        </div>
+      </aside>
       </div>
     </div>
   </article>
@@ -1594,7 +1797,11 @@
       <div class="t-body">
         <p class="t-time">約 08:00</p>
         <h4>出發去新千歲</h4>
-        <p class="t-copy">由 JR東日本ホテルメッツ プレミア 札幌去新千歲。快速エアポート約 33–37 分，國內線提前 60–90 分。</p>
+                <div class="t-copy">
+          <p>由 JR東日本ホテルメッツ プレミア 札幌去新千歲。</p>
+          <p>快速エアポート約 33–37 分</p>
+          <p>國內線提前 60–90 分。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1603,7 +1810,9 @@
       <div class="t-body">
         <p class="t-time">10:30</p>
         <h4>ANA NH56</h4>
-        <p class="t-copy">新千歲國內線 10:30 → 羽田 12:10，第2航廈。</p>
+                <div class="t-copy">
+          <p>新千歲國內線 10:30 → 羽田 12:10，第2航廈。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">飛機</span><span class="tag">已訂</span></div>
       </div>
     </article>
@@ -1612,7 +1821,11 @@
       <div class="t-body">
         <p class="t-time">12:10 後</p>
         <h4>HND → 秋葉原</h4>
-        <p class="t-copy">ANA 喺第2航廈到。京急喺第3航廈，航廈之間有免費接駁；東京モノレール有第2航廈站。之後京急→品川→JR，約 35–45 分（約 ¥500–540）。</p>
+                <div class="t-copy">
+          <p>ANA 喺第2航廈到。</p>
+          <p>京急喺第3航廈，航廈之間有免費接駁；東京モノレール有第2航廈站。</p>
+          <p>之後京急→品川→JR，約 35–45 分（約 ¥500–540）。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span></div>
       </div>
     </article>
@@ -1621,7 +1834,9 @@
       <div class="t-body">
         <p class="t-time">傍晚</p>
         <h4>入住秋葉原メッツ</h4>
-        <p class="t-copy">入住 JR東日本ホテルメッツ プレミア 秋葉原，傍晚輕量購物。</p>
+                <div class="t-copy">
+          <p>入住 JR東日本ホテルメッツ プレミア 秋葉原，傍晚輕量購物。</p>
+        </div>
         
       </div>
     </article>
@@ -1640,9 +1855,10 @@
       <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
       <div class="t-body">
         
-        <p class="t-time">上午</p>
         <h4>PokéPark</h4>
-        <p class="t-copy">抽籤結果約 11 月底。</p>
+                <div class="t-copy">
+          <p>抽籤結果約 11 月底。</p>
+        </div>
         <div class="t-tags"><span class="tag warn">抽籤待結果</span></div>
       </div>
     </article>
@@ -1651,7 +1867,9 @@
       <div class="t-body">
         
         <h4>若不中：秋葉原半天</h4>
-        <p class="t-copy">若不中：秋葉原電器／角色店／藥妝半天。</p>
+                <div class="t-copy">
+          <p>若不中：秋葉原電器／角色店／藥妝半天。</p>
+        </div>
         
       </div>
     </article>
@@ -1671,7 +1889,10 @@
       <div class="t-body">
         <p class="t-time">午前</p>
         <h4>澀谷購物</h4>
-        <p class="t-copy">午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO；BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。</p>
+                <div class="t-copy">
+          <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO</p>
+          <p>BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。</p>
+        </div>
         
       </div>
     </article>
@@ -1680,7 +1901,10 @@
       <div class="t-body">
         <p class="t-time">16:10–16:30</p>
         <h4>Shibuya Sky</h4>
-        <p class="t-copy">日落約 17:08–17:22 → Shibuya Sky 建議 16:10–16:30 入場（開售＝到訪日前 14 日 0:00 JST）。</p>
+                <div class="t-copy">
+          <p>日落約 17:08–17:22 → Shibuya Sky 建議 16:10–16:30 入場</p>
+          <p>開售＝到訪日前 14 日 0:00 JST。</p>
+        </div>
         
       </div>
     </article>
@@ -1700,7 +1924,10 @@
       <div class="t-body">
         <p class="t-time">13:30–14:00</p>
         <h4>離開酒店去成田</h4>
-        <p class="t-copy">去成田。推 Skyliner；13:30–14:00 離酒店。</p>
+                <div class="t-copy">
+          <p>去成田。推 Skyliner</p>
+          <p>13:30–14:00 離酒店。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">列車</span><span class="tag">推 Skyliner</span></div>
       </div>
     </article>
@@ -1709,7 +1936,9 @@
       <div class="t-body">
         <p class="t-time">18:30</p>
         <h4>JL735 成田回港</h4>
-        <p class="t-copy">參考 NRT 18:30 → HKG 22:55。</p>
+                <div class="t-copy">
+          <p>參考 NRT 18:30 → HKG 22:55。</p>
+        </div>
         <div class="t-tags"><span class="tag tag-mode">飛機</span><span class="tag warn">成田起飛</span></div>
       </div>
     </article>
@@ -1721,7 +1950,13 @@
 <section class="edition page" id="tomamu">
   <h2>Tomamu 專頁</h2>
   <hr class="rule" />
-  <p>住 2/8 夜至 2/11 早上。Day 2 15:26 先到トマム站，當日下午霧氷排唔到。Day 5 とかち6 12:15 開，只排到上午。霧氷留 Day 3、Day 4。泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
+  <div class="copy-stack">
+    <p>住 2/8 夜至 2/11 早上。</p>
+    <p>Day 2 15:26 先到トマム站，當日下午霧氷排唔到。</p>
+    <p>Day 5 とかち6 現行參考 12:15 開，只排到上午。</p>
+    <p>霧氷留 Day 3、Day 4。</p>
+    <p>泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
+  </div>
 
   <div class="block unit" id="tomamu-activities">
     <h3>活動・早午晚（2/8–11）</h3>
@@ -2187,7 +2422,10 @@
         <tr><td data-label="項目">Ice Village</td><td data-label="意思">多數 Tower 客滯在免費</td><td data-label="注意">行程當作已包</td></tr>
       </tbody>
     </table>
-    <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。要滑一日＝另買 1 日リフト券（2026–27 窗口大人約 ¥9,500；住宿者優待約 ¥9,000）。</p>
+    <div class="copy-stack">
+      <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。</p>
+      <p>要滑一日＝另買 1 日リフト券（2026–27 窗口大人約 ¥9,500；住宿者優待約 ¥9,000）。</p>
+    </div>
   </div>
 
   </section>
@@ -2243,7 +2481,12 @@
 <section class="edition page" id="jr">
   <h2>JR／eki-net（外國人）</h2>
   <hr class="rule" />
-  <div class="callout"><strong>訪日／海外居住：基本上買正價</strong>えきねっと＝日本國內居住者用；海外居住者不能註冊。訪日用 <strong>JR-EAST Train Reservation</strong>：可買おおぞら／とかち指定席，但係正價（普通車指定席片道約 ¥5,880），無外國人專屬價，亦無特急トクだ値。</div>
+  <div class="callout"><strong>訪日／海外居住：基本上買正價</strong>
+    <div class="copy-stack">
+      <p>えきねっと＝日本國內居住者用；海外居住者不能註冊。</p>
+      <p>訪日用 <strong>JR-EAST Train Reservation</strong>：可買おおぞら／とかち指定席，但係正價（普通車指定席片道約 ¥5,880），無外國人專屬價，亦無特急トクだ値。</p>
+    </div>
+  </div>
   <table class="stack">
     <thead><tr><th>項目</th><th>做法</th><th>注意</th></tr></thead>
     <tbody>
@@ -2255,7 +2498,11 @@
       <tr><td data-label="項目">發車後</td><td data-label="做法">指定券無效</td><td data-label="注意">當日後續或可立席／空席</td></tr>
     </tbody>
   </table>
-  <p>トマム駅無售票；回程可 Tower 指定席售票機（不收現金）或事先網上買。2/11 喺南千歳落車，指定席買到南千歳。</p>
+  <div class="copy-stack">
+    <p>トマム駅無售票</p>
+    <p>回程可 Tower 指定席售票機（不收現金）或事先網上買。</p>
+    <p>2/11 喺南千歳落車，指定席買到南千歳。</p>
+  </div>
 </section>
 
 </main>
