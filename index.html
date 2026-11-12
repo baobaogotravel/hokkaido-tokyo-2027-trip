@@ -4,909 +4,1990 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light" />
-<meta name="description" content="2027年2月7–16日 北海道＋東京行程：羽田、札幌雪祭、星野 Tomamu、支笏湖、東京。附 Tomamu 2/8–11 早午晚活動同價錢。" />
+<meta name="description" content="2027年2月7–16日 北海道＋東京行程。第一至十日總覽、交通、北海道每日、Tomamu 專頁、東京、待辦、JR。2/12 上午札幌、下午小樽夜燈。" />
 <title>2027年2月 北海道＋東京行程</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet" />
 <style>
+
   :root {
-    --ink: #141c2b;
-    --indigo: #1c3052;
-    --indigo-mid: #2a4570;
-    --paper: #e8e2d6;
-    --cream: #fbf7f0;
-    --card: #fffdf8;
-    --text: #1a2230;
-    --muted: #4e5664;
-    --line: #ddd2c0;
-    --line-strong: #cfc3ae;
-    --gold: #8d6b3a;
-    --gold-soft: #d9c7a4;
-    --gold-bright: #e4c98a;
-    --crimson: #8e3040;
-    --crimson-deep: #6e2430;
-    --crimson-soft: #f8eeea;
-    --ok: #1b5c40;
-    --ok-bg: #e5f2eb;
-    --warn: #7a5310;
-    --warn-bg: #f8f0dc;
-    --info: #1d3f72;
-    --info-bg: #eef3f8;
-    --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif TC", "Noto Serif CJK TC", "Songti TC", "PMingLiU", "Source Han Serif TC", serif;
-    --sans: "PingFang TC", "Hiragino Sans", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
-    --shadow: 0 1px 0 rgba(255,255,255,.75) inset, 0 12px 32px rgba(20, 28, 43, .05);
-    --max: 1180px;
+    --paper: #F3EBE3;
+    --paper-deep: #EDE0D6;
+    --cream: #FBF7F2;
+    --card: rgba(255, 252, 249, .95);
+    --ink: #3F3530;
+    --cocoa: #5A433A;
+    --taupe: #8A7368;
+    --rose: #C9928E;
+    --rose-deep: #A56B67;
+    --blush: #F4E7E3;
+    --frost: #E3EEEF;
+    --frost-deep: #7A9AA0;
+    --line: rgba(90, 67, 58, .12);
+    --line-strong: rgba(90, 67, 58, .2);
+    --shadow: 0 14px 36px rgba(90, 67, 58, .06);
+    --serif: "Noto Serif TC", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "Songti TC", "PMingLiU", serif;
+    --sans: "Noto Sans TC", "PingFang TC", "Hiragino Sans", "Yu Gothic", "Microsoft JhengHei", "WenQuanYi Micro Hei", sans-serif;
+    --max: 1080px;
+    --chrome-h: 154px;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: auto; scroll-padding-top: 0; overflow-anchor: none; }
+  .edition.page { scroll-margin-top: 0; }
   body {
     margin: 0;
     font-family: var(--sans);
-    background:
-      radial-gradient(ellipse at 0% 0%, rgba(255,255,255,.55), transparent 42%),
-      var(--paper);
-    color: var(--text);
-    line-height: 1.65;
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(ellipse at 8% 0%, rgba(201, 146, 142, .16), transparent 42%),
+      radial-gradient(ellipse at 96% 8%, rgba(122, 154, 160, .16), transparent 44%),
+      radial-gradient(ellipse at 50% 100%, rgba(244, 231, 227, .7), transparent 55%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%235A433A' stroke-width='0.7' opacity='0.11'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z'/%3E%3Cpath d='M40 16L64 40L40 64L16 40Z'/%3E%3C/g%3E%3Cg fill='%23A56B67' opacity='0.14'%3E%3Ccircle cx='40' cy='40' r='1.15'/%3E%3Ccircle cx='0' cy='40' r='1'/%3E%3Ccircle cx='80' cy='40' r='1'/%3E%3Ccircle cx='40' cy='0' r='1'/%3E%3Ccircle cx='40' cy='80' r='1'/%3E%3C/g%3E%3Cg stroke='%237A9AA0' stroke-width='0.55' fill='none' opacity='0.18'%3E%3Cpath d='M10 10v7M6.5 13.5h7M7.6 11.1l5.8 5.8M7.6 15.9l5.8-5.8'/%3E%3Cpath d='M70 66v7M66.5 69.5h7M67.6 67.1l5.8 5.8M67.6 71.9l5.8-5.8'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    line-height: 1.75;
     font-size: 16.5px;
   }
   body::before {
     content: "";
-    display: block;
-    height: 7px;
-    background: linear-gradient(90deg, var(--crimson-deep), #a84b58 42%, var(--crimson-deep));
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    opacity: .22;
+    background-image: radial-gradient(rgba(90, 67, 58, .11) .7px, transparent .8px);
+    background-size: 3px 3px;
+    mix-blend-mode: multiply;
+    z-index: 0;
   }
-  a { color: var(--info); text-underline-offset: 3px; }
-  a:hover { color: var(--crimson); }
-  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  body::after {
+    content: "";
+    pointer-events: none;
+    position: fixed;
+    right: -90px;
+    top: -90px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 40px solid rgba(201, 146, 142, .09);
+    box-shadow: inset 0 0 0 52px rgba(227, 238, 239, .18), 0 0 0 88px rgba(244, 231, 227, .22);
+    z-index: 0;
+  }
+  a { color: var(--rose-deep); text-underline-offset: 3px; }
+  a:hover { color: var(--cocoa); }
+  :focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
   .skip {
-    position: absolute;
-    left: 12px;
-    top: -40px;
-    background: var(--cream);
-    color: var(--ink);
-    padding: 8px 12px;
-    z-index: 50;
+    position: absolute; left: 12px; top: -48px; z-index: 80;
+    background: var(--cream); color: var(--ink); padding: 8px 12px;
   }
   .skip:focus { top: 10px; }
 
-  .hero {
-    position: relative;
-    color: #f6f0e6;
-    background:
-      radial-gradient(ellipse at 80% 0%, rgba(228, 201, 138, .16), transparent 46%),
-      linear-gradient(168deg, #10192c 0%, #1a3054 52%, #243f66 100%);
-    overflow: hidden;
-    padding: 42px 20px 78px;
-  }
-  .hero-snow, .hero-mountains { position: absolute; inset: auto 0 0 0; width: 100%; pointer-events: none; }
-  .hero-snow { top: 0; height: 100%; }
-  .hero-mountains { height: 92px; }
-  .hero-inner { position: relative; max-width: var(--max); margin: 0 auto; z-index: 1; }
-  .eyebrow {
-    margin: 0 0 10px;
-    font-family: var(--serif);
-    letter-spacing: .28em;
-    font-size: .78rem;
-    color: var(--gold-bright);
-  }
-  .hero-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
-  .hero h1 {
-    margin: 0 0 12px;
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(1.85rem, 4.2vw, 2.75rem);
-    letter-spacing: .06em;
-    line-height: 1.28;
-  }
-  .lede { margin: 0; max-width: 46rem; color: rgba(246, 240, 230, .9); font-size: 1.02rem; }
-  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; padding: 0; list-style: none; }
-  .hero-chips li {
-    border: 1px solid rgba(228, 201, 138, .45);
-    color: #f3e6cc;
-    padding: 4px 10px;
-    font-size: .84rem;
-    letter-spacing: .04em;
-    background: rgba(16, 25, 44, .25);
-  }
-  .seal {
-    flex: 0 0 auto;
-    width: 68px;
-    height: 68px;
-    margin-top: 6px;
-    display: grid;
-    place-items: center;
-    border: 2px solid rgba(212, 132, 138, .85);
-    color: #f0c4c4;
-    font-family: var(--serif);
-    font-size: 1.85rem;
-    letter-spacing: 0;
-    transform: rotate(-8deg);
-    background: rgba(142, 48, 64, .12);
-  }
-
-  .toc-bar {
+  .chrome {
     position: sticky;
     top: 0;
-    z-index: 30;
-    background: rgba(251, 247, 240, .94);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line-strong);
-    box-shadow: 0 8px 20px rgba(20, 28, 43, .04);
+    z-index: 50;
+    background:
+      linear-gradient(180deg, rgba(251, 247, 242, .92) 0%, rgba(247, 242, 235, .9) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 rgba(90, 67, 58, .04);
   }
-  .toc {
+  .mast {
+    position: relative;
+    z-index: 1;
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 12px 22px 0;
   }
-  .toc summary {
-    cursor: pointer;
+  .mast-row { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+  .mast-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: min(100%, 28rem);
+    margin: 0 0 6px;
+  }
+  .mast-mark::before,
+  .mast-mark::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 146, 142, .55), rgba(122, 154, 160, .45), transparent);
+  }
+  .mast-mark .fleuron {
+    width: 11px; height: 11px;
+    transform: rotate(45deg);
+    border: 1px solid rgba(165, 107, 103, .7);
+    background: rgba(244, 231, 227, .8);
+    flex: 0 0 auto;
+  }
+  .mast h1 {
+    margin: 0;
     font-family: var(--serif);
-    letter-spacing: .14em;
-    padding: 12px 0;
-    color: var(--indigo);
-    list-style: none;
-  }
-  .toc summary::-webkit-details-marker { display: none; }
-  .toc summary::after { content: " ＋"; color: var(--crimson); font-family: var(--sans); }
-  .toc[open] summary::after { content: " －"; }
-  .toc-links { display: flex; flex-wrap: wrap; gap: 6px 8px; padding: 0 0 12px; }
-  .toc-links a {
-    text-decoration: none;
-    color: var(--indigo);
-    background: transparent;
-    border: 1px solid var(--line-strong);
-    padding: 4px 10px;
-    font-size: .86rem;
-    line-height: 1.45;
-  }
-  .toc-links a:hover, .toc-links a.is-current {
-    background: var(--indigo);
-    color: #f6f0e6;
-    border-color: var(--indigo);
-  }
-  .toc-links a.toc-em { border-color: var(--crimson); color: var(--crimson); }
-  .toc-links a.toc-em:hover, .toc-links a.toc-em.is-current {
-    background: var(--crimson);
-    color: #fffaf6;
-    border-color: var(--crimson);
-  }
-  @media (min-width: 900px) {
-    .toc > summary { display: none; }
-    .toc-links { padding-top: 10px; }
-  }
-
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 22px 16px 72px; }
-  section {
-    background: linear-gradient(180deg, var(--card) 0%, var(--cream) 100%);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 20px 18px 8px;
-    margin: 0 0 16px;
-    box-shadow: var(--shadow);
-    scroll-margin-top: 96px;
-  }
-  h2, h3, h4 { font-family: var(--serif); font-weight: 560; letter-spacing: .04em; color: var(--ink); }
-  h2 {
-    margin: 0 0 14px;
-    font-size: 1.42rem;
+    font-weight: 600;
+    font-size: clamp(1.32rem, 2.6vw, 1.95rem);
+    letter-spacing: .08em;
     line-height: 1.35;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--gold-soft);
-    position: relative;
+    color: var(--cocoa);
   }
-  h2::after {
+  .mast h1 .amp {
+    display: inline-block;
+    margin: 0 .12em;
+    color: var(--rose-deep);
+    font-weight: 500;
+    letter-spacing: 0;
+    font-style: italic;
+    transform: translateY(-.04em);
+  }
+  .mast h1 .tail {
+    letter-spacing: .16em;
+    font-weight: 500;
+    font-size: .86em;
+    margin-left: .18em;
+    color: var(--cocoa);
+  }
+  .hills { display: block; width: 100%; height: 22px; margin: 8px 0 0; }
+
+  .section-nav {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    border-bottom: none;
+  }
+  .section-nav ul {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 16px 12px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 16px;
+  }
+  .section-nav ul::-webkit-scrollbar { display: none; }
+  .section-nav li { flex: 0 0 auto; }
+  .section-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--taupe);
+    min-width: 4.25rem;
+    padding: 7px 14px 8px;
+    border-radius: 18px;
+    line-height: 1.2;
+    scroll-snap-align: start;
+  }
+  .section-nav a small {
+    font-family: var(--serif);
+    letter-spacing: .12em;
+    font-size: .62rem;
+    color: var(--rose);
+  }
+  .section-nav a span { font-size: .92rem; color: var(--cocoa); }
+  .section-nav a:hover {
+    background: rgba(244, 231, 227, .7);
+  }
+  .section-nav a.is-current {
+    background: var(--blush);
+    box-shadow: inset 0 0 0 1px rgba(201, 146, 142, .3);
+  }
+  .section-nav a.is-current span,
+  .section-nav a.is-current small { color: var(--rose-deep); }
+  .section-nav a.is-current span { font-weight: 700; }
+  .nav-fade, .nav-fade-left { display: none; }
+
+  main { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 18px 16px 80px; }
+  .edition {
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(244, 231, 227, .35) 0 92px, transparent 180px),
+      var(--card);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 26px 24px 16px;
+    margin: 0;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .edition::before { content: none; display: none; }
+  .edition::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 46px;
-    height: 2px;
-    background: var(--crimson);
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, var(--rose-deep), var(--rose), var(--frost-deep));
+    opacity: .7;
   }
-  h3 { margin: 20px 0 8px; font-size: 1.12rem; }
+  .edition > * { position: relative; z-index: 1; }
+  .folio {
+    margin: 0;
+    font-family: var(--serif);
+    letter-spacing: .22em;
+    font-size: .72rem;
+    color: var(--rose-deep);
+  }
+  .edition > h2, .block h3, .day h3, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    color: var(--cocoa);
+    letter-spacing: .04em;
+  }
+  .edition > h2 {
+    margin: 4px 0 10px;
+    font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+    line-height: 1.35;
+    font-weight: 600;
+    max-width: 85%;
+  }
+  .block { margin: 0 0 22px; padding-top: 4px; }
+  .unit {
+    margin: 20px 0 8px;
+    padding: 18px 16px 8px;
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+  }
+  .unit + .unit { margin-top: 26px; }
+  .unit-kicker {
+    margin: 0 0 4px;
+    font-family: var(--serif);
+    letter-spacing: .18em;
+    font-size: .72rem;
+    color: var(--rose-deep);
+  }
+  .hotel-list { display: grid; gap: 14px; margin: 8px 0 4px; }
+  .hotel-card {
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 16px 16px 14px;
+    border-top: 0;
+    border-left: 4px solid var(--rose);
+    box-shadow: 0 8px 20px rgba(90, 67, 58, .04);
+  }
+  .hotel-card h4 { margin: 0; font-size: 1.08rem; line-height: 1.45; }
+  .hotel-card .gloss { margin: 2px 0 10px; color: var(--taupe); font-size: .9rem; }
+  .hotel-card dl { margin: 0; display: grid; grid-template-columns: 4.5rem 1fr; gap: 6px 10px; }
+  .hotel-card dt { margin: 0; font-family: var(--serif); color: var(--rose-deep); font-size: .84rem; }
+  .hotel-card dd { margin: 0; }
+  .hotel-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; }
+  .hotel-note { margin: 8px 0 0; color: var(--cocoa); font-size: .92rem; }
+  .block h3, .day h3 { margin: 0 0 8px; font-size: 1.18rem; }
   h4 { margin: 16px 0 8px; font-size: 1.02rem; }
-  p, li { color: var(--text); }
-  .muted { color: var(--muted); font-size: .95rem; }
-  .day-head { display: flex; gap: 14px; align-items: flex-start; }
-  .day-head h2 { flex: 1; min-width: 0; }
-  .hero-top h1 { min-width: 0; }
-  .date-badge {
-    flex: 0 0 auto;
-    width: 66px;
-    text-align: center;
-    background: var(--indigo);
-    color: #f6f0e6;
-    padding: 7px 4px 8px;
-    border-radius: 2px 12px 2px 12px;
-    box-shadow: inset 0 0 0 1px rgba(228, 201, 138, .45);
-    margin-top: 2px;
+  .muted, caption { color: var(--taupe); font-size: .92rem; }
+  caption { caption-side: bottom; text-align: left; padding-top: 8px; }
+  .rule {
+    height: 7px; border: 0; margin: 4px 0 22px; opacity: .55; border-radius: 3px;
+    background: repeating-linear-gradient(90deg,
+      var(--rose-deep) 0 7px, transparent 7px 12px,
+      var(--frost-deep) 12px 19px, transparent 19px 24px,
+      var(--cocoa) 24px 28px, transparent 28px 34px);
   }
-  .date-badge .m, .date-badge .w { display: block; font-size: .68rem; letter-spacing: .08em; color: var(--gold-bright); white-space: nowrap; }
-  .date-badge .d { display: block; font-family: var(--serif); font-size: 1.55rem; line-height: 1.05; }
+
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 0 0 26px;
+  }
+  .kpi {
+    position: relative;
+    overflow: hidden;
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 14px 16px 13px 18px;
+    box-shadow: 0 8px 20px rgba(90, 67, 58, .04);
+  }
+  .kpi::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--kpi-accent, var(--rose-deep));
+    border-radius: 4px 0 0 4px;
+  }
+  .kpi-label {
+    margin: 0 0 4px;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    color: var(--taupe);
+  }
+  .kpi-value {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--cocoa);
+    letter-spacing: .04em;
+    word-break: keep-all;
+  }
+  .kpi-meta { margin: 4px 0 0; font-size: .82rem; color: var(--taupe); line-height: 1.45; }
+  .journey {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0 0 22px;
+    padding: 12px 10px;
+    background: linear-gradient(90deg, rgba(244,231,227,.65), rgba(227,238,239,.55));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  .journey-stop {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--cocoa);
+    letter-spacing: .04em;
+    padding: 2px 4px;
+    flex: 1 1 0;
+    text-align: center;
+    word-break: keep-all;
+  }
+  .journey-stop small {
+    display: block;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    color: var(--rose-deep);
+  }
+  .journey-arrow {
+    color: var(--rose);
+    padding: 0 10px;
+    font-size: 1.05rem;
+  }
 
   .callout {
-    border: 1px solid var(--line);
-    border-left: 3px solid var(--indigo);
-    background: #f7f4ee;
-    border-radius: 0 12px 12px 0;
-    padding: 12px 14px;
+    border-radius: 18px;
+    padding: 12px 16px;
     margin: 12px 0;
+    background: var(--blush);
+    color: var(--cocoa);
   }
-  .callout strong { display: block; margin-bottom: 4px; color: var(--ink); }
-  .callout.warn { border-left-color: var(--gold); background: var(--warn-bg); }
-  .callout.danger { border-left-color: var(--crimson); background: var(--crimson-soft); }
-  .callout.info { border-left-color: var(--indigo-mid); background: var(--info-bg); }
-  .xref {
-    margin: 12px 0;
-    padding: 8px 12px;
+  .callout strong { display: block; font-family: var(--serif); letter-spacing: .03em; margin-bottom: 2px; }
+  .callout.frost { background: var(--frost); }
+  .callout.paper { background: var(--paper-deep); }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: .95rem; }
+  th, td { padding: 11px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+  th {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: .78rem;
+    letter-spacing: .08em;
+    color: var(--taupe);
     background: transparent;
-    border-top: 1px dashed var(--line-strong);
-    border-bottom: 1px dashed var(--line-strong);
-    font-size: .95rem;
   }
-  .xref a { font-family: var(--serif); letter-spacing: .03em; }
-
-  table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: .95rem; }
-  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-  th { background: #f3ecdf; color: var(--indigo); font-weight: 650; font-size: .84rem; letter-spacing: .04em; }
-  tbody tr:hover td { background: rgba(28, 48, 82, .035); }
-  table.facts th { width: 7.5rem; white-space: nowrap; background: #f6f1e7; }
-  caption { caption-side: bottom; text-align: left; color: var(--muted); font-size: .82rem; padding-top: 6px; }
-
-  .tag {
-    display: inline-block;
-    font-size: .75rem;
-    letter-spacing: .06em;
-    padding: 1px 7px;
-    border-radius: 2px;
-    border: 1px solid transparent;
-    line-height: 1.5;
-    vertical-align: 1px;
+  table.days td:first-child {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--cocoa);
+    font-size: 1.02rem;
+    letter-spacing: .04em;
+  }
+  table.days td:nth-child(2) {
+    color: var(--rose-deep);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
     font-family: var(--serif);
   }
-  .tag.ok { background: var(--ok-bg); color: var(--ok); }
-  .tag.warn { background: var(--warn-bg); color: var(--warn); border-color: #e4d2a4; }
-  .tag.danger { background: var(--crimson-soft); color: var(--crimson); border-color: #e4c4c0; }
-  .tag.info { background: var(--info-bg); color: var(--info); }
+  .tag {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: .75rem;
+    letter-spacing: .06em;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: var(--frost);
+    color: var(--frost-deep);
+  }
+  .tag.warn { background: #F3E6D4; color: #8A6238; }
+  .tag.rose { background: var(--blush); color: var(--rose-deep); }
 
-  ol.steps { list-style: none; padding: 0; margin: 8px 0 14px; counter-reset: step; }
-  ol.steps li { position: relative; padding: 6px 0 10px 42px; margin: 0; }
+  .day { padding: 4px 0 18px; }
+  .edition.page { display: none; }
+  .edition.page.active { display: block; animation: pageIn .35s ease; }
+  .day-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 16px; }
+  .day-chip {
+    appearance: none;
+    border: 1px solid var(--line-strong);
+    background: var(--cream);
+    color: var(--cocoa);
+    font-family: var(--serif);
+    font-size: .92rem;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .day-chip:hover { border-color: var(--rose); color: var(--rose-deep); }
+  .day-chip.active {
+    background: var(--rose-deep);
+    color: var(--cream);
+    border-color: var(--rose-deep);
+  }
+  article.day { display: none; }
+  article.day.active { display: block; animation: pageIn .3s ease; }
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  .day-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 8px; }
+  .date-badge {
+    flex: 0 0 auto;
+    width: 78px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, var(--blush), var(--frost));
+    color: var(--cocoa);
+    text-align: center;
+    padding: 8px 2px 9px;
+  }
+  .date-badge .m, .date-badge .w { display: block; letter-spacing: 0; white-space: nowrap; word-break: keep-all; }
+  .date-badge .m { font-size: .68rem; color: var(--rose-deep); }
+  .date-badge .w { font-size: .72rem; color: var(--cocoa); }
+  .date-badge .d { display: block; font-family: var(--serif); font-size: 1.5rem; line-height: 1.05; }
+  @media (min-width: 721px) {
+    table.days td:first-child, table.days th:first-child { white-space: nowrap; width: 5.4rem; }
+  }
+  ol.steps { list-style: none; padding: 0; margin: 8px 0 4px; counter-reset: step; }
+  ol.steps li { position: relative; padding: 4px 0 10px 40px; }
   ol.steps li::before {
     counter-increment: step;
     content: counter(step);
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--gold-soft);
-    border-radius: 50%;
-    color: var(--indigo);
-    font-family: var(--serif);
-    display: grid;
-    place-items: center;
-    font-size: .9rem;
-    background: #fff;
+    position: absolute; left: 0; top: 6px;
+    width: 26px; height: 26px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--serif); font-size: .82rem;
+    color: var(--rose-deep);
+    background: var(--cream);
+    border: 1px solid rgba(201, 146, 142, .45);
   }
-  ul.check { list-style: none; padding: 0; margin: 8px 0 12px; }
-  ul.check li { padding: 9px 2px; border-bottom: 1px solid var(--line); }
-  ul.check li:last-child { border-bottom: 0; }
-  ul.decide { padding-left: 1.2rem; }
-  ul.decide li { margin: 6px 0; }
+  .xref { margin: 8px 0 0; font-size: .95rem; color: var(--taupe); }
 
-  .perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; padding: 0; margin: 12px 0; list-style: none; }
-  .perks li {
-    background: #fff;
-    border: 1px solid var(--line);
-    border-top: 2px solid var(--gold);
-    padding: 8px 10px;
-    font-size: .92rem;
-  }
-  .perks span { display: block; font-family: var(--serif); color: var(--crimson); font-size: .78rem; letter-spacing: .08em; margin-bottom: 2px; }
+  .perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; padding: 0; margin: 12px 0; list-style: none; }
+  .perks li { background: var(--cream); border-radius: 16px; padding: 10px 12px; border: 1px solid var(--line); font-size: .92rem; }
+  .perks span { display: block; font-family: var(--serif); color: var(--rose-deep); font-size: .78rem; letter-spacing: .08em; }
 
-  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 8px 0 4px; font-size: .9rem; color: var(--muted); }
   .act-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
-  .act-tools input[type="search"] {
-    font: inherit;
-    color: var(--text);
-    background: #fff;
-    border: 1px solid var(--line-strong);
-    border-radius: 999px;
-    padding: 8px 14px;
-    min-width: min(100%, 280px);
-    flex: 1 1 220px;
+  .act-tools input[type="search"], .act-tools button {
+    font: inherit; color: var(--ink); background: var(--cream);
+    border: 1px solid var(--line-strong); border-radius: 999px; padding: 8px 14px;
   }
-  .act-tools button {
-    font: inherit;
-    background: transparent;
-    border: 1px solid var(--line-strong);
-    color: var(--indigo);
-    border-radius: 999px;
-    padding: 8px 14px;
-    cursor: pointer;
-  }
-  .act-tools button:hover { border-color: var(--crimson); color: var(--crimson); }
-  .filter-meta { margin: 0; font-size: .88rem; color: var(--muted); flex: 1 1 100%; }
+  .act-tools input[type="search"] { min-width: min(100%, 260px); flex: 1 1 220px; }
+  .act-tools button { cursor: pointer; color: var(--cocoa); }
+  .filter-meta { margin: 0; flex: 1 1 100%; color: var(--taupe); font-size: .88rem; }
+  .count-note { margin: 0 0 8px; color: var(--taupe); font-size: .9rem; }
 
-  .tabs { position: relative; margin-top: 6px; }
+  .tabs { position: relative; }
   .tab-labels { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
   .tabs input[type="radio"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    pointer-events: none;
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
   }
   .tab-labels label {
     font-family: var(--serif);
-    letter-spacing: .06em;
+    letter-spacing: .04em;
     border: 1px solid var(--line-strong);
-    background: transparent;
-    color: var(--indigo);
+    background: var(--cream);
+    color: var(--cocoa);
     padding: 8px 14px;
     border-radius: 999px;
     cursor: pointer;
   }
-  .tab-labels label .count {
-    font-family: var(--sans);
-    font-size: .78rem;
-    letter-spacing: 0;
-    margin-left: 4px;
-    opacity: .75;
-  }
+  .tab-labels label .count { font-family: var(--sans); letter-spacing: 0; }
   #tab-morning:checked ~ .tab-labels label[for="tab-morning"],
   #tab-afternoon:checked ~ .tab-labels label[for="tab-afternoon"],
   #tab-evening:checked ~ .tab-labels label[for="tab-evening"] {
-    background: var(--indigo);
-    color: #f6f0e6;
-    border-color: var(--indigo);
-  }
-  #tab-morning:focus-visible ~ .tab-labels label[for="tab-morning"],
-  #tab-afternoon:focus-visible ~ .tab-labels label[for="tab-afternoon"],
-  #tab-evening:focus-visible ~ .tab-labels label[for="tab-evening"] {
-    outline: 2px solid var(--gold);
-    outline-offset: 2px;
+    background: var(--rose-deep);
+    color: var(--cream);
+    border-color: var(--rose-deep);
   }
   .panel { display: none; }
   #tab-morning:checked ~ .panel-morning,
   #tab-afternoon:checked ~ .panel-afternoon,
   #tab-evening:checked ~ .panel-evening { display: block; }
-  .panel h3 { margin-top: 4px; }
   .name { font-weight: 700; }
-  .ja { display: block; color: var(--muted); font-size: .88em; margin-top: 1px; }
+  .ja { display: block; color: var(--taupe); font-size: .88em; }
   .mark {
-    display: inline-block;
-    margin: 0 6px 2px 0;
-    vertical-align: 1px;
-    font-size: .72rem;
+    display: inline-block; margin: 0 6px 2px 0; vertical-align: 1px;
+    font-size: .72rem; letter-spacing: .06em;
+  }
+  .mark.once, .mark.rep { font-family: var(--serif); border-radius: 999px; padding: 0 6px; letter-spacing: 0; font-size: .72rem; }
+  .mark.once { color: var(--rose-deep); border: 1px solid var(--rose); }
+  .mark.rep { color: var(--frost-deep); border: 1px solid var(--frost-deep); }
+  tr.row-once td { background: rgba(244, 231, 227, .45); }
+  td.price { font-variant-numeric: tabular-nums; }
+  td.is-free { color: var(--frost-deep); }
+  tr.filtered-out { display: none !important; }
+  .filter-empty { display: none; color: var(--taupe); }
+  .panel.is-empty .filter-empty { display: block; }
+  ul.check, ul.decide { padding-left: 0; list-style: none; margin: 8px 0 16px; }
+  ul.check li, ul.decide li { margin: 0; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+  ul.check li:last-child, ul.decide li:last-child { border-bottom: 0; }
+  ul.decide { padding-left: 1.1rem; list-style: disc; }
+  ul.decide li { padding: 4px 0; border-bottom: 0; color: var(--cocoa); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--taupe); font-size: .9rem; }
+
+  footer.site { display: none; }
+
+
+  /* —— v3 typography, days, timeline, checklist —— */
+  .mast-dates {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin: 8px 0 0;
+    padding: 4px 14px 5px;
+    background: linear-gradient(90deg, rgba(244,231,227,.75), rgba(227,238,239,.62));
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    line-height: 1.2;
+  }
+  .mast-dates .yr {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: .7rem;
+    letter-spacing: .2em;
+    color: var(--rose-deep);
+  }
+  .mast-dates .range {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: .98rem;
+    letter-spacing: .14em;
+    color: var(--cocoa);
+    font-variant-numeric: tabular-nums;
+  }
+  .mast-dates .range .dash { color: var(--rose); padding: 0 .15em; letter-spacing: 0; }
+  .mast-dates .span {
+    font-size: .62rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--frost-deep);
+  }
+  .mast-dates .dot {
+    width: 5px; height: 5px;
+    transform: rotate(45deg);
+    background: var(--rose);
+    opacity: .7;
+    flex: 0 0 auto;
+  }
+  .folio, .edition::before { content: none; display: none; }
+  .edition > h2 { max-width: 100%; }
+
+  .day-chip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    min-width: 3.8rem;
+    padding: 6px 12px 7px;
+    line-height: 1.15;
+  }
+  .day-chip .chip-day {
+    font-family: var(--sans);
+    font-size: .62rem;
     letter-spacing: .08em;
+    font-weight: 500;
+    color: var(--rose-deep);
+  }
+  .day-chip .chip-date {
+    font-size: .95rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .day-chip.active .chip-day { color: rgba(251, 247, 242, .88); }
+
+  .day-cell { white-space: nowrap; }
+  .day-cell small {
+    display: block;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: .68rem;
+    letter-spacing: .06em;
+    color: var(--rose-deep);
+  }
+  table.days td:first-child small { font-weight: 500; }
+
+  .day-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .day-layout.has-aside {
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 18px;
+    }
+    .day-asides { position: sticky; top: calc(var(--chrome-h) + 12px); }
+  }
+  .day-asides { display: flex; flex-direction: column; gap: 10px; }
+  .day-aside {
+    border-radius: 18px;
+    padding: 14px 16px;
+    background: var(--blush);
+    color: var(--cocoa);
+    font-size: .92rem;
+  }
+  .day-aside strong {
+    display: block;
+    font-family: var(--serif);
+    letter-spacing: .03em;
+    margin-bottom: 2px;
+    font-size: 1rem;
+  }
+  .day-aside.frost { background: var(--frost); }
+  .day-lead { margin: 0 0 12px; color: var(--cocoa); }
+
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    bottom: 18px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--rose), var(--frost-deep));
+    opacity: .35;
+    border-radius: 2px;
+  }
+  .t-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .t-rail {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+  }
+  .t-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--rose);
+    box-shadow: 0 0 0 4px #fffaf6;
+    margin-top: 4px;
+  }
+  .t-icon {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 0 4px #fffaf6;
+  }
+  .t-icon svg { width: 16px; height: 16px; display: block; }
+  .ico-flight { background: var(--blush); color: var(--rose-deep); }
+  .ico-train { background: var(--frost); color: #5A6F73; }
+  .ico-shuttle { background: #F3E6D4; color: #8A6238; }
+  .t-body {
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px 16px 14px;
+    box-shadow: 0 8px 20px rgba(90, 67, 58, .04);
+  }
+  .t-card.is-transit .t-body {
+    border-color: rgba(201, 146, 142, .32);
+    background:
+      linear-gradient(90deg, rgba(244,231,227,.7), #fffaf6 46%);
+  }
+  .t-card.is-train .t-body {
+    border-color: rgba(122, 154, 160, .35);
+    background: linear-gradient(90deg, rgba(227,238,239,.8), #fffaf6 46%);
+  }
+  .t-card.is-shuttle .t-body {
+    border-color: rgba(196, 150, 110, .32);
+    background: linear-gradient(90deg, rgba(243,230,212,.75), #fffaf6 46%);
+  }
+  .t-time {
+    margin: 0 0 2px;
+    font-family: var(--serif);
+    font-size: .82rem;
+    letter-spacing: .08em;
+    color: var(--rose-deep);
+    font-variant-numeric: tabular-nums;
+  }
+  .t-body h4 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--cocoa);
+    letter-spacing: .03em;
     line-height: 1.4;
   }
-  .mark.once {
-    font-family: var(--serif);
-    color: var(--crimson);
-    border: 1px solid var(--crimson);
-    padding: 0 6px;
-    background: #fff;
+  .t-copy, .copy-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 0;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
   }
-  .mark.rep { letter-spacing: 0; font-size: .95rem; }
-  tr.row-once td { background: #fbf4f0; }
-  tr.row-once td:first-child { box-shadow: inset 3px 0 0 var(--crimson); }
-  td.price { font-variant-numeric: tabular-nums; font-weight: 650; white-space: normal; }
-  td.is-free { color: var(--ok); }
-  tr.filtered-out { display: none !important; }
-  .filter-empty { display: none; margin: 8px 0 14px; color: var(--muted); }
-  .panel.is-empty .filter-empty { display: block; }
-
-  footer.site {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 16px 48px;
-    color: var(--muted);
-    font-size: .88rem;
+  .t-copy {
+    font-size: .92rem;
+    color: var(--ink);
+    line-height: 1.68;
   }
-  footer.site h2 { font-size: 1rem; border: 0; padding: 0; margin: 0 0 8px; }
-  footer.site h2::after { display: none; }
-  .sources { padding-left: 1.1rem; }
-  .sources li { margin: 4px 0; }
-  code { font-size: .86em; overflow-wrap: anywhere; }
+  .t-copy p, .copy-stack p { margin: 0; }
+  .copy-stack {
+    margin: 0 0 14px;
+    line-height: 1.68;
+  }
+  .callout .copy-stack { margin: 0; color: inherit; font-size: inherit; }
+  .day-aside .t-copy { font-size: inherit; color: inherit; line-height: 1.68; }
+  .t-src {
+    font-size: .8rem;
+    color: var(--taupe);
+    letter-spacing: .04em;
+    line-height: 1.65;
+    padding-top: 1px;
+  }
+  .t-src::before {
+    content: "◇";
+    font-size: .58em;
+    color: var(--rose);
+    margin-right: .45em;
+    letter-spacing: 0;
+    opacity: .8;
+    vertical-align: 0.12em;
+  }
+  .t-src a { white-space: nowrap; }
+  .t-keep { white-space: nowrap; }
+  .t-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag-mode { background: var(--blush); color: var(--rose-deep); }
+  .t-card.is-train .tag-mode { background: var(--frost); color: var(--frost-deep); }
+  .t-card.is-shuttle .tag-mode { background: #F3E6D4; color: #8A6238; }
 
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
+  .check-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 0 20px;
+    padding: 14px 16px;
+    background: linear-gradient(90deg, rgba(244,231,227,.6), rgba(227,238,239,.55));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  .check-progress p { margin: 0; font-family: var(--serif); color: var(--cocoa); letter-spacing: .04em; }
+  .check-progress em { font-style: normal; color: var(--rose-deep); font-weight: 700; }
+  .check-bar {
+    height: 8px;
+    border-radius: 99px;
+    background: rgba(255,252,249,.8);
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  }
+  .check-bar > i {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--rose), var(--rose-deep));
+    transition: width .35s ease;
+  }
+  .check-group { margin: 0 0 22px; }
+  .check-group h3 { margin: 0 0 10px; }
+  .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .checklist li label {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    cursor: pointer;
+    min-height: 48px;
+    transition: background .2s, border-color .2s;
+  }
+  .checklist li label:hover { border-color: rgba(201, 146, 142, .45); }
+  .checklist input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 1px; height: 1px;
+    pointer-events: none;
+  }
+  .tick {
+    width: 24px; height: 24px;
+    margin-top: 2px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(165, 107, 103, .55);
+    background: var(--cream);
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    transition: background .2s, border-color .2s, transform .2s;
+  }
+  .tick::after {
+    content: "";
+    width: 6px; height: 11px;
+    border: 2px solid #fffaf6;
+    border-top: 0; border-left: 0;
+    transform: rotate(45deg) scale(0);
+    margin-bottom: 3px;
+    transition: transform .2s;
+  }
+  .checklist input:checked + .tick {
+    background: var(--rose-deep);
+    border-color: var(--rose-deep);
+  }
+  .checklist input:checked + .tick::after { transform: rotate(45deg) scale(1); }
+  .checklist input:focus-visible + .tick { outline: 2px solid var(--rose); outline-offset: 2px; }
+  .checklist li.is-done label {
+    background: linear-gradient(90deg, rgba(227,238,239,.55), #fffaf6);
+  }
+  .checklist li.is-done .txt { color: var(--taupe); }
+  .txt { color: var(--ink); word-break: keep-all; overflow-wrap: anywhere; }
+  ul.note-cards, ul.note-cards.decide { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 8px; }
+  .note-cards li {
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 12px 16px;
+    border-left: 4px solid var(--rose);
+  }
+  .note-cards.decide li { border-left-color: var(--frost-deep); background: linear-gradient(90deg, rgba(227,238,239,.45), #fffaf6); }
+  .note-kicker {
+    display: block;
+    font-family: var(--serif);
+    font-size: .75rem;
+    letter-spacing: .08em;
+    color: var(--rose-deep);
+    margin-bottom: 2px;
   }
 
-  @media (max-width: 980px) {
+  @media (max-width: 720px) {
     body { font-size: 16px; }
-    .hero { padding: 28px 16px 70px; }
-    .seal { width: 52px; height: 52px; font-size: 1.4rem; }
-    section { padding: 16px 12px 6px; border-radius: 12px; }
-    table.stack { border: 0; }
-    table.stack thead {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
+    .mast { padding: 10px 16px 0; }
+    .mast h1 { font-size: 1.22rem; letter-spacing: .06em; }
+    .mast h1 .tail { letter-spacing: .12em; }
+    .mast-mark { width: 100%; margin-bottom: 4px; }
+
+    .mast-dates { margin-top: 6px; padding: 3px 10px 4px; gap: 6px 8px; }
+    .mast-dates .range { font-size: .82rem; letter-spacing: .1em; }
+    .mast-dates .yr { letter-spacing: .14em; }
+    .edition::before { content: none; display: none; }
+    .edition > h2 { max-width: 100%; font-size: 1.42rem; }
+    .day-layout.has-aside { grid-template-columns: 1fr; }
+    .t-body h4 { font-size: 1rem; }
+
+    .hills { height: 16px; margin-top: 4px; }
+    .kpi-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .kpi-value { font-size: 1.28rem; }
+    .journey { padding: 10px 6px; }
+    .journey-stop { font-size: .92rem; }
+    .journey-arrow { padding: 0 4px; font-size: .95rem; }
+    .edition > h2 { max-width: 100%; }
+    .section-nav ul {
+      padding: 0 16px 12px;
+      gap: 6px;
+      mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
     }
+    .section-nav a {
+      min-width: 4.5rem;
+      padding: 8px 12px 9px;
+    }
+    .section-nav a small { letter-spacing: .1em; font-size: .64rem; }
+    .section-nav a span { font-size: .86rem; white-space: nowrap; }
+    .nav-fade,
+    .nav-fade-left {
+      display: block;
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 28px;
+      pointer-events: none;
+    }
+    .nav-fade {
+      right: 0;
+      background: linear-gradient(90deg, rgba(247,242,235,0), rgba(247,242,235,.95));
+    }
+    .nav-fade-left {
+      left: 0;
+      background: linear-gradient(90deg, rgba(247,242,235,.95), rgba(247,242,235,0));
+    }
+    .edition { border-radius: 22px; padding: 20px 16px 12px; }
+    main { padding: 14px 14px 72px; }
+    table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
     table.stack, table.stack tbody { display: block; width: 100%; }
     table.stack tr {
-      display: block;
-      margin: 0 0 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      padding: 4px 12px 8px;
+      display: block; margin: 0 0 12px; padding: 8px 12px;
+      border: 1px solid var(--line); border-radius: 16px; background: var(--cream);
     }
-    table.stack td {
-      display: block;
-      border: 0;
-      border-bottom: 1px dashed var(--line);
-      padding: 8px 0;
-    }
+    table.stack td { display: block; border: 0; border-bottom: 1px dashed var(--line); padding: 8px 0; }
     table.stack td:last-child { border-bottom: 0; }
     table.stack td::before {
       content: attr(data-label);
-      display: block;
-      color: var(--indigo);
-      font-size: .75rem;
-      letter-spacing: .05em;
-      font-weight: 700;
-      margin-bottom: 2px;
+      display: block; color: var(--rose-deep);
+      font-family: var(--serif); font-size: .72rem; letter-spacing: .08em;
     }
-    table.act td[data-label="活動"] { padding-top: 10px; }
     table.act td[data-label="活動"]::before { content: none; }
-    table.facts { display: block; }
-    table.facts tr { display: block; border-bottom: 1px solid var(--line); }
-    table.facts tr:last-child { border-bottom: 0; }
-    table.facts th, table.facts td { display: block; width: 100%; border: 0; padding: 6px 0; }
-    table.facts th { background: transparent; padding-bottom: 0; }
-    tr.row-once { box-shadow: inset 3px 0 0 var(--crimson); }
-    tr.row-once td:first-child { box-shadow: none; }
   }
-
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    .edition.page.active, article.day.active { animation: none; }
   }
-
   @media print {
-    body { background: #fff; }
-    body::before, .hero-snow, .hero-mountains, .seal, .act-tools, .tab-labels { display: none !important; }
-    .hero { background: #fff !important; color: var(--ink) !important; padding: 0 0 12px; }
-    .lede, .eyebrow { color: var(--ink) !important; }
-    .toc-bar { position: static; box-shadow: none; }
-    details.toc > .toc-links { display: flex !important; }
-    section { box-shadow: none; break-inside: auto; }
-    .panel { display: block !important; }
-    h2, h3 { break-after: avoid; }
-    tr, .callout, li { break-inside: avoid; }
-    a { color: var(--ink); }
-    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; word-break: break-all; }
+    body::before, body::after, .section-nav, .hills, .day-chips, .chrome { display: none !important; }
+    .edition { box-shadow: none; break-inside: auto; }
+    .edition.page, article.day, .panel { display: block !important; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; word-break: break-all; }
   }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">跳至內容</a>
-<header class="hero">
-  <svg class="hero-snow" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g fill="#fff">
-      <circle cx="70" cy="48" r="1.4" opacity=".55"/>
-      <circle cx="150" cy="120" r="1.1" opacity=".35"/>
-      <circle cx="240" cy="64" r="1.6" opacity=".4"/>
-      <circle cx="360" cy="150" r="1.2" opacity=".3"/>
-      <circle cx="520" cy="40" r="1.5" opacity=".45"/>
-      <circle cx="680" cy="96" r="1.1" opacity=".35"/>
-      <circle cx="860" cy="54" r="1.7" opacity=".4"/>
-      <circle cx="980" cy="130" r="1.2" opacity=".28"/>
-      <circle cx="1100" cy="70" r="1.4" opacity=".4"/>
-      <circle cx="430" cy="210" r="1" opacity=".25"/>
-      <circle cx="760" cy="180" r="1.3" opacity=".3"/>
-    </g>
-    <g fill="none" stroke="#f6f0e6" stroke-width="1.2" opacity=".35">
-      <path d="M92 180v22M81 191h22M85 184l14 14M99 184L85 198"/>
-      <path d="M1040 200v18M1031 209h18M1034 203l12 12M1046 203l-12 12"/>
-    </g>
-  </svg>
-  <svg class="hero-mountains" viewBox="0 0 1200 92" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#162844" d="M0 92V58l150-28 130 22 150-40 140 34 160-46 150 38L1200 22v70H0z"/>
-    <path fill="#1d3358" d="M0 92V72l120-16 160 18 140-26 180 22 150-30 170 24L1200 48v44H0z"/>
-    <path fill="#e8e2d6" d="M0 92V80c80-10 160-6 240-12s170 4 250-6 180 2 270-8 190 6 280-4 120 0 160 4v38H0z"/>
-  </svg>
-  <div class="hero-inner">
-    <p class="eyebrow">北海道 · 冬 · 二〇二七</p>
-    <div class="hero-top">
-      <h1>2027年2月<br>北海道＋東京行程</h1>
-      <div class="seal" aria-hidden="true">冬</div>
-    </div>
-    <p class="lede">2月7–16日：羽田一夜 → 札幌雪祭 → 星野 Tomamu（Snowboard＋活動）→ 札幌／支笏湖 → 東京購物與 Shibuya Sky。時刻以出發前再核為準。資料整理截至 2026-11-07（交通結論參考綠色窗口）。</p>
-    <ul class="hero-chips">
-      <li>2/7–2/16</li>
-      <li>羽田一夜</li>
-      <li>札幌雪祭</li>
-      <li>星野 Tomamu</li>
-      <li>東京</li>
-    </ul>
+<a class="skip" href="#overview">跳至總覽</a>
+<div class="chrome">
+<header class="mast">
+  <div class="mast-row">
+    <div class="mast-mark" aria-hidden="true"><span class="fleuron"></span></div>
+    <h1>北海道 <span class="amp">&amp;</span> 東京<span class="tail">冬季旅行</span></h1>
+    <p class="mast-dates">
+      <span class="yr">2027</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span class="range">02.07<span class="dash">—</span>02.16</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span class="span">10 days</span>
+    </p>
   </div>
 </header>
+<svg class="hills" viewBox="0 0 1080 54" preserveAspectRatio="none" aria-hidden="true">
+  <path fill="#e7d5cf" d="M0 54V28c80-16 140-8 220-14s150 10 230-4 160 6 250-8 180 4 250-6 90 2 130 4v54H0z"/>
+  <path fill="#d5e4e6" d="M0 54V38c90-10 160-4 250-12s170 8 260-6 190 4 280-8 160 6 290 2v40H0z"/>
+</svg>
 
-<div class="toc-bar">
-  <details class="toc" open>
-    <summary>目錄</summary>
-    <nav class="toc-links" aria-label="目錄">
-      <a href="#overview">總覽</a>
-      <a href="#flights">航班</a>
-      <a href="#hotels">酒店／voucher</a>
-      <a href="#lifts">霧氷／Tower Express</a>
-      <a class="toc-em" href="#tomamu-activities">Tomamu 活動</a>
-      <a href="#d07">2/7</a>
-      <a href="#d08">2/8</a>
-      <a href="#d09">2/9</a>
-      <a href="#d10">2/10</a>
-      <a href="#d11">2/11</a>
-      <a href="#d12">2/12</a>
-      <a href="#tokyo">東京</a>
-      <a href="#transport">交通</a>
-      <a href="#jr">JR／eki-net</a>
-      <a href="#todo">待辦</a>
-    </nav>
-  </details>
-</div>
-<script>
-  if (window.matchMedia("(max-width: 899px)").matches) {
-    document.querySelector("details.toc").open = false;
-  }
-</script>
-
-<main class="wrap" id="main">
-
-<section id="overview">
-  <h2>行程總覽</h2>
-  <table class="facts">
-    <tr><th>日期</th><td>2027年2月7日（日）– 16日（二）</td></tr>
-    <tr><th>路線</th><td>香港 → 羽田 → 新千歲／札幌 → Tomamu → 札幌 → 羽田／東京 → 成田 → 香港</td></tr>
-    <tr><th>住宿</th><td>羽田1晚 · Tomamu Tower 3晚（連早餐・Ice Village・霧氷往返券・Mina-Mina／木林の湯）· 札幌 METS 2晚 · 秋葉原 METS 3晚</td></tr>
-    <tr><th>取消</th><td>除星野外其餘酒店可 FREE CANCEL（以訂房條款為準）</td></tr>
-  </table>
-  <div class="callout warn"><strong>重要：JL735 由成田（NRT）起飛，唔係羽田</strong>參考 NRT 18:30 → HKG 22:55（T2）。秋葉原酒店建議 13:30–14:00 出發，15:30 前到機場；推 JR→日暮里→Skyliner。</div>
-  <div class="callout info"><strong>2/8 到 Tower：目標約 15:30（非準 15:00）</strong>最接近：特急おおぞら7 札幌 13:57→トマム 15:26 → 無料 shuttle ≈15:31 Tower。雪祭要約 12:50–13:00 離開大通。</div>
-  <h3>活動對齊（2027）</h3>
-  <table class="stack">
-    <thead>
-      <tr><th>活動</th><th>2027 會期</th><th>同行程</th><th>狀態</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="活動">札幌雪祭</td>
-        <td data-label="2027 會期">2/4–2/11</td>
-        <td data-label="同行程">2/8 上午大通；2/11 可短訪すすきの</td>
-        <td data-label="狀態"><span class="tag ok">對得上</span></td>
-      </tr>
-      <tr>
-        <td data-label="活動">小樽雪燈之路</td>
-        <td data-label="2027 會期">2/6–2/13</td>
-        <td data-label="同行程">2/11 晚推（點灯參考 17:00–21:00）</td>
-        <td data-label="狀態"><span class="tag ok">對得上</span></td>
-      </tr>
-      <tr>
-        <td data-label="活動">支笏湖氷瀑祭</td>
-        <td data-label="2027 會期">1/30–2/23</td>
-        <td data-label="同行程">2/12 推午後ライトアップ巴士</td>
-        <td data-label="狀態"><span class="tag ok">對得上</span></td>
-      </tr>
-      <tr>
-        <td data-label="活動">PokéPark KANTO</td>
-        <td data-label="2027 會期">2/14 抽籤中</td>
-        <td data-label="同行程">結果約 11 月底</td>
-        <td data-label="狀態"><span class="tag warn">待結果</span></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="flights">
-  <h2>航班一覽</h2>
-  <table class="stack">
-    <thead>
-      <tr><th>日</th><th>航班</th><th>航線（典型）</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="日">2/7</td>
-        <td data-label="航班">JL026</td>
-        <td data-label="航線（典型）">HKG 15:35 → HND 20:25（T3）</td>
-        <td data-label="備註"><span class="tag ok">已訂</span></td>
-      </tr>
-      <tr>
-        <td data-label="日">2/8</td>
-        <td data-label="航班">JL503</td>
-        <td data-label="航線（典型）">HND 07:30 → CTS 09:00</td>
-        <td data-label="備註"><span class="tag ok">已訂</span>；JAL 國內多為 T1</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/13</td>
-        <td data-label="航班">未買</td>
-        <td data-label="航線（典型）">CTS → HND 中午附近</td>
-        <td data-label="備註"><span class="tag danger">必須訂</span></td>
-      </tr>
-      <tr>
-        <td data-label="日">2/16</td>
-        <td data-label="航班">JL735</td>
-        <td data-label="航線（典型）">NRT 18:30 → HKG 22:55（T2）</td>
-        <td data-label="備註"><span class="tag warn">成田起飛</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>2/13 CTS→HND 短名單</h3>
-  <p class="muted">札幌酒店約 09:00 前出發（快速エアポート約 33–37 分＋國內線提前 60–90 分）。</p>
-  <table class="stack">
-    <thead>
-      <tr><th>優先</th><th>航空</th><th>起飛</th><th>到羽田</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="優先">1</td>
-        <td data-label="航空">ANA NH58</td>
-        <td data-label="起飛">11:30</td>
-        <td data-label="到羽田">13:10</td>
-        <td data-label="備註">真正中午</td>
-      </tr>
-      <tr>
-        <td data-label="優先">2</td>
-        <td data-label="航空">Skymark BC712</td>
-        <td data-label="起飛">11:35</td>
-        <td data-label="到羽田">13:20</td>
-        <td data-label="備註">通常較平；核行李額</td>
-      </tr>
-      <tr>
-        <td data-label="優先">3</td>
-        <td data-label="航空">JAL JL508</td>
-        <td data-label="起飛">11:40</td>
-        <td data-label="到羽田">13:25</td>
-        <td data-label="備註">同系銜接方便</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="hotels">
-  <h2>酒店（已訂）同 The Tower voucher</h2>
-  <table class="stack">
-    <thead>
-      <tr><th>酒店</th><th>日期</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="酒店">京急 EX INN 羽田 Innovation City</td>
-        <td data-label="日期">2/7</td>
-        <td data-label="備註">可 FREE CANCEL</td>
-      </tr>
-      <tr>
-        <td data-label="酒店">星野 Tomamu The Tower</td>
-        <td data-label="日期">2/8–11</td>
-        <td data-label="備註">連早餐；取消條款較嚴</td>
-      </tr>
-      <tr>
-        <td data-label="酒店">JR東日本 METS PREMIERS SAPPORO</td>
-        <td data-label="日期">2/11–13</td>
-        <td data-label="備註">駅徒歩約2分；可 FREE CANCEL</td>
-      </tr>
-      <tr>
-        <td data-label="酒店">JR東日本 METS PREMIERS 秋葉原</td>
-        <td data-label="日期">2/13–16</td>
-        <td data-label="備註">可 FREE CANCEL</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="callout info"><strong>Voucher 原文</strong>Free Use of the MINA-MINA BEACH &amp; KIRIN NO YU throughout stay · 1 time round-trip ticket for “Terrace of Frost Tree” per night · Free Wifi in guest room</div>
-  <table class="stack">
-    <thead>
-      <tr><th>項目</th><th>意思</th><th>注意</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="項目">MINA-MINA BEACH</td>
-        <td data-label="意思">室內常溫海灘／波池</td>
-        <td data-label="注意">滯在中免費</td>
-      </tr>
-      <tr>
-        <td data-label="項目">KIRIN NO YU（木林の湯）</td>
-        <td data-label="意思">露天風呂＋サウナ（非天然溫泉）</td>
-        <td data-label="注意">全程免費</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Terrace of Frost Tree 往返</td>
-        <td data-label="意思">霧氷テラス＝雲海ゴンドラ往返</td>
-        <td data-label="注意">per night；住3晚最多3次；每人／每房以入住發券為準</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Free Wifi</td>
-        <td data-label="意思">客房＋ロビー</td>
-        <td data-label="注意">—</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Ice Village</td>
-        <td data-label="意思">多數 Tower 客滯在免費</td>
-        <td data-label="注意">行程當作已包</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。要滑一日＝另買 1 日リフト券（2026–27 窗口大人約¥9,500；住宿者優待約¥9,000）。</p>
-</section>
-
-<section id="lifts">
-  <h2>霧氷ゴンドラ vs Tower Express</h2>
-  <table class="stack">
-    <thead>
-      <tr><th>設施</th><th>係咩</th><th>去邊</th><th>同住宿券</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="設施">雲海ゴンドラ（霧氷用）</td>
-        <td data-label="係咩">4人封閉ゴンドラ；約13分到山頂</td>
-        <td data-label="去邊">霧氷テラス（約1,088m）</td>
-        <td data-label="同住宿券">住宿「霧氷往返券」＝呢條</td>
-      </tr>
-      <tr>
-        <td data-label="設施">Tower Express</td>
-        <td data-label="係咩">高速クワッド（有罩）椅式リフト</td>
-        <td data-label="去邊">Tower 山區雪道</td>
-        <td data-label="同住宿券">滑雪用；需リフト券；唔係去霧氷</td>
-      </tr>
-      <tr>
-        <td data-label="設施">其他 Express／リフト</td>
-        <td data-label="係咩">高速／固定椅式</td>
-        <td data-label="去邊">各區雪道</td>
-        <td data-label="同住宿券">滑雪用；唔包喺霧氷每晚一張</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="callout warn"><strong>用券上霧氷 ≠ 全日滑雪</strong>Tower Express 12/26–3/31 可至約 18:00；霧氷上り最終多數約 15:30。</div>
-</section>
-
-<section id="d07">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">7</span><span class="w">日</span></div>
-    <h2>2月7日（日）香港 → 羽田</h2>
-  </div>
-  <ol class="steps">
-    <li><strong>JL026</strong>：參考 HKG 15:35 → HND 20:25（T3）</li>
-    <li><strong>機場 → 京急 EX INN</strong>：推 東京モノレール T3→天空橋（約¥180）→ HICity口→ゾーンJ徒歩約2分。酒店無機場→酒店免費接駁。</li>
-    <li><strong>準備</strong>：翌日手提（雪祭暖衣）；大行李可考慮運送 Tomamu；早瞓，翌朝 shuttle 6:00／6:20。</li>
-  </ol>
-</section>
-
-<section id="d08">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">8</span><span class="w">一</span></div>
-    <h2>2月8日（一）CTS → 雪祭 → Tomamu（≈15:30）</h2>
-  </div>
-  <div class="callout warn"><strong>目標 Tower 約 15:30（おおぞら7）</strong>準 15:00 唔 realist。札幌 13:57 發 → トマム 15:26 → shuttle ≈15:31。大通建議 12:50 離，13:45 前到月台。</div>
-  <ol class="steps">
-    <li><strong>酒店 → JL503 → CTS</strong>：免費 shuttle 6:00／6:20；JL503 約 07:30→09:00</li>
-    <li><strong>CTS → 札幌站</strong>：快速エアポート約33–37分；約¥1,230；大件放ロッカー</li>
-    <li><strong>大通雪祭（壓縮版）</strong>：約 12:50–13:00 離大通</li>
-    <li><strong>おおぞら7 → トマム</strong>：13:57→15:26；全指定席；正價約¥5,880。替代：太早おおぞら5 11:46→13:22；太晚とかち5 15:51→17:39</li>
-    <li><strong>check-in</strong>：取 Mina-Mina／木林の湯、霧氷往返券、Ice Village</li>
-    <li><strong>15:30 起玩咩</strong>：幾乎趕唔切當日霧氷（上り最終約15:30）→ check-in／溫泉／Mina-Mina；17:00–22:00 Ice Village（已包）；霧氷留活動日</li>
-  </ol>
-  <p class="xref">2/8 傍晚可睇 <a href="#tomamu-evening">晚上活動</a>；全日清單見 <a href="#tomamu-activities">Tomamu 活動・早午晚</a>。</p>
-</section>
-
-<section id="d09">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">9</span><span class="w">二</span></div>
-    <h2>2月9日（二）Tomamu · Snowboard 上堂日（推）</h2>
-  </div>
-  <div class="callout info"><strong>唔會一日 Ski 一日 Board</strong>一日集中新手 Snowboard 課；另一日活動。9／10 可對調。上堂日若要全日練板＝另買リフト券。</div>
-  <ol class="steps">
-    <li>早餐後去 Adventure Base 3F Ski &amp; Snowboard Academy</li>
-    <li><strong>新手 Snowboard Lesson（要預約）</strong>：Group 120分主要日語 ¥7,800–8,800；Private 英／日約¥26,300–27,800；可加中文認證雪校</li>
-    <li>租賃＋當日リフト券（住宿者優待約¥9,000）；霧氷券≠全日 pass</li>
-    <li>午後 Debut Park／初級區練板（Tower Express 等）</li>
-    <li>晚：Ice Village 或 Mina-Mina／木林の湯</li>
-  </ol>
-  <p class="xref">滑雪／滑雪板課堂唔喺活動表。非滑雪項目見 <a href="#tomamu-activities">Tomamu 活動・早午晚（2/8–11）</a>。</p>
-</section>
-
-<section id="d10">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">10</span><span class="w">三</span></div>
-    <h2>2月10日（三）Tomamu · 活動日（推）</h2>
-  </div>
-  <p>用每晚霧氷往返券玩非滑雪項目。2/10 仍喺「シバレタイム」期內（至 2/10）。</p>
-  <table class="stack">
-    <thead>
-      <tr><th>活動</th><th>內容</th><th>預約</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="活動"><span class="tag ok">推</span> 霧氷テラス</td>
-        <td data-label="內容">上り約7:45–15:30；用住宿往返券</td>
-        <td data-label="預約">一般唔使約</td>
-      </tr>
-      <tr>
-        <td data-label="活動">シバレタイム</td>
-        <td data-label="內容">7:45–9:00；免費；至2/10</td>
-        <td data-label="預約">唔使約</td>
-      </tr>
-      <tr>
-        <td data-label="活動"><span class="tag ok">推</span> スノーモービル 3km</td>
-        <td data-label="內容">約¥3,000；約10分；16歲+</td>
-        <td data-label="預約">唔使約</td>
-      </tr>
-      <tr>
-        <td data-label="活動">其他 GAO</td>
-        <td data-label="內容">スノーシュー／ラフティング等</td>
-        <td data-label="預約">部分要約</td>
-      </tr>
-      <tr>
-        <td data-label="活動">Mina-Mina／木林の湯／Ice Village</td>
-        <td data-label="內容">全程免費權益</td>
-        <td data-label="預約">—</td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="xref">場次、價錢、🔁 同每日一場標記見 <a href="#tomamu-morning">早上</a>／<a href="#tomamu-afternoon">中午～下午</a>／<a href="#tomamu-evening">晚上</a>。</p>
-</section>
-
-<section id="d11">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">11</span><span class="w">四</span></div>
-    <h2>2月11日（四）Tomamu → 札幌 · すすきの＋小樽</h2>
-  </div>
-  <div class="callout info"><strong>雪祭最終日：唔係整天提早關</strong>大通燈至約22:00；すすきの最終日提早至22:00。</div>
-  <ol class="steps">
-    <li><strong>おおぞら4</strong>：10:58→12:29（或おおぞら2 08:58→10:41）；正價約¥5,880</li>
-    <li>Check-in METS，放行李</li>
-    <li><strong>時間軸（可行但緊）</strong>：12:29到 → 13:30–16:00大通 → 16:00–16:40短訪すすきの → 17:00前後往小樽 → 17:30–20:30あかり → 22:31／23:08前返</li>
-    <li>太趕：優先砍すすきの深度（30–40分），保留小樽夜燈</li>
-  </ol>
-  <p class="xref">若早上留 resort，活動同 2/11 纜車 9:00 見 <a href="#tomamu-activities">Tomamu 活動・早午晚</a>（列車 10:58 或 08:58 開）。</p>
-</section>
-
-<section id="tomamu-activities">
-  <h2>Tomamu 活動・早午晚（2/8–11）</h2>
-  <div class="callout info"><strong>唔包滑雪／滑雪板</strong>粗體／標記＝每日只有1場／1組／1晚；🔁＝一日2場或以上。價錢跟星野 snowtomamu.jp 26/27冬官網。</div>
-  <ul class="perks">
-    <li><span>住客免費</span>Mina-Mina、木林の湯</li>
-    <li><span>霧氷券</span>每晚一張往返券</li>
-    <li><span>纜車 2/8–10</span>7:45 開</li>
-    <li><span>纜車 2/11</span>改 9:00</li>
-    <li><span>シバレ</span>至 2/10</li>
+<nav class="section-nav" aria-label="七個版面">
+  <ul>
+    <li><a href="#overview" class="is-current" aria-current="page"><small>01</small><span>總覽</span></a></li>
+    <li><a href="#transport"><small>02</small><span>交通</span></a></li>
+    <li><a href="#hokkaido"><small>03</small><span>北海道</span></a></li>
+    <li><a href="#tokyo"><small>04</small><span>東京</span></a></li>
+    <li><a href="#tomamu"><small>05</small><span>Tomamu</span></a></li>
+    <li><a href="#todo"><small>06</small><span>待辦</span></a></li>
+    <li><a href="#jr"><small>07</small><span>JR</span></a></li>
   </ul>
-  <p class="legend">
-    <span><span class="mark once">每日1場</span>當日只有 1 場／1 組／1 晚</span>
-    <span><span class="mark rep">🔁</span>一日 2 場或以上</span>
+  <div class="nav-fade-left" aria-hidden="true"></div>
+  <div class="nav-fade" aria-hidden="true"></div>
+</nav>
+</div>
+
+<main id="main">
+
+<section class="edition page active" id="overview">
+  <h2>總覽</h2>
+  <hr class="rule" />
+
+  <div class="kpi-row" aria-label="行程要點">
+    <article class="kpi" style="--kpi-accent: var(--rose-deep)">
+      <p class="kpi-label">行程日數</p>
+      <p class="kpi-value">10 日</p>
+      <p class="kpi-meta">2月7–16日</p>
+    </article>
+    <article class="kpi" style="--kpi-accent: var(--frost-deep)">
+      <p class="kpi-label">路線</p>
+      <p class="kpi-value">北海道 · 東京</p>
+      <p class="kpi-meta">經 Tomamu、札幌</p>
+    </article>
+    <article class="kpi" style="--kpi-accent: var(--cocoa)">
+      <p class="kpi-label">航班</p>
+      <p class="kpi-value">4 段</p>
+      <p class="kpi-meta">JL026 · JL503 · NH56 · JL735</p>
+    </article>
+    <article class="kpi" style="--kpi-accent: var(--rose)">
+      <p class="kpi-label">酒店</p>
+      <p class="kpi-value">4 間</p>
+      <p class="kpi-meta">羽田 · Tomamu · 札幌 · 秋葉原</p>
+    </article>
+  </div>
+  <p class="journey" aria-label="行程路線">
+    <span class="journey-stop"><small>2/7</small>羽田</span>
+    <span class="journey-arrow" aria-hidden="true">→</span>
+    <span class="journey-stop"><small>2/8–13</small>北海道</span>
+    <span class="journey-arrow" aria-hidden="true">→</span>
+    <span class="journey-stop"><small>2/13–16</small>東京</span>
+    <span class="journey-arrow" aria-hidden="true">→</span>
+    <span class="journey-stop"><small>2/16</small>成田</span>
   </p>
-  <div class="act-tools">
-    <label class="search">
-      <span class="sr-only">搜尋活動</span>
-      <input id="act-filter" type="search" placeholder="搜尋活動、場次或價錢" autocomplete="off" />
-    </label>
-    <button type="button" id="act-clear">清除</button>
-    <p class="filter-meta" id="filter-meta" aria-live="polite"></p>
+  <div class="block" id="days">
+    <h3>行程總覽</h3>
+    <p class="muted">Day 1＝2月7日，Day 10＝2月16日。這裡只列當日行程重點。航班、車次同轉車細節見下面的航班一覽同交通版。</p>
+    <table class="stack days">
+      <thead><tr><th>日</th><th>日期</th><th>當日行程重點</th></tr></thead>
+      <tbody>
+        <tr><td data-label="日">Day 1</td><td data-label="日期">2/7（日）</td><td data-label="當日行程重點">香港飛羽田，住京急 EXイン</td></tr>
+        <tr><td data-label="日">Day 2</td><td data-label="日期">2/8（一）</td><td data-label="當日行程重點">大通＋薄野白天 → Tomamu</td></tr>
+        <tr><td data-label="日">Day 3</td><td data-label="日期">2/9（二）</td><td data-label="當日行程重點">Tomamu（Snowboard 推，可與 Day 4 對調）</td></tr>
+        <tr><td data-label="日">Day 4</td><td data-label="日期">2/10（三）</td><td data-label="當日行程重點">Tomamu（霧氷＋GAO 推）</td></tr>
+        <tr><td data-label="日">Day 5</td><td data-label="日期">2/11（四・祝）</td><td data-label="當日行程重點">支笏湖氷濤まつり → 薄野最終夜</td></tr>
+        <tr><td data-label="日">Day 6</td><td data-label="日期">2/12（五）</td><td data-label="當日行程重點">上午札幌，下午小樽雪あかりの路</td></tr>
+        <tr><td data-label="日">Day 7</td><td data-label="日期">2/13（六）</td><td data-label="當日行程重點">飛東京，住秋葉原メッツ</td></tr>
+        <tr><td data-label="日">Day 8</td><td data-label="日期">2/14（日）</td><td data-label="當日行程重點">PokéPark（抽籤）</td></tr>
+        <tr><td data-label="日">Day 9</td><td data-label="日期">2/15（一）</td><td data-label="當日行程重點">澀谷購物，傍晚 Shibuya Sky</td></tr>
+        <tr><td data-label="日">Day 10</td><td data-label="日期">2/16（二）</td><td data-label="當日行程重點">成田回香港</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="tabs">
-    <input type="radio" name="tomamu-slot" id="tab-morning" checked />
-    <input type="radio" name="tomamu-slot" id="tab-afternoon" />
-    <input type="radio" name="tomamu-slot" id="tab-evening" />
-    <div class="tab-labels">
-      <label for="tab-morning" data-hash="#tomamu-morning">早上 <span class="count" data-count="morning">21</span></label>
-      <label for="tab-afternoon" data-hash="#tomamu-afternoon">中午～下午 <span class="count" data-count="afternoon">16</span></label>
-      <label for="tab-evening" data-hash="#tomamu-evening">晚上 <span class="count" data-count="evening">16</span></label>
-    </div>
+  <div class="block" id="flights">
+    <h3>航班一覽</h3>
+    <table class="stack">
+      <thead><tr><th>日</th><th>航班</th><th>航線（典型）</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td data-label="日"><span class="day-cell"><small>Day 1</small>2/7</span></td><td data-label="航班">JL026</td><td data-label="航線（典型）">HKG 15:35 → HND 20:25（T3）</td><td data-label="備註"><span class="tag">已訂</span></td></tr>
+        <tr><td data-label="日"><span class="day-cell"><small>Day 2</small>2/8</span></td><td data-label="航班">JL503</td><td data-label="航線（典型）">HND 07:30 → CTS 09:00</td><td data-label="備註"><span class="tag">已訂</span>；JAL 國內多為 T1</td></tr>
+        <tr><td data-label="日"><span class="day-cell"><small>Day 7</small>2/13</span></td><td data-label="航班">NH56</td><td data-label="航線（典型）">CTS 10:30 → HND 12:10（T2）</td><td data-label="備註"><span class="tag">已訂</span>；新千歲國內線出發</td></tr>
+        <tr><td data-label="日"><span class="day-cell"><small>Day 10</small>2/16</span></td><td data-label="航班">JL735</td><td data-label="航線（典型）">NRT 18:30 → HKG 22:55（T2）</td><td data-label="備註"><span class="tag warn">成田起飛</span></td></tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="panel panel-morning" id="tomamu-morning" role="tabpanel">
-      <h3>早上</h3>
+  <div class="block" id="hotels">
+    <h3>酒店</h3>
+    <div class="hotel-list">
+      <article class="hotel-card">
+        <h4 lang="ja">京急 EXイン 羽田イノベーションシティ</h4>
+        <dl>
+          <dt>入住</dt>
+          <dd>2月7日</dd>
+          <dt>退房</dt>
+          <dd>2月8日</dd>
+          <dt>住所</dt>
+          <dd lang="ja">〒144-0041 東京都大田区羽田空港 1-1-4 羽田イノベーションシティ内 ゾーンJ（2階）</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81355797230">03-5579-7230</a></dd>
+        </dl>
+        <p class="hotel-note">受付 check-in 15:00／check-out 10:00</p>
+        <p class="hotel-links"><a href="https://www.keikyu-exinn.co.jp/hotel/innovation-city/">官方網站</a></p>
+      </article>
+      <article class="hotel-card">
+        <h4 lang="ja">トマム ザ・タワー by 星野リゾート</h4>
+        <p class="gloss">連早餐。券同纜車見 <a href="#tomamu">Tomamu</a>。</p>
+        <dl>
+          <dt>入住</dt>
+          <dd>2月8日</dd>
+          <dt>退房</dt>
+          <dd>2月11日</dd>
+          <dt>住所</dt>
+          <dd lang="ja">〒079-2204 北海道勇払郡占冠村中トマム</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81167581122">0167-58-1122</a>（予約電話）</dd>
+        </dl>
+        <p class="hotel-note">受付 10:00–18:00。電話予約有追加料金。</p>
+        <p class="hotel-links"><a href="https://hoshinoresorts.com/ja/hotels/tomamuthetower/">官方網站</a><a href="https://hoshinoresorts.com/ja/hotels/tomamuthetower/contact/">連絡先</a></p>
+      </article>
+      <article class="hotel-card">
+        <h4 lang="ja">JR東日本ホテルメッツ プレミア 札幌</h4>
+        <dl>
+          <dt>入住</dt>
+          <dd>2月11日</dd>
+          <dt>退房</dt>
+          <dd>2月13日</dd>
+          <dt>住所</dt>
+          <dd lang="ja">〒060-0807 北海道札幌市北区北7条西2-5-3</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81117290011">011-729-0011</a>（代表）</dd>
+        </dl>
+        <p class="hotel-links"><a href="https://www.hotelmets.jp/sapporo/">官方網站</a><a href="https://www.hotelmets.jp/sapporo/access.html">アクセス</a></p>
+      </article>
+      <article class="hotel-card">
+        <h4 lang="ja">JR東日本ホテルメッツ プレミア 秋葉原</h4>
+        <dl>
+          <dt>入住</dt>
+          <dd>2月13日</dd>
+          <dt>退房</dt>
+          <dd>2月16日</dd>
+          <dt>住所</dt>
+          <dd lang="ja">〒101-0021 東京都千代田区外神田1-17-4</dd>
+          <dt>電話</dt>
+          <dd><a href="tel:+81352941011">03-5294-1011</a>（代表）</dd>
+        </dl>
+        <p class="hotel-links"><a href="https://www.hotelmets.jp/akihabara/">官方網站</a><a href="https://www.hotelmets.jp/akihabara/access.html">アクセス</a></p>
+      </article>
+    </div>
+  </div>
+
+  <div class="block" id="align">
+    <h3>活動對齊</h3>
+    <table class="stack days">
+      <thead><tr><th>日</th><th>日期</th><th>當日活動</th><th>對齊</th></tr></thead>
+      <tbody>
+        <tr><td data-label="日">Day 1</td><td data-label="日期">2/7</td><td data-label="當日活動">夜抵羽田</td><td data-label="對齊">雪祭未開始玩</td></tr>
+        <tr><td data-label="日">Day 2</td><td data-label="日期">2/8</td><td data-label="當日活動">大通會場 highlights＋薄野短訪（白天）</td><td data-label="對齊">札幌雪祭 2/4–2/11。夜燈留 Day 5。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a></td></tr>
+        <tr><td data-label="日">Day 3</td><td data-label="日期">2/9</td><td data-label="當日活動">Snowboard 新手課</td><td data-label="對齊">Tomamu 住客日</td></tr>
+        <tr><td data-label="日">Day 4</td><td data-label="日期">2/10</td><td data-label="當日活動">霧氷テラス、シバレタイム、GAO</td><td data-label="對齊">シバレ到 2/10</td></tr>
+        <tr><td data-label="日">Day 5</td><td data-label="日期">2/11・祝</td><td data-label="當日活動">支笏湖氷濤まつり（午後到夜燈）＋薄野最終夜</td><td data-label="對齊">會期 1/30–2/23。祝日中學生以上 ¥3,000。<a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市</a></td></tr>
+        <tr><td data-label="日">Day 6</td><td data-label="日期">2/12</td><td data-label="當日活動">上午札幌；下午去小樽，晚上雪あかりの路</td><td data-label="對齊">官方會期 2/6–2/13。2027 點燈時間未公布。<a href="https://otaru.gr.jp/event/yukiakari2027">2027</a></td></tr>
+        <tr><td data-label="日">Day 7</td><td data-label="日期">2/13</td><td data-label="當日活動">飛東京，秋葉原輕量</td><td data-label="對齊">—</td></tr>
+        <tr><td data-label="日">Day 8</td><td data-label="日期">2/14</td><td data-label="當日活動">PokéPark KANTO 或秋葉原</td><td data-label="對齊"><span class="tag warn">抽籤待結果</span></td></tr>
+        <tr><td data-label="日">Day 9</td><td data-label="日期">2/15</td><td data-label="當日活動">購物＋Shibuya Sky</td><td data-label="對齊">日落約 17:08–17:22</td></tr>
+        <tr><td data-label="日">Day 10</td><td data-label="日期">2/16</td><td data-label="當日活動">成田回港</td><td data-label="對齊">JL735</td></tr>
+      </tbody>
+    </table>
+    <h4>會期對照</h4>
+    <table class="stack">
+      <thead><tr><th>活動</th><th>2027</th><th>同邊日</th></tr></thead>
+      <tbody>
+        <tr><td data-label="活動">札幌雪祭</td><td data-label="2027">2/4–2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00</td><td data-label="同邊日">第二日白天；第五日薄野最終夜</td></tr>
+        <tr><td data-label="活動">小樽雪あかりの路</td><td data-label="2027">2/6–2/13。點燈時間未公布。2026 為 17:00–21:00</td><td data-label="同邊日">第六日下午去、晚上睇</td></tr>
+        <tr><td data-label="活動">支笏湖氷濤まつり</td><td data-label="2027">1/30–2/23；10:00–20:00，燈 16:30–20:00</td><td data-label="同邊日">第五日 BLUE LINER。平日 ¥1,000，土日祝 ¥3,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="edition page" id="transport">
+  <h2>交通選項（重點）</h2>
+  <hr class="rule" />
+  <table class="stack">
+    <thead><tr><th>日</th><th>路段</th><th>推薦</th><th>重點</th></tr></thead>
+    <tbody>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 1</small>2/7</span></td><td data-label="路段">HND→酒店</td><td data-label="推薦">モノレール→天空橋</td><td data-label="重點">約 ¥180</td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 2</small>2/8 早</span></td><td data-label="路段">酒店→HND</td><td data-label="推薦">免費 shuttle 6:00／6:20</td><td data-label="重點">定員 20</td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 2</small>2/8 午後</span></td><td data-label="路段">雪祭→トマム</td><td data-label="推薦">おおぞら7 札幌 13:57 → トマム 15:26</td><td data-label="重點">約 13:15 離場、13:45 到月台。15:26 到站，轉車之後先 check-in。指定席</td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 5</small>2/11</span></td><td data-label="路段">トマム→支笏湖→札幌</td><td data-label="推薦">とかち6 12:15→南千歳 13:38，エアポート91，BLUE LINER 14:50／回 18:15</td><td data-label="重點">JR 現行參考，巴士 2027 官方。住札幌 METS。見 <a href="#d11">Day 5</a></td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 6</small>2/12</span></td><td data-label="路段">札幌下午→小樽→札幌</td><td data-label="推薦">上午留札幌；下午 JR 去小樽</td><td data-label="重點">晚上雪あかりの路，夜返 METS。2027 班次未公布，出發前再核</td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 7</small>2/13</span></td><td data-label="路段">札幌→CTS→HND→秋葉原</td><td data-label="推薦">約 08:00 離酒店；NH56 10:30→12:10（T2）；京急→品川→JR</td><td data-label="重點">快速エアポート約 33–37 分，國內線提前 60–90 分。ANA 到第2航廈；京急喺第3航廈（航廈間免費接駁），或東京モノレール有第2航廈站。秋葉原約 35–45 分</td></tr>
+      <tr><td data-label="日"><span class="day-cell"><small>Day 10</small>2/16</span></td><td data-label="路段">秋葉原→NRT</td><td data-label="推薦">日暮里→Skyliner</td><td data-label="重點">13:30–14:00 離酒店</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2/8 去 Tomamu 揀邊班</h3>
+  <table class="stack">
+    <thead><tr><th>判斷</th><th>列車</th><th>到トマム</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td data-label="判斷"><span class="tag">用這班</span></td><td data-label="列車">おおぞら7 札幌 13:57</td><td data-label="到トマム">15:26</td><td data-label="備註">站到 Tower 有免費 shuttle。Check-in 排喺轉車之後。正價約 ¥5,880</td></tr>
+      <tr><td data-label="判斷">太早</td><td data-label="列車">おおぞら5 札幌 11:46</td><td data-label="到トマム">13:22</td><td data-label="備註">雪祭時間大砍</td></tr>
+      <tr><td data-label="判斷">太晚</td><td data-label="列車">とかち5 札幌 15:51</td><td data-label="到トマム">17:39</td><td data-label="備註">當日霧氷更排唔到</td></tr>
+      <tr><td data-label="判斷">巴士</td><td data-label="列車">リゾートライナー（多由 CTS 發）</td><td data-label="到トマム">例 16:35 到 Tower</td><td data-label="備註">雪祭後繞 CTS 不划算；¥7,000・要約</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2/11 南千歳 → 支笏湖温泉</h3>
+  <table class="stack">
+    <caption>來源：<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">とかち 上り</a>、<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート</a>、<a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a>。</caption>
+    <thead><tr><th>段</th><th>用邊班</th><th>時刻</th></tr></thead>
+    <tbody>
+      <tr><td data-label="段">トマム → 南千歳</td><td data-label="用邊班">とかち6（唔停千歳）</td><td data-label="時刻">12:15 → 13:38</td></tr>
+      <tr><td data-label="段">南千歳 → 千歳</td><td data-label="用邊班">エアポート91</td><td data-label="時刻">14:02 → 14:06</td></tr>
+      <tr><td data-label="段">千歳東口 → 支笏湖温泉</td><td data-label="用邊班">BLUE LINER 14:50</td><td data-label="時刻">約 15:35 到會場。2027 官方</td></tr>
+      <tr><td data-label="段">支笏湖温泉 → 千歳</td><td data-label="用邊班">BLUE LINER 18:15</td><td data-label="時刻">19:00 到千歳。2027 官方。最遲可 19:30，唔搭 20:30</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="edition page" id="hokkaido">
+  <h2>北海道 · Day 1–6（2月7–12日）</h2>
+  <hr class="rule" />
+  <p class="muted">Tomamu 的券、纜車同活動表喺 <a href="#tomamu">Tomamu 專頁</a>，放喺東京之後。</p>
+    <div class="day-chips" role="tablist" aria-label="北海道日子">
+    <button type="button" class="day-chip active" data-day="d07" role="tab"><span class="chip-day">Day 1</span><span class="chip-date">2/7</span></button>
+    <button type="button" class="day-chip" data-day="d08" role="tab"><span class="chip-day">Day 2</span><span class="chip-date">2/8</span></button>
+    <button type="button" class="day-chip" data-day="d09" role="tab"><span class="chip-day">Day 3</span><span class="chip-date">2/9</span></button>
+    <button type="button" class="day-chip" data-day="d10" role="tab"><span class="chip-day">Day 4</span><span class="chip-date">2/10</span></button>
+    <button type="button" class="day-chip" data-day="d11" role="tab"><span class="chip-day">Day 5</span><span class="chip-date">2/11</span></button>
+    <button type="button" class="day-chip" data-day="d12" role="tab"><span class="chip-day">Day 6</span><span class="chip-date">2/12</span></button>
+  </div>
+
+  <article class="day active" id="d07">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 1</span><span class="d">7</span><span class="w">週日</span></div>
+      <h3>Day 1 · 2月7日（日）香港 → 羽田</h3>
+    </div>
+    <div class="day-layout">
+      <div class="timeline">
+    <article class="t-card is-transit is-flight">
+      <div class="t-rail"><span class="t-icon ico-flight" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 4c.5-.8-.4-1.7-1.2-1.3L3.5 9.5c-.7.3-.6 1.3.1 1.6l6.6 2.1 2.1 6.6c.3.7 1.3.8 1.6.1L20.7 4z"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">15:35</p>
+        <h4>香港起飛 · JL026</h4>
+                <div class="t-copy">
+          <p>參考 HKG 15:35 → HND 20:25（T3）</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">飛機</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">約 20:25 後</p>
+        <h4>機場 → 京急 EX INN</h4>
+                <div class="t-copy">
+          <p>推 東京モノレール T3→天空橋（約 ¥180）→ HICity口→ゾーンJ徒歩約 2 分。</p>
+          <p>酒店無機場→酒店免費接駁。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">晚上</p>
+        <h4>準備</h4>
+                <div class="t-copy">
+          <p>翌日手提（雪祭暖衣）</p>
+          <p>大行李可考慮運送 Tomamu</p>
+          <p>早瞓，翌朝 shuttle 6:00／6:20。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d08">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 2</span><span class="d">8</span><span class="w">週一</span></div>
+      <h3>Day 2 · 2月8日（一）大通＋薄野白天 → Tomamu</h3>
+    </div>
+    <div class="day-layout has-aside">
+      <div class="timeline">
+    <article class="t-card is-transit is-shuttle">
+      <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">6:00／6:20</p>
+        <h4>免費 shuttle 酒店 → 羽田</h4>
+                <div class="t-copy">
+          <p>免費 shuttle 6:00／6:20。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-flight">
+      <div class="t-rail"><span class="t-icon ico-flight" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 4c.5-.8-.4-1.7-1.2-1.3L3.5 9.5c-.7.3-.6 1.3.1 1.6l6.6 2.1 2.1 6.6c.3.7 1.3.8 1.6.1L20.7 4z"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">07:30</p>
+        <h4>JL503 羽田 → 新千歲</h4>
+                <div class="t-copy">
+          <p>JL503 HND 07:30 → CTS 09:00。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">飛機</span><span class="tag">已訂</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">上午</p>
+        <h4>CTS → 札幌站</h4>
+                <div class="t-copy">
+          <p>快速エアポート約 33–37 分</p>
+          <p>約 ¥1,230。</p>
+          <p>大件未寄去 Tomamu 就放札幌ロッカー。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">白天</p>
+        <h4>大通＋薄野短訪</h4>
+                <div class="t-copy">
+          <p>大通雪祭會場 highlights，再短訪薄野／すすきの。</p>
+          <p>今日只算白天，夜燈留到 2/11。</p>
+          <p>大通燈至 22:00；薄野通常至 23:00，最終日 22:00。</p>
+          <p class="t-src"><a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">約 13:15</p>
+        <h4>離開會場</h4>
+                <div class="t-copy">
+          <p>行李已經寄去 Tomamu，或者已經放入ロッカー，就約 13:15 離開會場，13:45 前到 JR 札幌月台。</p>
+          <p>大通／薄野／中島公園去 JR 札幌：地鐵約 10 分鐘，行路約 20 分鐘</p>
+          <p>唔好預一小時車程。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">13:57</p>
+        <h4>おおぞら7 札幌 → トマム</h4>
+                <div class="t-copy">
+          <p>現行參考 札幌 13:57 → トマム 15:26</p>
+          <p>全指定席</p>
+          <p>正價約 ¥5,880。</p>
+          <p>2027 冬期表未公布。</p>
+          <p>太早係 おおぞら5 11:46→13:22</p>
+          <p>太晚係 とかち5 15:51→17:39。</p>
+          <p class="t-src"><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・下り</a>（令和8年11月号，截至 2026-11-10）</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span><span class="tag">指定席</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-shuttle">
+      <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">到站之後</p>
+        <h4>免費 shuttle 到 Tower</h4>
+                <div class="t-copy">
+          <p>免費 shuttle 去 Tower。</p>
+          <p>Check-in 同當日活動排喺到站同轉車之後。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">17:00–22:00</p>
+        <h4>Ice Village</h4>
+                <div class="t-copy">
+          <p>當日霧氷留低。</p>
+          <p>到酒店之後按 <a href="#tomamu-evening">晚上活動</a> 去 Ice Village（17:00–22:00）。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+      <div class="day-asides">
+      <aside class="day-aside"><strong>15:26 先到トマム站</strong>
+        <div class="t-copy">
+          <p>北海道由今日開始。</p>
+          <p>列車到站之後先轉 shuttle、先 check-in。</p>
+          <p>霧氷上り最終約 15:30，同到站撞在一起，留 Day 3、Day 4。</p>
+          <p>傍晚到酒店之後可以去 Ice Village。</p>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d09">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 3</span><span class="d">9</span><span class="w">週二</span></div>
+      <h3>Day 3 · 2月9日（二）Tomamu · Snowboard 上堂日（推）</h3>
+    </div>
+    <div class="day-layout has-aside">
+      <div class="timeline">
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">早餐後</p>
+        <h4>去 Snowboard Academy</h4>
+                <div class="t-copy">
+          <p>早餐後去 Adventure Base 3F Ski &amp; Snowboard Academy。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>新手 Snowboard Lesson（要預約）</h4>
+                <div class="t-copy">
+          <p>Group 120 分主要日語 ¥7,800–8,800</p>
+          <p>Private 英／日約 ¥26,300–27,800</p>
+          <p>可加中文認證雪校。</p>
+        </div>
+        <div class="t-tags"><span class="tag warn">要預約</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>租賃＋當日リフト券</h4>
+                <div class="t-copy">
+          <p>住宿者優待約 ¥9,000。</p>
+          <p>霧氷券唔等於全日 pass。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">午後</p>
+        <h4>Debut Park／初級區練板</h4>
+                <div class="t-copy">
+          <p>午後 Debut Park／初級區練板（Tower Express 等）。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">晚上</p>
+        <h4>Ice Village</h4>
+                <div class="t-copy">
+          <p>場次見 <a href="#tomamu">Tomamu 專頁</a>。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+      <div class="day-asides">
+      <aside class="day-aside frost"><strong>一日集中板，唔會一日 Ski 一日 Board</strong>
+        <div class="t-copy">
+          <p>另一日做活動。9／10 可對調。</p>
+          <p>泳池同溫泉唔當今日主線。</p>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d10">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 4</span><span class="d">10</span><span class="w">週三</span></div>
+      <h3>Day 4 · 2月10日（三）Tomamu · 霧氷同活動日（推）</h3>
+    </div>
+    <p class="day-lead">用每晚霧氷往返券。2/10 仍喺シバレタイム期內（至 2/10）。主線係霧氷同 GAO，晚上 Ice Village。</p>
+    <div class="day-layout">
+      <div class="timeline">
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">7:45–15:30</p>
+        <h4>霧氷テラス</h4>
+                <div class="t-copy">
+          <p>上り約 7:45–15:30</p>
+          <p>用住宿往返券。</p>
+          <p>一般唔使約。</p>
+        </div>
+        <div class="t-tags"><span class="tag">推</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">7:45–9:00</p>
+        <h4>シバレタイム</h4>
+                <div class="t-copy">
+          <p>免費；至 2/10。</p>
+          <p>唔使約。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>スノーモービル 3km</h4>
+                <div class="t-copy">
+          <p>約 ¥3,000</p>
+          <p>約 10 分</p>
+          <p>16 歲+。</p>
+          <p>唔使約。</p>
+        </div>
+        <div class="t-tags"><span class="tag">推</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>其他 GAO</h4>
+                <div class="t-copy">
+          <p>スノーシュー／ラフティング等。</p>
+          <p>部分要約。</p>
+          <p>全表見專頁。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">17:00–22:00</p>
+        <h4>Ice Village</h4>
+                <div class="t-copy">
+          <p>住客當已包。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+    </div>
+    <p class="xref">價錢同場次見 <a href="#tomamu-morning">早上</a>／<a href="#tomamu-afternoon">中午～下午</a>／<a href="#tomamu-evening">晚上</a>。</p>
+  </article>
+
+  <article class="day" id="d11">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 5</span><span class="d">11</span><span class="w">祝日</span></div>
+      <h3>Day 5 · 2月11日（四・建国記念の日）Tomamu → 支笏湖 → 薄野最終夜</h3>
+    </div>
+    <div class="day-layout has-aside">
+      <div class="timeline">
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">早上稍後</p>
+        <h4>Checkout 星野 Tomamu</h4>
+                <div class="t-copy">
+          <p>2/11 纜車 9:00 開，霧氷只可以排上午。</p>
+          <p>12:15 的列車趕唔切下午活動。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card is-transit is-shuttle">
+      <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        
+        <h4>Shuttle 去トマム站</h4>
+                <div class="t-copy">
+          <p>去トマム站的 shuttle 向酒店核，呢度唔寫死班次。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">12:15</p>
+        <h4>とかち6（札幌行）</h4>
+                <div class="t-copy">
+          <p>現行參考 トマム 12:15 → <span class="t-keep">南千歳 13:38</span></p>
+          <p>列車續開 新札幌 14:01／札幌 14:10</p>
+          <p><strong>唔停千歳</strong></p>
+          <p class="t-src"><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道・上り</a>（令和8年11月号，截至 2026-11-10）</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">14:02</p>
+        <h4>南千歳轉快速エアポート91</h4>
+                <div class="t-copy">
+          <p>現行參考 エアポート91 南千歳 14:02 → 千歳 14:06</p>
+          <p>緩衝約 24 分。</p>
+          <p>エアポート87 13:42→13:46 只剩<span class="t-keep">約 4 分</span>。</p>
+          <p>エアポート89 13:53 通過千歳，停唔到。</p>
+          <p class="t-src"><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート時刻</a></p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>行李放 JR 千歳 coin locker</h4>
+                <div class="t-copy">
+          <p>西口 1 階、改札外。</p>
+          <p>小／中／大都有；使用開始日起計最多 3 日。</p>
+          <p class="t-src"><a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道ロッカー</a>（<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">一覽 PDF</a>）</p>
+          <p>千歳観光案内所的手荷物預かり 9:00–17:00，回程 19:00 之後已經收檔。</p>
+          <p class="t-src"><a href="https://www.welcome-to-chitose.jp/guide.html">千歳市案内</a></p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card is-transit is-shuttle">
+      <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">14:50</p>
+        <h4>BLUE LINER 去支笏湖</h4>
+                <div class="t-copy">
+          <p>行去東口 7 番。</p>
+          <p>官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。</p>
+          <p>單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。</p>
+          <p>去程 14:50 同回程 18:15 要前日 20:30 前分別訂好。</p>
+          <p>當日不可訂；不可改班；取消收費 100%；自由席；10 分鐘前到站。</p>
+          <p>官方寫明巴士不代存行李箱。</p>
+          <p>2027 官方 東口 14:50 → 支笏湖温泉約 15:35。</p>
+          <p>13:20 那班喺 とかち6 到南千歳之前已經開出。</p>
+          <p>14:20→15:05 由 14:06 到站計太趕，唔做主計劃。</p>
+          <p>官方話 <span class="t-keep">15 時</span>之後的開出同到達可能延遲。</p>
+          <p class="t-src"><a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス</a></p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">15:35</p>
+        <h4>支笏湖氷濤まつり</h4>
+                <div class="t-copy">
+          <p>2027 官方 1 月 30 日–2 月 23 日，10:00–20:00，ライトアップ 16:30–20:00。</p>
+          <p>平日中學生以上 ¥1,000；土日祝 ¥3,000（小學生以下免費）。</p>
+          <p>2/11 係祝日，所以 ¥3,000。</p>
+          <p>巴士票唔包含入場。</p>
+          <p>15:35 到場，16:30 開燈前大約得 <span class="t-keep">55 分鐘</span>日光，之後留燈約 1–1.5 小時。</p>
+          <p>會場喺支笏湖温泉。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card is-transit is-shuttle">
+      <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">18:15</p>
+        <h4>BLUE LINER 回千歳</h4>
+                <div class="t-copy">
+          <p>2027 官方 18:15 → JR 千歳東口 19:00。</p>
+          <p>取西口ロッカー之後轉札幌：千歳 19:14→札幌 19:45（エアポート157）取行李太貼</p>
+          <p>用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。</p>
+          <p>計劃按大約 20:00 到札幌、薄野約 20:10–20:20。</p>
+          <p>18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-shuttle">
+      <div class="t-rail"><span class="t-icon ico-shuttle" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 11.5h19" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="5" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="9.4" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><rect x="13.8" y="7" width="3.2" height="2.6" rx=".6" fill="currentColor"/><circle cx="7" cy="18.4" r="1.65" fill="currentColor"/><circle cx="17" cy="18.4" r="1.65" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">最遲 19:30</p>
+        <h4>跳過 20:30 那班</h4>
+                <div class="t-copy">
+          <p>2027 官方 19:30 → 千歳 20:15</p>
+          <p>エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。</p>
+          <p>落雪若延遲，會逼近最終日 22:00。</p>
+          <p>20:30 官方只到千歳 21:15，而且唔去機場。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">接駁巴士</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">約 20:00</p>
+        <h4>入住 METS，再去薄野最終夜</h4>
+                <div class="t-copy">
+          <p>METS 離札幌站約 2 分鐘，行李先放酒店。</p>
+          <p>南北線さっぽろ→すすきの約 3 分鐘，再加行路。</p>
+          <p>2/12 上午留札幌，下午先去小樽。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+      <div class="day-asides">
+      <aside class="day-aside"><strong>祝日入場 ¥3,000，晚住札幌 METS</strong>
+        <div class="t-copy">
+          <p>先放 JR 千歳ロッカー，再去支笏湖。</p>
+          <p>唔好先繞札幌酒店，亦唔搬去千歳酒店。</p>
+          <p>當晚入住 JR東日本ホテルメッツ プレミア 札幌。</p>
+        </div>
+      </aside>
+      <aside class="day-aside frost"><strong>雪祭最終日</strong>
+        <div class="t-copy">
+          <p>會期去到 2/11。</p>
+          <p>大通燈至 22:00；薄野通常至 23:00，最終日 22:00。</p>
+          <p class="t-src"><a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></p>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d12">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 6</span><span class="d">12</span><span class="w">週五</span></div>
+      <h3>Day 6 · 2月12日（五）上午札幌 · 下午小樽雪あかりの路</h3>
+    </div>
+    <div class="day-layout has-aside">
+      <div class="timeline">
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">上午</p>
+        <h4>札幌慢行</h4>
+                <div class="t-copy">
+          <p>由 JR東日本ホテルメッツ プレミア 札幌出發，留喺札幌，近酒店慢行，留力下午坐車。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">下午</p>
+        <h4>JR 札幌 → 小樽</h4>
+                <div class="t-copy">
+          <p>JR 札幌→小樽。</p>
+          <p>2027 冬期時刻未公布，具體班次出發前再核，呢度唔寫死某一班。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">晚上</p>
+        <h4>小樽雪あかりの路</h4>
+                <div class="t-copy">
+          <p>官方 2027 會期 2 月 6–13 日，點燈時間未公布。</p>
+          <p class="t-src"><a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会・2027</a></p>
+          <p>2026 年（第 28 回，2 月 7–14 日）係 17:00–21:00。</p>
+          <p>呢個係舊年時間。</p>
+          <p class="t-src"><a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 官方頁</a></p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">夜返</p>
+        <h4>返札幌 METS</h4>
+                <div class="t-copy">
+          <p>燈後返 JR東日本ホテルメッツ プレミア 札幌，過第二晚。</p>
+          <p>回程 JR 同樣未有 2027 冬期表。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+      </div>
+      <div class="day-asides">
+      <aside class="day-aside frost"><strong>第二晚繼續住札幌 METS</strong>
+        <div class="t-copy">
+          <p>支笏湖已喺 2/11 去完。</p>
+          <p>上午留札幌，下午先出發去小樽，晚上睇燈，之後返同一間酒店。</p>
+          <p>唔搬去千歳酒店。</p>
+          <p>2/13 早上 NH56 10:30 由新千歲國內線飛羽田。</p>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="edition page" id="tokyo">
+  <h2>東京 · Day 7–10（2月13–16日）</h2>
+  <hr class="rule" />
+    <div class="day-chips" role="tablist" aria-label="東京日子">
+    <button type="button" class="day-chip active" data-day="d13" role="tab"><span class="chip-day">Day 7</span><span class="chip-date">2/13</span></button>
+    <button type="button" class="day-chip" data-day="d14" role="tab"><span class="chip-day">Day 8</span><span class="chip-date">2/14</span></button>
+    <button type="button" class="day-chip" data-day="d15" role="tab"><span class="chip-day">Day 9</span><span class="chip-date">2/15</span></button>
+    <button type="button" class="day-chip" data-day="d16" role="tab"><span class="chip-day">Day 10</span><span class="chip-date">2/16</span></button>
+  </div>
+
+  <article class="day active" id="d13">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 7</span><span class="d">13</span><span class="w">週六</span></div>
+      <h3>Day 7 · 2月13日（六）札幌 → 東京</h3>
+    </div>
+    <div class="day-layout">
+      <div class="timeline">
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">約 08:00</p>
+        <h4>出發去新千歲</h4>
+                <div class="t-copy">
+          <p>由 JR東日本ホテルメッツ プレミア 札幌去新千歲。</p>
+          <p>快速エアポート約 33–37 分</p>
+          <p>國內線提前 60–90 分。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-flight">
+      <div class="t-rail"><span class="t-icon ico-flight" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 4c.5-.8-.4-1.7-1.2-1.3L3.5 9.5c-.7.3-.6 1.3.1 1.6l6.6 2.1 2.1 6.6c.3.7 1.3.8 1.6.1L20.7 4z"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">10:30</p>
+        <h4>ANA NH56</h4>
+                <div class="t-copy">
+          <p>新千歲國內線 10:30 → 羽田 12:10，第2航廈。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">飛機</span><span class="tag">已訂</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">12:10 後</p>
+        <h4>HND → 秋葉原</h4>
+                <div class="t-copy">
+          <p>ANA 喺第2航廈到。</p>
+          <p>京急喺第3航廈，航廈之間有免費接駁；東京モノレール有第2航廈站。</p>
+          <p>之後京急→品川→JR，約 35–45 分（約 ¥500–540）。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">傍晚</p>
+        <h4>入住秋葉原メッツ</h4>
+                <div class="t-copy">
+          <p>入住 JR東日本ホテルメッツ プレミア 秋葉原，傍晚輕量購物。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d14">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 8</span><span class="d">14</span><span class="w">週日</span></div>
+      <h3>Day 8 · 2月14日（日）PokéPark／備案</h3>
+    </div>
+    <div class="day-layout">
+      <div class="timeline">
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>PokéPark</h4>
+                <div class="t-copy">
+          <p>抽籤結果約 11 月底。</p>
+        </div>
+        <div class="t-tags"><span class="tag warn">抽籤待結果</span></div>
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        
+        <h4>若不中：秋葉原半天</h4>
+                <div class="t-copy">
+          <p>若不中：秋葉原電器／角色店／藥妝半天。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d15">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 9</span><span class="d">15</span><span class="w">週一</span></div>
+      <h3>Day 9 · 2月15日（一）購物＋Shibuya Sky</h3>
+    </div>
+    <div class="day-layout">
+      <div class="timeline">
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">午前</p>
+        <h4>澀谷購物</h4>
+                <div class="t-copy">
+          <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO</p>
+          <p>BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。</p>
+        </div>
+        
+      </div>
+    </article>
+    <article class="t-card">
+      <div class="t-rail"><span class="t-dot" aria-hidden="true"></span></div>
+      <div class="t-body">
+        <p class="t-time">16:10–16:30</p>
+        <h4>Shibuya Sky</h4>
+                <div class="t-copy">
+          <p>日落約 17:08–17:22 → Shibuya Sky 建議 16:10–16:30 入場</p>
+          <p>開售＝到訪日前 14 日 0:00 JST。</p>
+        </div>
+        
+      </div>
+    </article>
+      </div>
+    </div>
+  </article>
+
+  <article class="day" id="d16">
+    <div class="day-head">
+      <div class="date-badge" aria-hidden="true"><span class="m">Day 10</span><span class="d">16</span><span class="w">週二</span></div>
+      <h3>Day 10 · 2月16日（二）成田回港</h3>
+    </div>
+    <div class="day-layout">
+      <div class="timeline">
+    <article class="t-card is-transit is-train">
+      <div class="t-rail"><span class="t-icon ico-train" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="14.5" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="7.2" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><rect x="12.8" y="5.2" width="4" height="3" rx=".8" fill="currentColor"/><circle cx="8.2" cy="19.2" r="1.55" fill="currentColor"/><circle cx="15.8" cy="19.2" r="1.55" fill="currentColor"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">13:30–14:00</p>
+        <h4>離開酒店去成田</h4>
+                <div class="t-copy">
+          <p>去成田。推 Skyliner</p>
+          <p>13:30–14:00 離酒店。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">列車</span><span class="tag">推 Skyliner</span></div>
+      </div>
+    </article>
+    <article class="t-card is-transit is-flight">
+      <div class="t-rail"><span class="t-icon ico-flight" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 4c.5-.8-.4-1.7-1.2-1.3L3.5 9.5c-.7.3-.6 1.3.1 1.6l6.6 2.1 2.1 6.6c.3.7 1.3.8 1.6.1L20.7 4z"/></svg></span></div>
+      <div class="t-body">
+        <p class="t-time">18:30</p>
+        <h4>JL735 成田回港</h4>
+                <div class="t-copy">
+          <p>參考 NRT 18:30 → HKG 22:55。</p>
+        </div>
+        <div class="t-tags"><span class="tag tag-mode">飛機</span><span class="tag warn">成田起飛</span></div>
+      </div>
+    </article>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="edition page" id="tomamu">
+  <h2>Tomamu 專頁</h2>
+  <hr class="rule" />
+  <div class="copy-stack">
+    <p>住 2/8 夜至 2/11 早上。</p>
+    <p>Day 2 15:26 先到トマム站，當日下午霧氷排唔到。</p>
+    <p>Day 5 とかち6 現行參考 12:15 開，只排到上午。</p>
+    <p>霧氷留 Day 3、Day 4。</p>
+    <p>泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
+  </div>
+
+  <div class="block unit" id="tomamu-activities">
+    <h3>活動・早午晚（2/8–11）</h3>
+    <p class="count-note">下面圓點入面的數字係<strong>活動場數</strong>，例如「早上・21 場」＝早上表有 21 項。唔係時間，亦唔係價錢。搜尋之後，場數會跟住篩選結果變。</p>
+    <div class="callout paper"><strong>唔包滑雪／滑雪板課堂</strong>粗體標記＝每日只有 1 場／1 組／1 晚；多場＝一日 2 場或以上。價錢跟星野 snowtomamu.jp 26/27 冬官網。第二日同第五日排唔到下午霧氷。</div>
+    <ul class="perks">
+      <li><span>住客免費</span>Mina-Mina、木林の湯（券內有，主線唔排）</li>
+      <li><span>霧氷券</span>每晚一張往返券</li>
+      <li><span>纜車 2/8–10</span>7:45 開</li>
+      <li><span>纜車 2/11</span>改 9:00，中午要走</li>
+      <li><span>シバレ</span>至 2/10</li>
+    </ul>
+    <p class="legend"><span><span class="mark once">每日1場</span>當日只有 1 場／1 組／1 晚</span><span><span class="mark rep">多場</span>一日 2 場或以上</span></p>
+    <div class="act-tools">
+      <label><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">搜尋活動</span>
+        <input id="act-filter" type="search" placeholder="搜尋活動、場次或價錢" autocomplete="off" />
+      </label>
+      <button type="button" id="act-clear">清除</button>
+      <p class="filter-meta" id="filter-meta" aria-live="polite"></p>
+    </div>
+    <div class="tabs">
+      <input type="radio" name="tomamu-slot" id="tab-morning" checked />
+      <input type="radio" name="tomamu-slot" id="tab-afternoon" />
+      <input type="radio" name="tomamu-slot" id="tab-evening" />
+      <div class="tab-labels">
+        <label for="tab-morning" data-hash="#tomamu-morning">早上・<span class="count" data-count="morning">21 場</span></label>
+        <label for="tab-afternoon" data-hash="#tomamu-afternoon">中午～下午・<span class="count" data-count="afternoon">16 場</span></label>
+        <label for="tab-evening" data-hash="#tomamu-evening">晚上・<span class="count" data-count="evening">16 場</span></label>
+      </div>
+<div class="panel panel-morning" id="tomamu-morning" role="tabpanel">
+      <h3>早上活動</h3>
       <p class="filter-empty">呢個時段冇符合嘅活動。</p>
       <table class="stack act">
         <thead>
@@ -935,77 +2016,77 @@
             <td data-label="人數／備註">全日開放</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪鞋森林漫步</span><span class="ja" lang="ja">スノーシュー</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪鞋森林漫步</span><span class="ja" lang="ja">スノーシュー</span></td>
             <td data-label="開場／場次">8:30–9:15｜15:30–16:15</td>
             <td data-label="所需時間">約45分鐘</td>
             <td data-label="價錢" class="price">¥4,000／人</td>
             <td data-label="人數／備註">每日2場・3歲+・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">Fun★冰壺</span><span class="ja" lang="ja">Fun★カーリング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">Fun★冰壺</span><span class="ja" lang="ja">Fun★カーリング</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（9–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">家庭冰壺（3歲起）</span><span class="ja" lang="ja">ファミリーカーリング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">家庭冰壺（3歲起）</span><span class="ja" lang="ja">ファミリーカーリング</span></td>
             <td data-label="開場／場次">8:30–12:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（3–11）</td>
             <td data-label="人數／備註">要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冬季家庭森林探險</span><span class="ja" lang="ja">冬の森たんけん</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冬季家庭森林探險</span><span class="ja" lang="ja">冬の森たんけん</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（3–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪鞋行山＋森林咖啡</span><span class="ja" lang="ja">スノーシュー＆森カフェ</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪鞋行山＋森林咖啡</span><span class="ja" lang="ja">スノーシュー＆森カフェ</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,500／¥6,500（7–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">樺木匙手作</span><span class="ja" lang="ja">白樺のスプーンづくり</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">樺木匙手作</span><span class="ja" lang="ja">白樺のスプーンづくり</span></td>
             <td data-label="開場／場次">8:30–12:00｜12:30–16:00</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,000／人</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪地組合遊覽</span><span class="ja" lang="ja">スノーコンボクルージング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪地組合遊覽</span><span class="ja" lang="ja">スノーコンボクルージング</span></td>
             <td data-label="開場／場次">8:45｜10:45｜12:15｜13:45｜15:15</td>
             <td data-label="所需時間">約1小時</td>
             <td data-label="價錢" class="price">¥24,000／組（2–4人）；¥30,000（5人）</td>
             <td data-label="人數／備註">每日5場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">家庭雪地野餐</span><span class="ja" lang="ja">ファミリースノーピクニック</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">家庭雪地野餐</span><span class="ja" lang="ja">ファミリースノーピクニック</span></td>
             <td data-label="開場／場次">9:00–10:30｜13:00–14:30</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥8,000／¥7,000（2–11）</td>
             <td data-label="人數／備註">每日2場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">年輪蛋糕製作</span><span class="ja" lang="ja">バウムクーヘン作り</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">年輪蛋糕製作</span><span class="ja" lang="ja">バウムクーヘン作り</span></td>
             <td data-label="開場／場次">9:30｜11:30｜13:30</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥5,500／¥5,000</td>
             <td data-label="人數／備註">每日3場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">魔法雪板・度假村路線</span><span class="ja" lang="ja">スロースキー リゾート</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">魔法雪板・度假村路線</span><span class="ja" lang="ja">スロースキー リゾート</span></td>
             <td data-label="開場／場次">9:30｜11:00｜13:00｜15:30</td>
             <td data-label="所需時間">約1小時</td>
             <td data-label="價錢" class="price">¥4,500／人</td>
             <td data-label="人數／備註">每日4場・8歲+・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">魔法雪板・森林山丘</span><span class="ja" lang="ja">フォレストヒル</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">魔法雪板・森林山丘</span><span class="ja" lang="ja">フォレストヒル</span></td>
             <td data-label="開場／場次">9:00–11:30｜13:00–15:30</td>
             <td data-label="所需時間">約2.5小時</td>
             <td data-label="價錢" class="price">¥8,000／¥7,000（8–11）</td>
@@ -1065,7 +2146,7 @@
     </div>
 
     <div class="panel panel-afternoon" id="tomamu-afternoon" role="tabpanel">
-      <h3>中午～下午</h3>
+      <h3>中午～下午活動</h3>
       <p class="filter-empty">呢個時段冇符合嘅活動。</p>
       <table class="stack act">
         <thead>
@@ -1143,14 +2224,14 @@
             <td data-label="人數／備註">5–12／12–15歲</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冰上釣虹鱒</span><span class="ja" lang="ja">トマムポンド</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冰上釣虹鱒</span><span class="ja" lang="ja">トマムポンド</span></td>
             <td data-label="開場／場次">10:00｜12:00｜14:00</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥6,000／¥5,500（2–11）</td>
             <td data-label="人數／備註">每日3場・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">湖上野餐釣魚</span><span class="ja" lang="ja">レイクピクニック</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">湖上野餐釣魚</span><span class="ja" lang="ja">レイクピクニック</span></td>
             <td data-label="開場／場次">9:00–12:30｜12:45–16:15</td>
             <td data-label="所需時間">約3.5小時</td>
             <td data-label="價錢" class="price">¥7,000／¥6,000（6–11）</td>
@@ -1171,14 +2252,14 @@
             <td data-label="人數／備註">18歲+・要預約</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">家庭雪地野餐（第二場）</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">家庭雪地野餐（第二場）</span></td>
             <td data-label="開場／場次">13:00–14:30</td>
             <td data-label="所需時間">約1.5小時</td>
             <td data-label="價錢" class="price">¥8,000／¥7,000</td>
             <td data-label="人數／備註">同早場共2場</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">雪鞋漫步（第二場）</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">雪鞋漫步（第二場）</span></td>
             <td data-label="開場／場次">15:30–16:15</td>
             <td data-label="所需時間">約45分鐘</td>
             <td data-label="價錢" class="price">¥4,000</td>
@@ -1189,7 +2270,7 @@
     </div>
 
     <div class="panel panel-evening" id="tomamu-evening" role="tabpanel">
-      <h3>晚上</h3>
+      <h3>晚上活動</h3>
       <p class="filter-empty">呢個時段冇符合嘅活動。</p>
       <table class="stack act">
         <thead>
@@ -1204,7 +2285,7 @@
             <td data-label="人數／備註">每晚開放</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">夜間雪橇車廂遊</span><span class="ja" lang="ja">ナイトキャビンクルージング</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">夜間雪橇車廂遊</span><span class="ja" lang="ja">ナイトキャビンクルージング</span></td>
             <td data-label="開場／場次">2月：17:15–18:00｜18:30–19:15</td>
             <td data-label="所需時間">約45分鐘</td>
             <td data-label="價錢" class="price">¥24,000／組（2–4）；¥30,000（5）</td>
@@ -1218,14 +2299,14 @@
             <td data-label="人數／備註">—</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冰之酒店參觀</span><span class="ja" lang="ja">氷のホテル見学</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冰之酒店參觀</span><span class="ja" lang="ja">氷のホテル見学</span></td>
             <td data-label="開場／場次">17:00–17:20｜18:20–19:20｜20:20–21:00</td>
             <td data-label="所需時間">每段約20–60分</td>
             <td data-label="價錢" class="price is-free">免費</td>
             <td data-label="人數／備註">每日3時段</td>
           </tr>
           <tr>
-            <td data-label="活動"><span class="mark rep">🔁</span><span class="name">冰之下午茶</span><span class="ja" lang="ja">氷のアフタヌーンティー</span></td>
+            <td data-label="活動"><span class="mark rep">多場</span><span class="name">冰之下午茶</span><span class="ja" lang="ja">氷のアフタヌーンティー</span></td>
             <td data-label="開場／場次">17:30｜19:30</td>
             <td data-label="所需時間">約40分鐘</td>
             <td data-label="價錢" class="price">¥7,500／人</td>
@@ -1311,270 +2392,168 @@
         </tbody>
       </table>
     </div>
+
+    </div>
   </div>
-</section>
 
-<section id="d12">
-  <div class="day-head">
-    <div class="date-badge" aria-hidden="true"><span class="m">二月</span><span class="d">12</span><span class="w">五</span></div>
-    <h2>2月12日（五）日間方案</h2>
+  <div class="block unit" id="lifts">
+    <h3>霧氷ゴンドラ vs Tower Express</h3>
+    <table class="stack">
+      <thead><tr><th>設施</th><th>係咩</th><th>去邊</th><th>同住宿券</th></tr></thead>
+      <tbody>
+        <tr><td data-label="設施">雲海ゴンドラ（霧氷用）</td><td data-label="係咩">4 人封閉ゴンドラ；約 13 分到山頂</td><td data-label="去邊">霧氷テラス（約 1,088m）</td><td data-label="同住宿券">住宿「霧氷往返券」＝呢條</td></tr>
+        <tr><td data-label="設施">Tower Express</td><td data-label="係咩">高速クワッド（有罩）椅式リフト</td><td data-label="去邊">Tower 山區雪道</td><td data-label="同住宿券">滑雪用；需リフト券；唔係去霧氷</td></tr>
+        <tr><td data-label="設施">其他 Express／リフト</td><td data-label="係咩">高速／固定椅式</td><td data-label="去邊">各區雪道</td><td data-label="同住宿券">滑雪用；唔包喺霧氷每晚一張</td></tr>
+      </tbody>
+    </table>
+    <div class="callout paper"><strong>用券上霧氷，唔等於全日滑雪</strong>Tower Express 12/26–3/31 可至約 18:00；霧氷上り最終多數約 15:30。</div>
   </div>
-  <div class="callout info"><strong>全日在札幌；2/13 中午飛東京</strong>已去過小樽唔使再遠途重遊。</div>
-  <table class="stack">
-    <thead>
-      <tr><th>方案</th><th>內容</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="方案"><span class="tag ok">推 A</span> 支笏湖氷瀑午後</td>
-        <td data-label="內容">例：札幌駅約13:20–14:45發觀光／氷濤巴士 → ライトアップ16:30–20:00 → 約19:40–20:00回。巴士約¥5,400–9,000；入場另計；<strong>要預約</strong></td>
-      </tr>
-      <tr>
-        <td data-label="方案">B 定山渓半日</td>
-        <td data-label="內容">かっぱライナー等；早歸打包；適合累／天氣差</td>
-      </tr>
-      <tr>
-        <td data-label="方案">C 市內慢行</td>
-        <td data-label="內容">大通／狸小路／藥妝；留力翌日早機</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="callout warn"><strong>不推</strong>自拼 JR＋千歳再轉；遠途新景點；再跑小樽日間。</div>
-</section>
 
-<section id="tokyo">
-  <h2>東京（2/13–16）</h2>
-  <h3>2/13 抵京</h3>
-  <ol class="steps">
-    <li>約09:00前去 CTS；建議 NH58／BC712／JL508</li>
-    <li>HND→秋葉原：推 京急→品川→JR（約35–45分；約¥500–540）</li>
-    <li>傍晚秋葉原輕量購物</li>
-  </ol>
-  <h3>2/14 PokéPark／備案</h3>
-  <p>抽籤結果約11月底。若不中：秋葉原電器／角色店／藥妝半天。</p>
-  <h3>2/15 購物＋Shibuya Sky</h3>
-  <p>午前澀谷掃 LOFT／PLAZA／3COINS／STANDARD PRODUCTS／DAISO；BEAMS／UA／URBAN RESEARCH／LOWRYS FARM。日落約17:08–17:22 → Shibuya Sky 建議16:10–16:30入場（開售＝到訪日前14日 0:00 JST）。</p>
-  <h3>2/16 回港</h3>
-  <p>去<strong>成田</strong>。推 Skyliner；13:30–14:00離酒店；JL735 參考 NRT 18:30 → HKG 22:55。</p>
-</section>
+  <div class="block unit" id="voucher">
+    <h3>The Tower voucher</h3>
+    <div class="callout frost"><strong>Voucher 原文</strong>Free Use of the MINA-MINA BEACH &amp; KIRIN NO YU throughout stay · 1 time round-trip ticket for “Terrace of Frost Tree” per night · Free Wifi in guest room</div>
+    <table class="stack">
+      <thead><tr><th>項目</th><th>意思</th><th>注意</th></tr></thead>
+      <tbody>
+        <tr><td data-label="項目">MINA-MINA BEACH</td><td data-label="意思">室內常溫海灘／波池</td><td data-label="注意">滯在中免費。行程主線唔排游泳</td></tr>
+        <tr><td data-label="項目">KIRIN NO YU（木林の湯）</td><td data-label="意思">露天風呂＋サウナ（非天然溫泉）</td><td data-label="注意">全程免費。行程主線唔排溫泉</td></tr>
+        <tr><td data-label="項目">Terrace of Frost Tree 往返</td><td data-label="意思">霧氷テラス＝雲海ゴンドラ往返</td><td data-label="注意">per night；住 3 晚最多 3 次；每人／每房以入住發券為準</td></tr>
+        <tr><td data-label="項目">Free Wifi</td><td data-label="意思">客房＋ロビー</td><td data-label="注意">—</td></tr>
+        <tr><td data-label="項目">Ice Village</td><td data-label="意思">多數 Tower 客滯在免費</td><td data-label="注意">行程當作已包</td></tr>
+      </tbody>
+    </table>
+    <div class="copy-stack">
+      <p>呢啲霧氷券係「上霧氷テラス睇景」用，<strong>唔係全日滑雪 lift pass</strong>。</p>
+      <p>要滑一日＝另買 1 日リフト券（2026–27 窗口大人約 ¥9,500；住宿者優待約 ¥9,000）。</p>
+    </div>
+  </div>
 
-<section id="transport">
-  <h2>交通選項（重點）</h2>
-  <p class="muted">2027年2月班次多數未公布；時刻以 2025–2026 冬／2026 現行為參考。</p>
-  <h3>推薦速覽</h3>
-  <table class="stack">
-    <thead>
-      <tr><th>日</th><th>路段</th><th>推薦</th><th>重點</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="日">2/7</td>
-        <td data-label="路段">HND→酒店</td>
-        <td data-label="推薦">モノレール→天空橋</td>
-        <td data-label="重點">約¥180</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/8早</td>
-        <td data-label="路段">酒店→HND</td>
-        <td data-label="推薦">免費 shuttle 6:00／6:20</td>
-        <td data-label="重點">定員20</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/8午後</td>
-        <td data-label="路段">雪祭→トマム</td>
-        <td data-label="推薦">おおぞら7 13:57→15:26</td>
-        <td data-label="重點">Tower≈15:30；指定席必訂</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/11</td>
-        <td data-label="路段">トマム→札幌</td>
-        <td data-label="推薦">おおぞら4 10:58→12:29</td>
-        <td data-label="重點">同日小樽＋すすきの可行但緊</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/12</td>
-        <td data-label="路段">札幌→支笏湖</td>
-        <td data-label="推薦">午後ライトアップ巴士</td>
-        <td data-label="重點">要預約</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/13</td>
-        <td data-label="路段">HND→秋葉原</td>
-        <td data-label="推薦">京急→品川→JR</td>
-        <td data-label="重點">約35–45分</td>
-      </tr>
-      <tr>
-        <td data-label="日">2/16</td>
-        <td data-label="路段">秋葉原→NRT</td>
-        <td data-label="推薦">日暮里→Skyliner</td>
-        <td data-label="重點">13:30–14:00離酒店</td>
-      </tr>
-    </tbody>
-  </table>
+  </section>
 
-  <h3>2/8 雪祭→Tower 詳細 options</h3>
-  <table class="stack">
-    <thead>
-      <tr><th>Option</th><th>內容</th><th>到 Tower</th><th>備註</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Option"><span class="tag ok">推 ≈15:30</span></td>
-        <td data-label="內容">おおぞら7 13:57→15:26＋shuttle</td>
-        <td data-label="到 Tower">≈15:31</td>
-        <td data-label="備註">正價約¥5,880；約1ヶ月前訂</td>
-      </tr>
-      <tr>
-        <td data-label="Option">太早</td>
-        <td data-label="內容">おおぞら5 11:46→13:22</td>
-        <td data-label="到 Tower">≈13:30</td>
-        <td data-label="備註">雪祭時間大砍</td>
-      </tr>
-      <tr>
-        <td data-label="Option">太晚</td>
-        <td data-label="內容">とかち5 15:51→17:39</td>
-        <td data-label="到 Tower">≈17:45</td>
-        <td data-label="備註">錯過當日ゴンドラ</td>
-      </tr>
-      <tr>
-        <td data-label="Option">巴士直達</td>
-        <td data-label="內容">リゾートライナー（多由CTS發）</td>
-        <td data-label="到 Tower">例16:35</td>
-        <td data-label="備註">雪祭後繞CTS不划算；¥7,000・要約</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="jr">
-  <h2>JR／eki-net（外國人）</h2>
-  <div class="callout warn"><strong>訪日／海外居住：基本上買正價</strong>えきねっと＝日本國內居住者用；海外居住者不能註冊。訪日用 <strong>JR-EAST Train Reservation</strong>：可買おおぞら／とかち指定席，但係正價（普通車指定席片道約¥5,880），無外國人專屬價，亦無特急トクだ値。</div>
-  <table class="stack">
-    <thead>
-      <tr><th>項目</th><th>做法</th><th>注意</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="項目">訪日／海外</td>
-        <td data-label="做法">JR-EAST Train Reservation</td>
-        <td data-label="注意">正價；約¥5,880／程</td>
-      </tr>
-      <tr>
-        <td data-label="項目">えきねっと</td>
-        <td data-label="做法">海外居住者不能用</td>
-        <td data-label="注意">トクだ値基本無緣</td>
-      </tr>
-      <tr>
-        <td data-label="項目">Hokkaido Rail Pass</td>
-        <td data-label="做法">5日約¥22,000</td>
-        <td data-label="注意">只為往返トマム多半不划算</td>
-      </tr>
-      <tr>
-        <td data-label="項目">何時買</td>
-        <td data-label="做法">約1ヶ月前10:00</td>
-        <td data-label="注意">訂2/8おおぞら7＋2/11回程</td>
-      </tr>
-      <tr>
-        <td data-label="項目">改班</td>
-        <td data-label="做法">取消後再買正價</td>
-        <td data-label="注意">受取前後規則不同；出發前再核</td>
-      </tr>
-      <tr>
-        <td data-label="項目">發車後</td>
-        <td data-label="做法">指定券無效</td>
-        <td data-label="注意">當日後續或可立席／空席</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>トマム駅無售票；回程可 Tower 指定席售票機（不收現金）或事先網上買。</p>
-</section>
-
-<section id="todo">
+<section class="edition page" id="todo">
   <h2>待辦 Checklist</h2>
-  <ul class="check">
-    <li>✅ JL026／JL503／JL735 已持有</li>
-    <li>⬜ <strong>2/13 CTS→HND 機票</strong>（優先）</li>
-    <li>✅ 四間酒店已訂</li>
-    <li>✅ PokéPark 2/14 抽籤已申請（等結果）</li>
-    <li>⬜ Tomamu Snowboard 新手課預約</li>
-    <li>⬜ Board 日租賃＋當日リフト券</li>
-    <li>⬜ JR 2/8 おおぞら7 正價指定席（Train Reservation）</li>
-    <li>⬜ JR 2/11 おおぞら4／2 正價指定席</li>
-    <li>⬜ 支笏湖午後ライトアップ巴士（2/12）</li>
-    <li>⬜ Skyliner 指定席（16日）</li>
-    <li>⬜ Shibuya Sky 日落時段票</li>
-    <li>⬜ 2/8 行李運送（可選）</li>
-  </ul>
-  <h3>要你決定</h3>
-  <ul class="decide">
-    <li>2/13 選 ANA NH58／Skymark BC712／JAL JL508</li>
-    <li>2/12：支笏湖午後 vs 定山渓 vs 市內（推支笏湖）</li>
-    <li>9／10：Board 日 vs 活動日邊日先（推 9=Board、10=霧氷＋GAO）</li>
-    <li>2/11：すすきの深度 vs 只小樽</li>
-    <li>Snowboard：官方 Group（日）vs Private／中文校</li>
-  </ul>
+  <hr class="rule" />
+  <div class="check-progress" aria-live="polite">
+    <p id="check-count">已完成 <em>4</em> / 13</p>
+    <div class="check-bar"><i id="check-bar" style="width:30.77%"></i></div>
+  </div>
+  <div class="check-group">
+    <h3>已持有／已辦</h3>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-id="flights-held" checked /><span class="tick" aria-hidden="true"></span><span class="txt">JL026／JL503／NH56／JL735 已持有</span></label></li>
+      <li><label><input type="checkbox" data-id="nh56" checked /><span class="tick" aria-hidden="true"></span><span class="txt"><strong>2/13 CTS→HND 機票</strong>：已訂 NH56</span></label></li>
+      <li><label><input type="checkbox" data-id="hotels" checked /><span class="tick" aria-hidden="true"></span><span class="txt">四間酒店已訂</span></label></li>
+      <li><label><input type="checkbox" data-id="pokepark" checked /><span class="tick" aria-hidden="true"></span><span class="txt">PokéPark 2/14 抽籤已申請（等結果）</span></label></li>
+    </ul>
+  </div>
+  <div class="check-group">
+    <h3>待辦</h3>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-id="sb-lesson" /><span class="tick" aria-hidden="true"></span><span class="txt">Tomamu Snowboard 新手課預約</span></label></li>
+      <li><label><input type="checkbox" data-id="sb-rental" /><span class="tick" aria-hidden="true"></span><span class="txt">Board 日租賃＋當日リフト券</span></label></li>
+      <li><label><input type="checkbox" data-id="jr-ozora" /><span class="tick" aria-hidden="true"></span><span class="txt">JR 2/8 おおぞら7 正價指定席（Train Reservation）</span></label></li>
+      <li><label><input type="checkbox" data-id="jr-tokachi" /><span class="tick" aria-hidden="true"></span><span class="txt">JR 2/11 とかち6（トマム→南千歳）指定席</span></label></li>
+      <li><label><input type="checkbox" data-id="blueliner" /><span class="tick" aria-hidden="true"></span><span class="txt">2/11 氷濤 BLUE LINER：去程 14:50、回程 18:15</span></label></li>
+      <li><label><input type="checkbox" data-id="otaru-hours" /><span class="tick" aria-hidden="true"></span><span class="txt">小樽雪あかりの路 2027 點燈時間（官方而家只公布 2/6–13）</span></label></li>
+      <li><label><input type="checkbox" data-id="skyliner" /><span class="tick" aria-hidden="true"></span><span class="txt">Skyliner 指定席（16日）</span></label></li>
+      <li><label><input type="checkbox" data-id="shibuya-sky" /><span class="tick" aria-hidden="true"></span><span class="txt">Shibuya Sky 日落時段票</span></label></li>
+      <li><label><input type="checkbox" data-id="luggage" /><span class="tick" aria-hidden="true"></span><span class="txt">2/8 行李運送（可選）</span></label></li>
+    </ul>
+  </div>
+  <div class="check-group">
+    <h3>已定</h3>
+    <ul class="note-cards">
+      <li><span class="note-kicker">Day 2 · 2/8</span>大通 highlights＋薄野短訪（白天）→ おおぞら7，15:26 到トマム；霧氷留 2/9–10</li>
+      <li><span class="note-kicker">Day 5 · 2/11</span>とかち6 → 千歳ロッカー → BLUE LINER 14:50 去支笏湖；夜返札幌薄野；住 METS</li>
+      <li><span class="note-kicker">Day 6 · 2/12</span>上午札幌，下午去小樽睇雪あかりの路；第二晚繼續札幌 METS</li>
+    </ul>
+  </div>
+  <div class="check-group">
+    <h3>要你決定</h3>
+    <ul class="note-cards decide">
+      <li>9／10：Board 日 vs 活動日邊日先（推 9＝Board、10＝霧氷＋GAO）</li>
+      <li>Snowboard：官方 Group（日）vs Private／中文校</li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="edition page" id="jr">
+  <h2>JR／eki-net（外國人）</h2>
+  <hr class="rule" />
+  <div class="callout"><strong>訪日／海外居住：基本上買正價</strong>
+    <div class="copy-stack">
+      <p>えきねっと＝日本國內居住者用；海外居住者不能註冊。</p>
+      <p>訪日用 <strong>JR-EAST Train Reservation</strong>：可買おおぞら／とかち指定席，但係正價（普通車指定席片道約 ¥5,880），無外國人專屬價，亦無特急トクだ値。</p>
+    </div>
+  </div>
+  <table class="stack">
+    <thead><tr><th>項目</th><th>做法</th><th>注意</th></tr></thead>
+    <tbody>
+      <tr><td data-label="項目">訪日／海外</td><td data-label="做法">JR-EAST Train Reservation</td><td data-label="注意">正價。札幌↔トマム直通參考約 ¥5,880；2/11 喺南千歳落車，以購票頁為準</td></tr>
+      <tr><td data-label="項目">えきねっと</td><td data-label="做法">海外居住者不能用</td><td data-label="注意">トクだ値基本無緣</td></tr>
+      <tr><td data-label="項目">Hokkaido Rail Pass</td><td data-label="做法">5 日約 ¥22,000</td><td data-label="注意">只為往返トマム多半不划算</td></tr>
+      <tr><td data-label="項目">何時買</td><td data-label="做法">約 1 個月前 10:00</td><td data-label="注意">訂 2/8 おおぞら7（札幌→トマム）＋ 2/11 とかち6（トマム→南千歳）</td></tr>
+      <tr><td data-label="項目">改班</td><td data-label="做法">取消後再買正價</td><td data-label="注意">受取前後規則不同</td></tr>
+      <tr><td data-label="項目">發車後</td><td data-label="做法">指定券無效</td><td data-label="注意">當日後續或可立席／空席</td></tr>
+    </tbody>
+  </table>
+  <div class="copy-stack">
+    <p>トマム駅無售票</p>
+    <p>回程可 Tower 指定席售票機（不收現金）或事先網上買。</p>
+    <p>2/11 喺南千歳落車，指定席買到南千歳。</p>
+  </div>
 </section>
 
 </main>
 
-<footer class="site">
-  <p>同步自行程 Page「2027年2月 北海道＋東京行程」。檔案位置：<code>/workspace/trips/2027-02-hokkaido-tokyo-itinerary.html</code>。出發前請再核航班、JR 冬期時刻同星野預約。</p>
-  <h2>Tomamu 活動來源（26/27 冬官網）</h2>
-  <ul class="sources">
-    <li><a href="https://www.snowtomamu.jp/winter/icevillage/">Ice Village</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/frosttree/">霧氷テラス</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/minamina/">Mina-Mina</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/activity/">活動一覽</a></li>
-  </ul>
-</footer>
+<!-- footer omitted in visual: no instructions, verification notes, or source checklist on-page -->
 
 <script>
 (function () {
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  function pinTop() {
+    window.scrollTo(0, 0);
+    var current = document.querySelector(".section-nav a.is-current");
+    if (current) current.scrollIntoView({ inline: "center", block: "nearest" });
+    window.scrollTo(0, 0);
+  }
+  function pinTopLater() {
+    pinTop();
+    requestAnimationFrame(pinTop);
+    setTimeout(pinTop, 60);
+  }
   var hashToTab = {
     "#tomamu-morning": "tab-morning",
     "#tomamu-afternoon": "tab-afternoon",
     "#tomamu-evening": "tab-evening"
   };
-
   function syncTabFromHash() {
     var id = hashToTab[location.hash];
     if (!id) return;
     var input = document.getElementById(id);
     if (input) input.checked = true;
-    var target = document.querySelector(location.hash);
-    if (target) {
-      requestAnimationFrame(function () { target.scrollIntoView(); });
-    }
   }
-
   document.querySelectorAll(".tab-labels label").forEach(function (label) {
     label.addEventListener("click", function () {
       if (label.dataset.hash) history.replaceState(null, "", label.dataset.hash);
     });
   });
-
   var filter = document.getElementById("act-filter");
   var clearBtn = document.getElementById("act-clear");
   var meta = document.getElementById("filter-meta");
   var panels = document.querySelectorAll(".panel");
-
   var tabInputs = {
     morning: document.getElementById("tab-morning"),
     afternoon: document.getElementById("tab-afternoon"),
     evening: document.getElementById("tab-evening")
   };
-  var tabHash = {
-    morning: "#tomamu-morning",
-    afternoon: "#tomamu-afternoon",
-    evening: "#tomamu-evening"
-  };
-
+  var tabHash = { morning: "#tomamu-morning", afternoon: "#tomamu-afternoon", evening: "#tomamu-evening" };
   function activeKey() {
     if (tabInputs.afternoon.checked) return "afternoon";
     if (tabInputs.evening.checked) return "evening";
     return "morning";
   }
-
   function applyFilter() {
     var q = (filter && filter.value || "").trim().toLowerCase();
     var counts = { morning: 0, afternoon: 0, evening: 0 };
@@ -1589,7 +2568,7 @@
       counts[key] = n;
       panel.classList.toggle("is-empty", n === 0);
       var badge = document.querySelector('[data-count="' + key + '"]');
-      if (badge) badge.textContent = String(n);
+      if (badge) badge.textContent = n + " 場";
     });
     if (q && !counts[activeKey()]) {
       ["morning", "afternoon", "evening"].some(function (key) {
@@ -1600,9 +2579,8 @@
       });
     }
     var total = counts.morning + counts.afternoon + counts.evening;
-    if (meta) meta.textContent = q ? ("搵到 " + total + " 項") : "";
+    if (meta) meta.textContent = q ? ("搵到 " + total + " 場活動") : "";
   }
-
   if (filter) filter.addEventListener("input", applyFilter);
   if (clearBtn) clearBtn.addEventListener("click", function () {
     if (!filter) return;
@@ -1610,30 +2588,118 @@
     applyFilter();
     filter.focus();
   });
+  var pageIds = ["overview", "transport", "hokkaido", "tokyo", "tomamu", "todo", "jr"];
+  var dayPage = {
+    d07: "hokkaido", d08: "hokkaido", d09: "hokkaido", d10: "hokkaido", d11: "hokkaido", d12: "hokkaido",
+    d13: "tokyo", d14: "tokyo", d15: "tokyo", d16: "tokyo"
+  };
+  var subPage = {
+    days: "overview", flights: "overview", hotels: "overview", align: "overview",
+    lifts: "tomamu", voucher: "tomamu", "tomamu-activities": "tomamu",
+    "tomamu-morning": "tomamu", "tomamu-afternoon": "tomamu", "tomamu-evening": "tomamu"
+  };
 
-  var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".toc-links a"));
-  var sections = tocLinks.map(function (a) {
-    return document.querySelector(a.getAttribute("href"));
-  }).filter(Boolean);
-
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        tocLinks.forEach(function (link) {
-          link.classList.toggle("is-current", link.getAttribute("href") === "#" + en.target.id);
-        });
-      });
-    }, { rootMargin: "-20% 0px -65% 0px", threshold: 0.01 });
-    sections.forEach(function (sec) { io.observe(sec); });
+  function showPage(id) {
+    document.querySelectorAll(".edition.page").forEach(function (panel) {
+      panel.classList.toggle("active", panel.id === id);
+    });
+    document.querySelectorAll(".section-nav a").forEach(function (link) {
+      var on = link.getAttribute("href") === "#" + id;
+      link.classList.toggle("is-current", on);
+      if (on) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
   }
 
-  window.addEventListener("hashchange", syncTabFromHash);
-  syncTabFromHash();
-  window.addEventListener("beforeprint", function () {
-    var toc = document.querySelector("details.toc");
-    if (toc) toc.open = true;
+  function showDay(dayId) {
+    var pageId = dayPage[dayId];
+    if (!pageId) return;
+    showPage(pageId);
+    var root = document.getElementById(pageId);
+    root.querySelectorAll("article.day").forEach(function (day) {
+      day.classList.toggle("active", day.id === dayId);
+    });
+    root.querySelectorAll(".day-chip").forEach(function (chip) {
+      var on = chip.dataset.day === dayId;
+      chip.classList.toggle("active", on);
+      chip.setAttribute("aria-selected", on ? "true" : "false");
+    });
+  }
+
+  function ensureDay(pageId) {
+    var root = document.getElementById(pageId);
+    if (!root || root.querySelector("article.day.active")) return;
+    var first = root.querySelector(".day-chip");
+    if (first) showDay(first.dataset.day);
+  }
+
+  function route(scroll) {
+    var raw = (location.hash || "#overview").replace(/^#/, "");
+    var page = pageIds.indexOf(raw) >= 0 ? raw : (dayPage[raw] || subPage[raw] || "overview");
+    showPage(page);
+    if (dayPage[raw]) showDay(raw);
+    else ensureDay(page);
+    if (hashToTab["#" + raw]) {
+      var input = document.getElementById(hashToTab["#" + raw]);
+      if (input) input.checked = true;
+    }
+    pinTopLater();
+  }
+
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href^='#']");
+    if (!link) return;
+    var href = link.getAttribute("href");
+    if (!href || href === "#") return;
+    e.preventDefault();
+    if (location.hash !== href) history.pushState(null, "", href);
+    route(true);
   });
+  document.querySelectorAll(".day-chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var href = "#" + chip.dataset.day;
+      if (location.hash !== href) history.pushState(null, "", href);
+      route(true);
+    });
+  });
+  window.addEventListener("popstate", function () { route(true); });
+  window.addEventListener("hashchange", function () { route(true); });
+  window.addEventListener("load", pinTopLater);
+
+  var CHECK_KEY = "hokkaido-tokyo-2027-checklist";
+  function updateCheckProgress() {
+    var boxes = document.querySelectorAll('.checklist input[type="checkbox"][data-id]');
+    var on = 0;
+    boxes.forEach(function (b) {
+      if (b.checked) on += 1;
+      var li = b.closest("li");
+      if (li) li.classList.toggle("is-done", b.checked);
+    });
+    var el = document.getElementById("check-count");
+    if (el) el.innerHTML = "已完成 <em>" + on + "</em> / " + boxes.length;
+    var bar = document.getElementById("check-bar");
+    if (bar) bar.style.width = (boxes.length ? (on / boxes.length * 100) : 0) + "%";
+  }
+  function persistChecks() {
+    var data = {};
+    document.querySelectorAll('.checklist input[type="checkbox"][data-id]').forEach(function (box) {
+      data[box.dataset.id] = box.checked;
+    });
+    try { localStorage.setItem(CHECK_KEY, JSON.stringify(data)); } catch (e) {}
+    updateCheckProgress();
+  }
+  function loadChecks() {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(CHECK_KEY) || "{}"); } catch (e) {}
+    document.querySelectorAll('.checklist input[type="checkbox"][data-id]').forEach(function (box) {
+      if (Object.prototype.hasOwnProperty.call(saved, box.dataset.id)) box.checked = !!saved[box.dataset.id];
+      box.addEventListener("change", persistChecks);
+    });
+    updateCheckProgress();
+  }
+  loadChecks();
+
+  route(false);
 })();
 </script>
 </body>
