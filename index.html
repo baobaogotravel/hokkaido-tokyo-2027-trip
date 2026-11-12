@@ -10,37 +10,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet" />
 <style>
+
   :root {
-    --paper: #f3ece4;
-    --paper-deep: #efe4da;
-    --cream: #fbf7f2;
-    --card: rgba(255, 251, 247, .9);
-    --ink: #3e342e;
-    --cocoa: #5c463c;
-    --taupe: #8d7368;
-    --rose: #c48984;
-    --rose-deep: #9c5f5c;
-    --blush: #f6e7e3;
-    --frost: #dce8ea;
-    --frost-deep: #6e8b93;
-    --line: rgba(92, 70, 60, .14);
-    --line-strong: rgba(92, 70, 60, .22);
-    --shadow: 0 18px 40px rgba(92, 70, 60, .06);
+    --paper: #F3EBE3;
+    --paper-deep: #EDE0D6;
+    --cream: #FBF7F2;
+    --card: rgba(255, 252, 249, .95);
+    --ink: #3F3530;
+    --cocoa: #5A433A;
+    --taupe: #8A7368;
+    --rose: #C9928E;
+    --rose-deep: #A56B67;
+    --blush: #F4E7E3;
+    --frost: #E3EEEF;
+    --frost-deep: #7A9AA0;
+    --line: rgba(90, 67, 58, .12);
+    --line-strong: rgba(90, 67, 58, .2);
+    --shadow: 0 14px 36px rgba(90, 67, 58, .06);
     --serif: "Noto Serif TC", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "Songti TC", "PMingLiU", serif;
     --sans: "Noto Sans TC", "PingFang TC", "Hiragino Sans", "Yu Gothic", "Microsoft JhengHei", "WenQuanYi Micro Hei", sans-serif;
     --max: 1080px;
-    --nav-h: 58px;
+    --chrome-h: 126px;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: auto; scroll-padding-top: 0; }
+  .edition.page { scroll-margin-top: 0; }
   body {
     margin: 0;
     font-family: var(--sans);
     color: var(--ink);
-    background:
-      radial-gradient(ellipse at 8% 0%, rgba(246, 231, 227, .95), transparent 36%),
-      radial-gradient(ellipse at 96% 4%, rgba(220, 232, 234, .85), transparent 32%),
-      linear-gradient(180deg, #f7f2eb 0%, var(--paper) 240px);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(ellipse at 8% 0%, rgba(201, 146, 142, .16), transparent 42%),
+      radial-gradient(ellipse at 96% 8%, rgba(122, 154, 160, .16), transparent 44%),
+      radial-gradient(ellipse at 50% 100%, rgba(244, 231, 227, .7), transparent 55%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%235A433A' stroke-width='0.7' opacity='0.11'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z'/%3E%3Cpath d='M40 16L64 40L40 64L16 40Z'/%3E%3C/g%3E%3Cg fill='%23A56B67' opacity='0.14'%3E%3Ccircle cx='40' cy='40' r='1.15'/%3E%3Ccircle cx='0' cy='40' r='1'/%3E%3Ccircle cx='80' cy='40' r='1'/%3E%3Ccircle cx='40' cy='0' r='1'/%3E%3Ccircle cx='40' cy='80' r='1'/%3E%3C/g%3E%3Cg stroke='%237A9AA0' stroke-width='0.55' fill='none' opacity='0.18'%3E%3Cpath d='M10 10v7M6.5 13.5h7M7.6 11.1l5.8 5.8M7.6 15.9l5.8-5.8'/%3E%3Cpath d='M70 66v7M66.5 69.5h7M67.6 67.1l5.8 5.8M67.6 71.9l5.8-5.8'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
     line-height: 1.75;
     font-size: 16.5px;
   }
@@ -49,10 +54,23 @@
     pointer-events: none;
     position: fixed;
     inset: 0;
-    opacity: .35;
-    background-image: radial-gradient(rgba(92, 70, 60, .07) .6px, transparent .7px);
+    opacity: .22;
+    background-image: radial-gradient(rgba(90, 67, 58, .11) .7px, transparent .8px);
     background-size: 3px 3px;
     mix-blend-mode: multiply;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    pointer-events: none;
+    position: fixed;
+    right: -90px;
+    top: -90px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 40px solid rgba(201, 146, 142, .09);
+    box-shadow: inset 0 0 0 52px rgba(227, 238, 239, .18), 0 0 0 88px rgba(244, 231, 227, .22);
     z-index: 0;
   }
   a { color: var(--rose-deep); text-underline-offset: 3px; }
@@ -64,104 +82,162 @@
   }
   .skip:focus { top: 10px; }
 
+  .chrome {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background:
+      linear-gradient(180deg, rgba(251, 247, 242, .92) 0%, rgba(247, 242, 235, .9) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 rgba(90, 67, 58, .04);
+  }
   .mast {
     position: relative;
     z-index: 1;
     max-width: var(--max);
     margin: 0 auto;
-    padding: 36px 22px 18px;
+    padding: 12px 22px 0;
   }
-  .mast-kicker {
-    margin: 0 0 8px;
-    font-family: var(--serif);
-    letter-spacing: .32em;
-    font-size: .74rem;
-    color: var(--rose-deep);
+  .mast-row { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+  .mast-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: min(100%, 28rem);
+    margin: 0 0 6px;
   }
-  .mast-row { display: flex; justify-content: space-between; gap: 18px; align-items: flex-end; }
+  .mast-mark::before,
+  .mast-mark::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 146, 142, .55), rgba(122, 154, 160, .45), transparent);
+  }
+  .mast-mark .fleuron {
+    width: 11px; height: 11px;
+    transform: rotate(45deg);
+    border: 1px solid rgba(165, 107, 103, .7);
+    background: rgba(244, 231, 227, .8);
+    flex: 0 0 auto;
+  }
   .mast h1 {
     margin: 0;
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(2rem, 5vw, 3.15rem);
-    letter-spacing: .04em;
-    line-height: 1.25;
+    font-weight: 600;
+    font-size: clamp(1.32rem, 2.6vw, 1.95rem);
+    letter-spacing: .08em;
+    line-height: 1.35;
     color: var(--cocoa);
   }
-  .lede { margin: 14px 0 0; max-width: 40rem; color: var(--cocoa); }
-  .stamp {
-    flex: 0 0 auto;
-    width: 74px; height: 74px;
-    display: grid; place-items: center;
-    border-radius: 50%;
-    border: 1px solid rgba(156, 95, 92, .45);
+  .mast h1 .amp {
+    display: inline-block;
+    margin: 0 .12em;
     color: var(--rose-deep);
-    font-family: var(--serif);
-    font-size: 1.7rem;
-    background: rgba(246, 231, 227, .7);
-    transform: rotate(-8deg);
+    font-weight: 500;
+    letter-spacing: 0;
+    font-style: italic;
+    transform: translateY(-.04em);
   }
-  .hills { display: block; width: min(100%, var(--max)); margin: 8px auto 0; height: 54px; }
+  .mast h1 .tail {
+    letter-spacing: .16em;
+    font-weight: 500;
+    font-size: .86em;
+    margin-left: .18em;
+    color: var(--cocoa);
+  }
+  .hills { display: block; width: 100%; height: 22px; margin: 8px 0 0; }
 
   .section-nav {
-    position: sticky;
-    top: 0;
-    z-index: 40;
-    background: rgba(251, 247, 242, .92);
-    border-bottom: 1px solid var(--line);
-    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    border-bottom: none;
   }
   .section-nav ul {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 14px;
+    padding: 0 16px 12px;
     list-style: none;
     display: flex;
-    gap: 0;
+    justify-content: flex-start;
+    gap: 6px;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 16px;
   }
   .section-nav ul::-webkit-scrollbar { display: none; }
+  .section-nav li { flex: 0 0 auto; }
   .section-nav a {
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: var(--taupe);
-    padding: 8px 8px 9px;
-    border-bottom: 2px solid transparent;
+    min-width: 4.25rem;
+    padding: 7px 14px 8px;
+    border-radius: 18px;
     line-height: 1.2;
+    scroll-snap-align: start;
   }
   .section-nav a small {
     font-family: var(--serif);
-    letter-spacing: .14em;
+    letter-spacing: .12em;
     font-size: .62rem;
     color: var(--rose);
   }
   .section-nav a span { font-size: .92rem; color: var(--cocoa); }
-  .section-nav a.is-current, .section-nav a:hover {
-    border-bottom-color: var(--rose);
-    background: linear-gradient(180deg, transparent, rgba(246, 231, 227, .65));
+  .section-nav a:hover {
+    background: rgba(244, 231, 227, .7);
   }
   .section-nav a.is-current {
     background: var(--blush);
-    border-bottom-color: var(--rose-deep);
+    box-shadow: inset 0 0 0 1px rgba(201, 146, 142, .3);
   }
   .section-nav a.is-current span,
   .section-nav a.is-current small { color: var(--rose-deep); }
   .section-nav a.is-current span { font-weight: 700; }
+  .nav-fade { display: none; }
 
-  main { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 18px 16px 64px; }
+  main { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 18px 16px 80px; }
   .edition {
-    background: var(--card);
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(244, 231, 227, .35) 0 92px, transparent 180px),
+      var(--card);
     border: 1px solid var(--line);
     border-radius: 28px;
-    padding: 26px 22px 12px;
-    margin: 0 0 18px;
+    padding: 26px 24px 16px;
+    margin: 0;
     box-shadow: var(--shadow);
-    scroll-margin-top: calc(var(--nav-h) + 12px);
+    overflow: hidden;
   }
+  .edition::before {
+    content: attr(data-folio);
+    position: absolute;
+    top: -6px;
+    right: 16px;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(4.4rem, 10vw, 6.2rem);
+    line-height: 1;
+    letter-spacing: -.04em;
+    color: rgba(201, 146, 142, .16);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .edition::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, var(--rose-deep), var(--rose), var(--frost-deep));
+    opacity: .7;
+  }
+  .edition > * { position: relative; z-index: 1; }
   .folio {
     margin: 0;
     font-family: var(--serif);
@@ -176,9 +252,11 @@
     letter-spacing: .04em;
   }
   .edition > h2 {
-    margin: 4px 0 16px;
-    font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+    margin: 4px 0 10px;
+    font-size: clamp(1.5rem, 2.6vw, 2.05rem);
     line-height: 1.35;
+    font-weight: 600;
+    max-width: 85%;
   }
   .block { margin: 0 0 22px; padding-top: 4px; }
   .unit {
@@ -202,7 +280,9 @@
     border: 1px solid var(--line);
     border-radius: 22px;
     padding: 16px 16px 14px;
-    border-top: 3px solid var(--rose);
+    border-top: 0;
+    border-left: 4px solid var(--rose);
+    box-shadow: 0 8px 20px rgba(90, 67, 58, .04);
   }
   .hotel-card h4 { margin: 0; font-size: 1.08rem; line-height: 1.45; }
   .hotel-card .gloss { margin: 2px 0 10px; color: var(--taupe); font-size: .9rem; }
@@ -215,7 +295,90 @@
   h4 { margin: 16px 0 8px; font-size: 1.02rem; }
   .muted, caption { color: var(--taupe); font-size: .92rem; }
   caption { caption-side: bottom; text-align: left; padding-top: 8px; }
-  .rule { height: 1px; border: 0; margin: 8px 0 16px; background: linear-gradient(90deg, var(--rose), var(--frost), transparent); }
+  .rule {
+    height: 7px; border: 0; margin: 4px 0 22px; opacity: .55; border-radius: 3px;
+    background: repeating-linear-gradient(90deg,
+      var(--rose-deep) 0 7px, transparent 7px 12px,
+      var(--frost-deep) 12px 19px, transparent 19px 24px,
+      var(--cocoa) 24px 28px, transparent 28px 34px);
+  }
+
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 0 0 26px;
+  }
+  .kpi {
+    position: relative;
+    overflow: hidden;
+    background: #fffaf6;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 14px 16px 13px 18px;
+    box-shadow: 0 8px 20px rgba(90, 67, 58, .04);
+  }
+  .kpi::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--kpi-accent, var(--rose-deep));
+    border-radius: 4px 0 0 4px;
+  }
+  .kpi-label {
+    margin: 0 0 4px;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    color: var(--taupe);
+  }
+  .kpi-value {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--cocoa);
+    letter-spacing: .04em;
+    word-break: keep-all;
+  }
+  .kpi-meta { margin: 4px 0 0; font-size: .82rem; color: var(--taupe); line-height: 1.45; }
+  .journey {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0 0 22px;
+    padding: 12px 10px;
+    background: linear-gradient(90deg, rgba(244,231,227,.65), rgba(227,238,239,.55));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  .journey-stop {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--cocoa);
+    letter-spacing: .04em;
+    padding: 2px 4px;
+    flex: 1 1 0;
+    text-align: center;
+    word-break: keep-all;
+  }
+  .journey-stop small {
+    display: block;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    color: var(--rose-deep);
+  }
+  .journey-arrow {
+    color: var(--rose);
+    padding: 0 10px;
+    font-size: 1.05rem;
+  }
 
   .callout {
     border-radius: 18px;
@@ -229,7 +392,7 @@
   .callout.paper { background: var(--paper-deep); }
 
   table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: .95rem; }
-  th, td { padding: 9px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+  th, td { padding: 11px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
   th {
     font-family: var(--serif);
     font-weight: 500;
@@ -237,6 +400,19 @@
     letter-spacing: .08em;
     color: var(--taupe);
     background: transparent;
+  }
+  table.days td:first-child {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--cocoa);
+    font-size: 1.02rem;
+    letter-spacing: .04em;
+  }
+  table.days td:nth-child(2) {
+    color: var(--rose-deep);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    font-family: var(--serif);
   }
   .tag {
     display: inline-block;
@@ -248,12 +424,10 @@
     background: var(--frost);
     color: var(--frost-deep);
   }
-  .tag.warn { background: #f3e6d4; color: #8a6238; }
+  .tag.warn { background: #F3E6D4; color: #8A6238; }
   .tag.rose { background: var(--blush); color: var(--rose-deep); }
 
-  .day {
-    padding: 4px 0 18px;
-  }
+  .day { padding: 4px 0 18px; }
   .edition.page { display: none; }
   .edition.page.active { display: block; animation: pageIn .35s ease; }
   .day-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 16px; }
@@ -270,9 +444,9 @@
   }
   .day-chip:hover { border-color: var(--rose); color: var(--rose-deep); }
   .day-chip.active {
-    background: var(--cocoa);
+    background: var(--rose-deep);
     color: var(--cream);
-    border-color: var(--cocoa);
+    border-color: var(--rose-deep);
   }
   article.day { display: none; }
   article.day.active { display: block; animation: pageIn .3s ease; }
@@ -308,7 +482,7 @@
     font-family: var(--serif); font-size: .82rem;
     color: var(--rose-deep);
     background: var(--cream);
-    border: 1px solid rgba(196, 137, 132, .45);
+    border: 1px solid rgba(201, 146, 142, .45);
   }
   .xref { margin: 8px 0 0; font-size: .95rem; color: var(--taupe); }
 
@@ -345,9 +519,9 @@
   #tab-morning:checked ~ .tab-labels label[for="tab-morning"],
   #tab-afternoon:checked ~ .tab-labels label[for="tab-afternoon"],
   #tab-evening:checked ~ .tab-labels label[for="tab-evening"] {
-    background: var(--cocoa);
+    background: var(--rose-deep);
     color: var(--cream);
-    border-color: var(--cocoa);
+    border-color: var(--rose-deep);
   }
   .panel { display: none; }
   #tab-morning:checked ~ .panel-morning,
@@ -362,33 +536,56 @@
   .mark.once, .mark.rep { font-family: var(--serif); border-radius: 999px; padding: 0 6px; letter-spacing: 0; font-size: .72rem; }
   .mark.once { color: var(--rose-deep); border: 1px solid var(--rose); }
   .mark.rep { color: var(--frost-deep); border: 1px solid var(--frost-deep); }
-  tr.row-once td { background: rgba(246, 231, 227, .45); }
+  tr.row-once td { background: rgba(244, 231, 227, .45); }
   td.price { font-variant-numeric: tabular-nums; }
   td.is-free { color: var(--frost-deep); }
   tr.filtered-out { display: none !important; }
   .filter-empty { display: none; color: var(--taupe); }
   .panel.is-empty .filter-empty { display: block; }
-  ul.check, ul.decide { padding-left: 1.15rem; }
-  ul.check li, ul.decide li { margin: 6px 0; }
+  ul.check, ul.decide { padding-left: 0; list-style: none; margin: 8px 0 16px; }
+  ul.check li, ul.decide li { margin: 0; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+  ul.check li:last-child, ul.decide li:last-child { border-bottom: 0; }
+  ul.decide { padding-left: 1.1rem; list-style: disc; }
+  ul.decide li { padding: 4px 0; border-bottom: 0; color: var(--cocoa); }
   .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--taupe); font-size: .9rem; }
 
-  footer.site {
-    position: relative; z-index: 1;
-    max-width: var(--max); margin: 0 auto; padding: 0 20px 48px;
-    color: var(--taupe); font-size: .9rem;
-  }
-  footer.site h2 { font-family: var(--serif); font-size: 1rem; color: var(--cocoa); font-weight: 500; }
-  .sources { padding-left: 1.1rem; }
-  code { font-size: .86em; }
+  footer.site { display: none; }
 
   @media (max-width: 720px) {
     body { font-size: 16px; }
-    .section-nav a { padding: 7px 1px 8px; }
-    .section-nav a small { letter-spacing: 0; font-size: .62rem; }
-    .section-nav a span { font-size: .74rem; white-space: nowrap; }
-    .mast { padding: 24px 16px 8px; }
-    .stamp { width: 58px; height: 58px; font-size: 1.35rem; }
-    .edition { border-radius: 20px; padding: 18px 14px 8px; }
+    .mast { padding: 10px 16px 0; }
+    .mast h1 { font-size: 1.22rem; letter-spacing: .06em; }
+    .mast h1 .tail { letter-spacing: .12em; }
+    .mast-mark { width: 100%; margin-bottom: 4px; }
+    .hills { height: 16px; margin-top: 4px; }
+    .kpi-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .kpi-value { font-size: 1.28rem; }
+    .journey { padding: 10px 6px; }
+    .journey-stop { font-size: .92rem; }
+    .journey-arrow { padding: 0 4px; font-size: .95rem; }
+    .edition::before { font-size: 4.2rem; right: 10px; }
+    .edition > h2 { max-width: 80%; font-size: 1.42rem; }
+    .section-nav ul {
+      padding: 0 16px 12px;
+      gap: 6px;
+      mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 32px), transparent 100%);
+    }
+    .section-nav a {
+      min-width: 4.5rem;
+      padding: 8px 12px 9px;
+    }
+    .section-nav a small { letter-spacing: .1em; font-size: .64rem; }
+    .section-nav a span { font-size: .86rem; white-space: nowrap; }
+    .nav-fade {
+      display: block;
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 36px;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(247,242,235,0), rgba(247,242,235,.95));
+    }
+    .edition { border-radius: 22px; padding: 20px 16px 12px; }
+    main { padding: 14px 14px 72px; }
     table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
     table.stack, table.stack tbody { display: block; width: 100%; }
     table.stack tr {
@@ -409,7 +606,7 @@
     .edition.page.active, article.day.active { animation: none; }
   }
   @media print {
-    body::before, .section-nav, .hills, .stamp, .day-chips { display: none !important; }
+    body::before, body::after, .section-nav, .hills, .day-chips, .chrome { display: none !important; }
     .edition { box-shadow: none; break-inside: auto; }
     .edition.page, article.day, .panel { display: block !important; }
     a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; word-break: break-all; }
@@ -418,10 +615,11 @@
 </head>
 <body>
 <a class="skip" href="#overview">跳至總覽</a>
+<div class="chrome">
 <header class="mast">
   <div class="mast-row">
-    <h1>北海道 &amp; 東京冬季旅行</h1>
-    <div class="stamp" aria-hidden="true">雪</div>
+    <div class="mast-mark" aria-hidden="true"><span class="fleuron"></span></div>
+    <h1>北海道 <span class="amp">&amp;</span> 東京<span class="tail">冬季旅行</span></h1>
   </div>
 </header>
 <svg class="hills" viewBox="0 0 1080 54" preserveAspectRatio="none" aria-hidden="true">
@@ -439,15 +637,48 @@
     <li><a href="#todo"><small>06</small><span>待辦</span></a></li>
     <li><a href="#jr"><small>07</small><span>JR</span></a></li>
   </ul>
+  <div class="nav-fade" aria-hidden="true"></div>
 </nav>
+</div>
 
 <main id="main">
 
-<section class="edition page active" id="overview">
+<section class="edition page active" id="overview" data-folio="01">
   <p class="folio">第一版</p>
   <h2>總覽</h2>
   <hr class="rule" />
 
+  <div class="kpi-row" aria-label="行程要點">
+    <article class="kpi" style="--kpi-accent: var(--rose-deep)">
+      <p class="kpi-label">行程日數</p>
+      <p class="kpi-value">10 日</p>
+      <p class="kpi-meta">2月7–16日</p>
+    </article>
+    <article class="kpi" style="--kpi-accent: var(--frost-deep)">
+      <p class="kpi-label">路線</p>
+      <p class="kpi-value">北海道 · 東京</p>
+      <p class="kpi-meta">經 Tomamu、札幌</p>
+    </article>
+    <article class="kpi" style="--kpi-accent: var(--cocoa)">
+      <p class="kpi-label">航班</p>
+      <p class="kpi-value">4 段</p>
+      <p class="kpi-meta">JL026 · JL503 · NH56 · JL735</p>
+    </article>
+    <article class="kpi" style="--kpi-accent: var(--rose)">
+      <p class="kpi-label">酒店</p>
+      <p class="kpi-value">4 間</p>
+      <p class="kpi-meta">羽田 · Tomamu · 札幌 · 秋葉原</p>
+    </article>
+  </div>
+  <p class="journey" aria-label="行程路線">
+    <span class="journey-stop"><small>2/7</small>羽田</span>
+    <span class="journey-arrow" aria-hidden="true">→</span>
+    <span class="journey-stop"><small>2/8–13</small>北海道</span>
+    <span class="journey-arrow" aria-hidden="true">→</span>
+    <span class="journey-stop"><small>2/13–16</small>東京</span>
+    <span class="journey-arrow" aria-hidden="true">→</span>
+    <span class="journey-stop"><small>2/16</small>成田</span>
+  </p>
   <div class="block" id="days">
     <h3>行程總覽</h3>
     <p class="muted">第一日＝2月7日，第十日＝2月16日。這裡只列當日行程重點。航班、車次同轉車細節見下面的航班一覽同交通版。</p>
@@ -575,19 +806,18 @@
   </div>
 </section>
 
-<section class="edition page" id="transport">
+<section class="edition page" id="transport" data-folio="02">
   <p class="folio">第二版</p>
   <h2>交通選項（重點）</h2>
   <hr class="rule" />
-  <p class="muted">JR 同中央巴士的 2027 年 2 月班次未公布。下面 JR 時刻全部係現行時刻表參考（JR時刻表 令和8年11月号／JR北海道頁面截至 2026-11-10）。氷濤 BLUE LINER 係 2027 已公布時刻。支笏湖用 BLUE LINER，呢頁唔寫未公布的中央巴士班次。</p>
   <table class="stack">
     <thead><tr><th>日</th><th>路段</th><th>推薦</th><th>重點</th></tr></thead>
     <tbody>
       <tr><td data-label="日">2/7</td><td data-label="路段">HND→酒店</td><td data-label="推薦">モノレール→天空橋</td><td data-label="重點">約 ¥180</td></tr>
       <tr><td data-label="日">2/8 早</td><td data-label="路段">酒店→HND</td><td data-label="推薦">免費 shuttle 6:00／6:20</td><td data-label="重點">定員 20</td></tr>
-      <tr><td data-label="日">2/8 午後</td><td data-label="路段">雪祭→トマム</td><td data-label="推薦">おおぞら7 札幌 13:57 → トマム 15:26</td><td data-label="重點">約 13:15 離場、13:45 到月台。15:26 到站，轉車之後先 check-in。指定席。現行參考</td></tr>
-      <tr><td data-label="日">2/11</td><td data-label="路段">トマム→支笏湖→札幌</td><td data-label="推薦">とかち6 12:15→南千歳 13:38，エアポート91，BLUE LINER 14:50／回 18:15</td><td data-label="重點">JR 現行參考，巴士 2027 官方。住札幌 METS。見 <a href="#d11">第五日</a></td></tr>
-      <tr><td data-label="日">2/12</td><td data-label="路段">札幌下午→小樽→札幌</td><td data-label="推薦">上午留札幌；下午 JR 去小樽</td><td data-label="重點">晚上雪あかりの路，夜返 METS。2027 班次未公布，出發前再核</td></tr>
+      <tr><td data-label="日">2/8 午後</td><td data-label="路段">雪祭→トマム</td><td data-label="推薦">おおぞら7 札幌 13:57 → トマム 15:26</td><td data-label="重點">約 13:15 離場、13:45 到月台。15:26 到站，轉車之後先 check-in。指定席</td></tr>
+      <tr><td data-label="日">2/11</td><td data-label="路段">トマム→支笏湖→札幌</td><td data-label="推薦">とかち6 12:15→南千歳 13:38，エアポート91，BLUE LINER 14:50／回 18:15</td><td data-label="重點">住札幌 METS。見 <a href="#d11">第五日</a></td></tr>
+      <tr><td data-label="日">2/12</td><td data-label="路段">札幌下午→小樽→札幌</td><td data-label="推薦">上午留札幌；下午 JR 去小樽</td><td data-label="重點">晚上雪あかりの路，夜返 METS</td></tr>
       <tr><td data-label="日">2/13</td><td data-label="路段">札幌→CTS→HND→秋葉原</td><td data-label="推薦">約 08:00 離酒店；NH56 10:30→12:10（T2）；京急→品川→JR</td><td data-label="重點">快速エアポート約 33–37 分，國內線提前 60–90 分。ANA 到第2航廈；京急喺第3航廈（航廈間免費接駁），或東京モノレール有第2航廈站。秋葉原約 35–45 分</td></tr>
       <tr><td data-label="日">2/16</td><td data-label="路段">秋葉原→NRT</td><td data-label="推薦">日暮里→Skyliner</td><td data-label="重點">13:30–14:00 離酒店</td></tr>
     </tbody>
@@ -595,10 +825,9 @@
 
   <h3>2/8 去 Tomamu 揀邊班</h3>
   <table class="stack">
-    <caption>時刻來源：<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・おおぞら／とかち 下り</a>（令和8年11月号）。</caption>
     <thead><tr><th>判斷</th><th>列車</th><th>到トマム</th><th>備註</th></tr></thead>
     <tbody>
-      <tr><td data-label="判斷"><span class="tag">用這班</span></td><td data-label="列車">おおぞら7 札幌 13:57</td><td data-label="到トマム">15:26</td><td data-label="備註">站到 Tower 的免費 shuttle，舊頁估算約 15:31 先到酒店。Check-in 排喺轉車之後。正價約 ¥5,880；約 1 個月前訂。現行參考</td></tr>
+      <tr><td data-label="判斷"><span class="tag">用這班</span></td><td data-label="列車">おおぞら7 札幌 13:57</td><td data-label="到トマム">15:26</td><td data-label="備註">站到 Tower 有免費 shuttle。Check-in 排喺轉車之後。正價約 ¥5,880</td></tr>
       <tr><td data-label="判斷">太早</td><td data-label="列車">おおぞら5 札幌 11:46</td><td data-label="到トマム">13:22</td><td data-label="備註">雪祭時間大砍</td></tr>
       <tr><td data-label="判斷">太晚</td><td data-label="列車">とかち5 札幌 15:51</td><td data-label="到トマム">17:39</td><td data-label="備註">當日霧氷更排唔到</td></tr>
       <tr><td data-label="判斷">巴士</td><td data-label="列車">リゾートライナー（多由 CTS 發）</td><td data-label="到トマム">例 16:35 到 Tower</td><td data-label="備註">雪祭後繞 CTS 不划算；¥7,000・要約</td></tr>
@@ -610,15 +839,15 @@
     <caption>來源：<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">とかち 上り</a>、<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート</a>、<a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a>。</caption>
     <thead><tr><th>段</th><th>用邊班</th><th>時刻</th></tr></thead>
     <tbody>
-      <tr><td data-label="段">トマム → 南千歳</td><td data-label="用邊班">とかち6（唔停千歳）</td><td data-label="時刻">12:15 → 13:38。現行參考</td></tr>
-      <tr><td data-label="段">南千歳 → 千歳</td><td data-label="用邊班">エアポート91</td><td data-label="時刻">14:02 → 14:06。現行參考</td></tr>
+      <tr><td data-label="段">トマム → 南千歳</td><td data-label="用邊班">とかち6（唔停千歳）</td><td data-label="時刻">12:15 → 13:38</td></tr>
+      <tr><td data-label="段">南千歳 → 千歳</td><td data-label="用邊班">エアポート91</td><td data-label="時刻">14:02 → 14:06</td></tr>
       <tr><td data-label="段">千歳東口 → 支笏湖温泉</td><td data-label="用邊班">BLUE LINER 14:50</td><td data-label="時刻">約 15:35 到會場。2027 官方</td></tr>
       <tr><td data-label="段">支笏湖温泉 → 千歳</td><td data-label="用邊班">BLUE LINER 18:15</td><td data-label="時刻">19:00 到千歳。2027 官方。最遲可 19:30，唔搭 20:30</td></tr>
     </tbody>
   </table>
 </section>
 
-<section class="edition page" id="hokkaido">
+<section class="edition page" id="hokkaido" data-folio="03">
   <p class="folio">第三版</p>
   <h2>第一日 &amp; 北海道（2月7–12日）</h2>
   <hr class="rule" />
@@ -655,8 +884,8 @@
       <li><strong>CTS → 札幌站</strong>：快速エアポート約 33–37 分；約 ¥1,230。大件未寄去 Tomamu 就放札幌ロッカー</li>
       <li><strong>壓縮白天</strong>：大通雪祭會場 highlights，再短訪薄野／すすきの。今日只算白天，夜燈留到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></li>
       <li><strong>約 13:15 離場</strong>：行李已經寄去 Tomamu，或者已經放入ロッカー，就約 13:15 離開會場，13:45 前到 JR 札幌月台。大通／薄野／中島公園去 JR 札幌：地鐵約 10 分鐘，行路約 20 分鐘，唔好預一小時車程</li>
-      <li><strong>おおぞら7</strong>：現行參考 札幌 13:57 → トマム 15:26；全指定席；正價約 ¥5,880。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道・下り</a>（令和8年11月号，截至 2026-11-10）。2027 冬期表未公布。太早係 おおぞら5 11:46→13:22；太晚係 とかち5 15:51→17:39</li>
-      <li><strong>到站之後</strong>：免費 shuttle 舊頁估算約 15:31 先到 Tower。Check-in、取券，同任何當日活動，都排喺到站同轉車之後</li>
+      <li><strong>おおぞら7</strong>：札幌 13:57 → トマム 15:26；全指定席；正價約 ¥5,880。太早係 おおぞら5 11:46→13:22；太晚係 とかち5 15:51→17:39</li>
+      <li><strong>到站之後</strong>：免費 shuttle 去 Tower。Check-in 同當日活動排喺到站同轉車之後</li>
       <li><strong>晚上</strong>：當日霧氷留低。到酒店之後按 <a href="#tomamu-evening">晚上活動</a> 去 Ice Village（17:00–22:00）</li>
     </ol>
   </article>
@@ -704,14 +933,14 @@
     <div class="callout frost"><strong>雪祭最終日</strong>會期去到 2/11。大通燈至 22:00；薄野通常至 23:00，最終日 22:00。<a href="https://www.snowfes.com/faq/">雪祭 FAQ</a> · <a href="https://www.welcome-to-chitose.jp/archives/16708.html">千歳市・支笏湖氷濤まつり</a> · <a href="https://www.sakkan.com/lp/hyoutou-bus/">BLUE LINER</a></div>
     <ol class="steps">
       <li><strong>早上稍後 checkout</strong>：星野 Tomamu。2/11 纜車 9:00 開，霧氷只可以排上午。12:15 的列車趕唔切下午活動。去トマム站的 shuttle 向酒店核，呢度唔寫死班次</li>
-      <li><strong>とかち6（札幌行）</strong>：現行參考 トマム 12:15 → 南千歳 13:38，列車續開 新札幌 14:01／札幌 14:10。<strong>唔停千歳</strong>。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道・上り</a>（令和8年11月号，截至 2026-11-10）</li>
-      <li><strong>南千歳轉快速エアポート，用 91</strong>：現行參考 エアポート91 南千歳 14:02 → 千歳 14:06，緩衝約 24 分。<a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">エアポート時刻</a>。エアポート87 13:42→13:46 只剩約 4 分。エアポート89 13:53 通過千歳，停唔到</li>
+      <li><strong>とかち6（札幌行）</strong>：トマム 12:15 → 南千歳 13:38，列車續開 新札幌 14:01／札幌 14:10。<strong>唔停千歳</strong></li>
+      <li><strong>南千歳轉快速エアポート，用 91</strong>：エアポート91 南千歳 14:02 → 千歳 14:06，緩衝約 24 分。エアポート87 13:42→13:46 只剩約 4 分。エアポート89 13:53 通過千歳，停唔到</li>
       <li><strong>行李放 JR 千歳 coin locker</strong>：西口 1 階、改札外。小／中／大都有；使用開始日起計最多 3 日。<a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道ロッカー</a>（<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">一覽 PDF</a>）。千歳観光案内所的手荷物預かり 9:00–17:00，回程 19:00 之後已經收檔。<a href="https://www.welcome-to-chitose.jp/guide.html">千歳市案内</a></li>
-      <li><strong>行去東口 7 番搭 BLUE LINER</strong>：官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。去程 14:50 同回程 18:15 要前日 20:30 前分別訂好。當日不可訂；不可改班；取消收費 100%；自由席；10 分鐘前到站。官方寫明巴士不代存行李箱。<a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス</a></li>
+      <li><strong>行去東口 7 番搭 BLUE LINER</strong>：官方路線係新千歳機場國內線 1F，同 JR 千歳東口 7 番，去支笏湖温泉。單程 ¥2,000（大人同細路同一價；不佔位、小學前的幼兒，大人 1 名對 1 名免費）。去程 14:50、回程 18:15。自由席；10 分鐘前到站。巴士不代存行李箱。<a href="https://www.sakkan.com/lp/hyoutou-bus/">札幌観光バス</a></li>
       <li><strong>去程用 14:50</strong>：2027 官方 東口 14:50 → 支笏湖温泉約 15:35。13:20 那班喺 とかち6 到南千歳之前已經開出。14:20→15:05 由 14:06 到站計太趕，唔做主計劃。官方話 15 時之後的開出同到達可能延遲</li>
       <li><strong>支笏湖氷濤まつり</strong>：2027 官方 1 月 30 日–2 月 23 日，10:00–20:00，ライトアップ 16:30–20:00。平日中學生以上 ¥1,000；土日祝 ¥3,000（小學生以下免費）。2/11 係祝日，所以 ¥3,000。巴士票唔包含入場。15:35 到場，16:30 開燈前大約得 55 分鐘日光，之後留燈約 1–1.5 小時。會場喺支笏湖温泉</li>
-      <li><strong>回程最穩 18:15</strong>：2027 官方 18:15 → JR 千歳東口 19:00。取西口ロッカー之後轉札幌。現行參考：千歳 19:14→札幌 19:45（エアポート157）取行李太貼；用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。計劃按大約 20:00 到札幌、薄野約 20:10–20:20。18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌</li>
-      <li><strong>最遲 19:30，跳過 20:30</strong>：2027 官方 19:30 → 千歳 20:15。現行參考 エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。落雪若延遲，會逼近最終日 22:00。20:30 官方只到千歳 21:15，而且唔去機場</li>
+      <li><strong>回程最穩 18:15</strong>：2027 官方 18:15 → JR 千歳東口 19:00。取西口ロッカー之後轉札幌：千歳 19:14→札幌 19:45（エアポート157）取行李太貼；用 19:25→19:55（エアポート159）或 19:37→20:08（エアポート161）。計劃按大約 20:00 到札幌、薄野約 20:10–20:20。18:30 官方到千歳 19:15，之後同樣大約 20:00 前後到札幌</li>
+      <li><strong>最遲 19:30，跳過 20:30</strong>：2027 官方 19:30 → 千歳 20:15 エアポート171 千歳 20:39 → 札幌 21:12，薄野約 21:20。落雪若延遲，會逼近最終日 22:00。20:30 官方只到千歳 21:15，而且唔去機場</li>
       <li><strong>入住 METS，再去薄野最終夜</strong>：METS 離札幌站約 2 分鐘，行李先放酒店。南北線さっぽろ→すすきの約 3 分鐘，再加行路。2/12 上午留札幌，下午先去小樽</li>
     </ol>
   </article>
@@ -724,14 +953,14 @@
     <div class="callout frost"><strong>第二晚繼續住札幌 METS</strong>支笏湖已喺 2/11 去完。上午留札幌，下午先出發去小樽，晚上睇燈，之後返同一間酒店。唔搬去千歳酒店。2/13 早上 NH56 10:30 由新千歲國內線飛羽田。</div>
     <ol class="steps">
       <li><strong>上午札幌</strong>：由 JR東日本ホテルメッツ プレミア 札幌出發，留喺札幌，近酒店慢行，留力下午坐車</li>
-      <li><strong>下午去小樽</strong>：JR 札幌→小樽。2027 冬期時刻未公布，具體班次出發前再核，呢度唔寫死某一班</li>
-      <li><strong>晚上：小樽雪あかりの路</strong>：官方 2027 會期 2 月 6–13 日，點燈時間未公布。<a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会・2027</a>。2026 年（第 28 回，2 月 7–14 日）係 17:00–21:00，<a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 官方頁</a>。呢個係舊年時間</li>
-      <li><strong>夜返札幌</strong>：燈後返 JR東日本ホテルメッツ プレミア 札幌，過第二晚。回程 JR 同樣未有 2027 冬期表</li>
+      <li><strong>下午去小樽</strong>：JR 札幌→小樽</li>
+      <li><strong>晚上：小樽雪あかりの路</strong>：2027 會期 2 月 6–13 日。<a href="https://otaru.gr.jp/event/yukiakari2027">小樽観光協会</a>。2026 年點燈 17:00–21:00</li>
+      <li><strong>夜返札幌</strong>：燈後返 JR東日本ホテルメッツ プレミア 札幌，過第二晚</li>
     </ol>
   </article>
 </section>
 
-<section class="edition page" id="tokyo">
+<section class="edition page" id="tokyo" data-folio="04">
   <p class="folio">第四版</p>
   <h2>東京（2月13–16日）</h2>
   <hr class="rule" />
@@ -777,11 +1006,11 @@
   </article>
 </section>
 
-<section class="edition page" id="tomamu">
+<section class="edition page" id="tomamu" data-folio="05">
   <p class="folio">第五版</p>
   <h2>Tomamu 專頁</h2>
   <hr class="rule" />
-  <p>住 2/8 夜至 2/11 早上。第二日 15:26 先到トマム站，當日下午霧氷排唔到。第五日 とかち6 現行參考 12:15 開，只排到上午。霧氷留第三、四日。泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
+  <p>住 2/8 夜至 2/11 早上。第二日 15:26 先到トマム站，當日下午霧氷排唔到。第五日 とかち6 12:15 開，只排到上午。霧氷留第三、四日。泳池同溫泉係券入面的權益，唔當呢幾日的主線。</p>
 
   <div class="block unit" id="lifts">
     <p class="unit-kicker">A</p>
@@ -1254,7 +1483,7 @@
   </div>
 </section>
 
-<section class="edition page" id="todo">
+<section class="edition page" id="todo" data-folio="06">
   <p class="folio">第六版 · 尾二</p>
   <h2>待辦 Checklist</h2>
   <hr class="rule" />
@@ -1266,8 +1495,8 @@
     <li>⬜ Tomamu Snowboard 新手課預約</li>
     <li>⬜ Board 日租賃＋當日リフト券</li>
     <li>⬜ JR 2/8 おおぞら7 正價指定席（Train Reservation）</li>
-    <li>⬜ JR 2/11 とかち6（トマム→南千歳）指定席。時刻係令和8年11月号參考，2027 冬期表出咗再核</li>
-    <li>⬜ 2/11 氷濤 BLUE LINER：去程 14:50、回程 18:15（前日 20:30 前；不可改班、取消 100%）</li>
+    <li>⬜ JR 2/11 とかち6（トマム→南千歳）指定席。</li>
+    <li>⬜ 2/11 氷濤 BLUE LINER：去程 14:50、回程 18:15</li>
     <li>⬜ 小樽雪あかりの路 2027 點燈時間（官方而家只公布 2/6–13）</li>
     <li>⬜ Skyliner 指定席（16日）</li>
     <li>⬜ Shibuya Sky 日落時段票</li>
@@ -1286,7 +1515,7 @@
   </ul>
 </section>
 
-<section class="edition page" id="jr">
+<section class="edition page" id="jr" data-folio="07">
   <p class="folio">第七版 · 最後</p>
   <h2>JR／eki-net（外國人）</h2>
   <hr class="rule" />
@@ -1297,8 +1526,8 @@
       <tr><td data-label="項目">訪日／海外</td><td data-label="做法">JR-EAST Train Reservation</td><td data-label="注意">正價。札幌↔トマム直通參考約 ¥5,880；2/11 喺南千歳落車，以購票頁為準</td></tr>
       <tr><td data-label="項目">えきねっと</td><td data-label="做法">海外居住者不能用</td><td data-label="注意">トクだ値基本無緣</td></tr>
       <tr><td data-label="項目">Hokkaido Rail Pass</td><td data-label="做法">5 日約 ¥22,000</td><td data-label="注意">只為往返トマム多半不划算</td></tr>
-      <tr><td data-label="項目">何時買</td><td data-label="做法">約 1 個月前 10:00</td><td data-label="注意">訂 2/8 おおぞら7（札幌→トマム）＋ 2/11 とかち6（トマム→南千歳）。時刻係現行參考，2027 冬期表出咗再核</td></tr>
-      <tr><td data-label="項目">改班</td><td data-label="做法">取消後再買正價</td><td data-label="注意">受取前後規則不同；出發前再核</td></tr>
+      <tr><td data-label="項目">何時買</td><td data-label="做法">約 1 個月前 10:00</td><td data-label="注意">訂 2/8 おおぞら7（札幌→トマム）＋ 2/11 とかち6（トマム→南千歳）</td></tr>
+      <tr><td data-label="項目">改班</td><td data-label="做法">取消後再買正價</td><td data-label="注意">受取前後規則不同</td></tr>
       <tr><td data-label="項目">發車後</td><td data-label="做法">指定券無效</td><td data-label="注意">當日後續或可立席／空席</td></tr>
     </tbody>
   </table>
@@ -1307,28 +1536,18 @@
 
 </main>
 
-<footer class="site">
-  <p>2027年2月 北海道＋東京行程，呢頁就係本站 <code>index.html</code>。出發前再核航班、JR 冬期時刻、BLUE LINER 預約同星野預約。</p>
-  <h2>來源</h2>
-  <ul class="sources">
-    <li><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?p=y&amp;s=130">JR北海道 おおぞら・とかち 下り</a>（令和8年11月号）</li>
-    <li><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=131">JR北海道 おおぞら・とかち 上り</a>（令和8年11月号）</li>
-    <li><a href="https://jrhokkaidonorikae.com/vtime/vtime.php?s=9650">JR北海道 エアポート（新千歳空港→札幌方面）</a></li>
-    <li><a href="https://www.sakkan.com/lp/hyoutou-bus/">氷濤 BLUE LINER（札幌観光バス，2027 時刻）</a></li>
-    <li><a href="https://www.welcome-to-chitose.jp/archives/16708.html">2027 千歳・支笏湖氷濤まつり（千歳市）</a></li>
-    <li><a href="https://www.jrhokkaido.co.jp/network/locker/index.html">JR北海道 駅ロッカー</a>／<a href="https://www.jrhokkaido.co.jp/network/locker/locker.pdf">設置站一覽 PDF</a></li>
-    <li><a href="https://www.welcome-to-chitose.jp/guide.html">千歳駅観光案内所（手荷物預かり 9:00–17:00）</a></li>
-    <li><a href="https://www.snowfes.com/faq/">さっぽろ雪まつり FAQ</a></li>
-    <li><a href="https://otaru.gr.jp/event/yukiakari2027">2027 小樽雪あかりの路</a>／<a href="https://otaru.gr.jp/event/otaruyukiakari-2026">2026 點燈 17:00–21:00</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/icevillage/">Ice Village</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/frosttree/">霧氷テラス</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/minamina/">Mina-Mina</a></li>
-    <li><a href="https://www.snowtomamu.jp/winter/activity/">活動一覽</a></li>
-  </ul>
-</footer>
+<!-- footer omitted in visual: no instructions, verification notes, or source checklist on-page -->
 
 <script>
 (function () {
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  function pinTop() {
+    window.scrollTo(0, 0);
+    var current = document.querySelector(".section-nav a.is-current");
+    if (current) current.scrollIntoView({ inline: "center", block: "nearest" });
+    window.scrollTo(0, 0);
+    requestAnimationFrame(function () { window.scrollTo(0, 0); });
+  }
   var hashToTab = {
     "#tomamu-morning": "tab-morning",
     "#tomamu-afternoon": "tab-afternoon",
@@ -1339,8 +1558,6 @@
     if (!id) return;
     var input = document.getElementById(id);
     if (input) input.checked = true;
-    var target = document.querySelector(location.hash);
-    if (target) requestAnimationFrame(function () { target.scrollIntoView(); });
   }
   document.querySelectorAll(".tab-labels label").forEach(function (label) {
     label.addEventListener("click", function () {
@@ -1451,10 +1668,7 @@
       var input = document.getElementById(hashToTab["#" + raw]);
       if (input) input.checked = true;
     }
-    if (scroll) {
-      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
-    }
+    pinTop();
   }
 
   document.addEventListener("click", function (e) {
