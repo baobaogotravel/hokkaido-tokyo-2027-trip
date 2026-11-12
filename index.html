@@ -144,6 +144,13 @@
     border-bottom-color: var(--rose);
     background: linear-gradient(180deg, transparent, rgba(246, 231, 227, .65));
   }
+  .section-nav a.is-current {
+    background: var(--blush);
+    border-bottom-color: var(--rose-deep);
+  }
+  .section-nav a.is-current span,
+  .section-nav a.is-current small { color: var(--rose-deep); }
+  .section-nav a.is-current span { font-weight: 700; }
 
   main { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 18px 16px 64px; }
   .edition {
@@ -245,8 +252,33 @@
   .tag.rose { background: var(--blush); color: var(--rose-deep); }
 
   .day {
-    padding: 8px 0 18px;
-    border-top: 1px solid var(--line);
+    padding: 4px 0 18px;
+  }
+  .edition.page { display: none; }
+  .edition.page.active { display: block; animation: pageIn .35s ease; }
+  .day-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 16px; }
+  .day-chip {
+    appearance: none;
+    border: 1px solid var(--line-strong);
+    background: var(--cream);
+    color: var(--cocoa);
+    font-family: var(--serif);
+    font-size: .92rem;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .day-chip:hover { border-color: var(--rose); color: var(--rose-deep); }
+  .day-chip.active {
+    background: var(--cocoa);
+    color: var(--cream);
+    border-color: var(--cocoa);
+  }
+  article.day { display: none; }
+  article.day.active { display: block; animation: pageIn .3s ease; }
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
   }
   .day-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 8px; }
   .date-badge {
@@ -372,11 +404,14 @@
     }
     table.act td[data-label="活動"]::before { content: none; }
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .edition.page.active, article.day.active { animation: none; }
+  }
   @media print {
-    body::before, .section-nav, .hills, .stamp { display: none !important; }
+    body::before, .section-nav, .hills, .stamp, .day-chips { display: none !important; }
     .edition { box-shadow: none; break-inside: auto; }
-    .panel { display: block !important; }
+    .edition.page, article.day, .panel { display: block !important; }
     a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; word-break: break-all; }
   }
 </style>
@@ -396,7 +431,7 @@
 
 <nav class="section-nav" aria-label="七個版面">
   <ul>
-    <li><a href="#overview"><small>01</small><span>總覽</span></a></li>
+    <li><a href="#overview" class="is-current" aria-current="page"><small>01</small><span>總覽</span></a></li>
     <li><a href="#transport"><small>02</small><span>交通</span></a></li>
     <li><a href="#hokkaido"><small>03</small><span>北海道</span></a></li>
     <li><a href="#tokyo"><small>04</small><span>東京</span></a></li>
@@ -408,7 +443,7 @@
 
 <main id="main">
 
-<section class="edition" id="overview">
+<section class="edition page active" id="overview">
   <p class="folio">第一版</p>
   <h2>總覽</h2>
   <hr class="rule" />
@@ -540,7 +575,7 @@
   </div>
 </section>
 
-<section class="edition" id="transport">
+<section class="edition page" id="transport">
   <p class="folio">第二版</p>
   <h2>交通選項（重點）</h2>
   <hr class="rule" />
@@ -583,13 +618,21 @@
   </table>
 </section>
 
-<section class="edition" id="hokkaido">
+<section class="edition page" id="hokkaido">
   <p class="folio">第三版</p>
   <h2>第一日 &amp; 北海道（2月7–12日）</h2>
   <hr class="rule" />
   <p class="muted">Tomamu 的券、纜車同活動表喺 <a href="#tomamu">第五版</a>，放喺東京之後。</p>
+  <div class="day-chips" role="tablist" aria-label="北海道日子">
+    <button type="button" class="day-chip active" data-day="d07" role="tab">2/7</button>
+    <button type="button" class="day-chip" data-day="d08" role="tab">2/8</button>
+    <button type="button" class="day-chip" data-day="d09" role="tab">2/9</button>
+    <button type="button" class="day-chip" data-day="d10" role="tab">2/10</button>
+    <button type="button" class="day-chip" data-day="d11" role="tab">2/11</button>
+    <button type="button" class="day-chip" data-day="d12" role="tab">2/12</button>
+  </div>
 
-  <article class="day" id="d07">
+  <article class="day active" id="d07">
     <div class="day-head">
       <div class="date-badge" aria-hidden="true"><span class="m">第一日</span><span class="d">7</span><span class="w">週日</span></div>
       <h3>2月7日（日）香港 → 羽田</h3>
@@ -688,12 +731,18 @@
   </article>
 </section>
 
-<section class="edition" id="tokyo">
+<section class="edition page" id="tokyo">
   <p class="folio">第四版</p>
   <h2>東京（2月13–16日）</h2>
   <hr class="rule" />
+  <div class="day-chips" role="tablist" aria-label="東京日子">
+    <button type="button" class="day-chip active" data-day="d13" role="tab">2/13</button>
+    <button type="button" class="day-chip" data-day="d14" role="tab">2/14</button>
+    <button type="button" class="day-chip" data-day="d15" role="tab">2/15</button>
+    <button type="button" class="day-chip" data-day="d16" role="tab">2/16</button>
+  </div>
 
-  <article class="day" id="d13">
+  <article class="day active" id="d13">
     <div class="day-head">
       <div class="date-badge" aria-hidden="true"><span class="m">第七日</span><span class="d">13</span><span class="w">週六</span></div>
       <h3>2月13日（六）札幌 → 東京</h3>
@@ -728,7 +777,7 @@
   </article>
 </section>
 
-<section class="edition" id="tomamu">
+<section class="edition page" id="tomamu">
   <p class="folio">第五版</p>
   <h2>Tomamu 專頁</h2>
   <hr class="rule" />
@@ -1205,7 +1254,7 @@
   </div>
 </section>
 
-<section class="edition" id="todo">
+<section class="edition page" id="todo">
   <p class="folio">第六版 · 尾二</p>
   <h2>待辦 Checklist</h2>
   <hr class="rule" />
@@ -1237,7 +1286,7 @@
   </ul>
 </section>
 
-<section class="edition" id="jr">
+<section class="edition page" id="jr">
   <p class="folio">第七版 · 最後</p>
   <h2>JR／eki-net（外國人）</h2>
   <hr class="rule" />
@@ -1347,21 +1396,86 @@
     applyFilter();
     filter.focus();
   });
-  var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".section-nav a"));
-  var sections = tocLinks.map(function (a) { return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        tocLinks.forEach(function (link) {
-          link.classList.toggle("is-current", link.getAttribute("href") === "#" + en.target.id);
-        });
-      });
-    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0.01 });
-    sections.forEach(function (sec) { io.observe(sec); });
+  var pageIds = ["overview", "transport", "hokkaido", "tokyo", "tomamu", "todo", "jr"];
+  var dayPage = {
+    d07: "hokkaido", d08: "hokkaido", d09: "hokkaido", d10: "hokkaido", d11: "hokkaido", d12: "hokkaido",
+    d13: "tokyo", d14: "tokyo", d15: "tokyo", d16: "tokyo"
+  };
+  var subPage = {
+    days: "overview", flights: "overview", hotels: "overview", align: "overview",
+    lifts: "tomamu", voucher: "tomamu", "tomamu-activities": "tomamu",
+    "tomamu-morning": "tomamu", "tomamu-afternoon": "tomamu", "tomamu-evening": "tomamu"
+  };
+
+  function showPage(id) {
+    document.querySelectorAll(".edition.page").forEach(function (panel) {
+      panel.classList.toggle("active", panel.id === id);
+    });
+    document.querySelectorAll(".section-nav a").forEach(function (link) {
+      var on = link.getAttribute("href") === "#" + id;
+      link.classList.toggle("is-current", on);
+      if (on) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
   }
-  window.addEventListener("hashchange", syncTabFromHash);
-  syncTabFromHash();
+
+  function showDay(dayId) {
+    var pageId = dayPage[dayId];
+    if (!pageId) return;
+    showPage(pageId);
+    var root = document.getElementById(pageId);
+    root.querySelectorAll("article.day").forEach(function (day) {
+      day.classList.toggle("active", day.id === dayId);
+    });
+    root.querySelectorAll(".day-chip").forEach(function (chip) {
+      var on = chip.dataset.day === dayId;
+      chip.classList.toggle("active", on);
+      chip.setAttribute("aria-selected", on ? "true" : "false");
+    });
+  }
+
+  function ensureDay(pageId) {
+    var root = document.getElementById(pageId);
+    if (!root || root.querySelector("article.day.active")) return;
+    var first = root.querySelector(".day-chip");
+    if (first) showDay(first.dataset.day);
+  }
+
+  function route(scroll) {
+    var raw = (location.hash || "#overview").replace(/^#/, "");
+    var page = pageIds.indexOf(raw) >= 0 ? raw : (dayPage[raw] || subPage[raw] || "overview");
+    showPage(page);
+    if (dayPage[raw]) showDay(raw);
+    else ensureDay(page);
+    if (hashToTab["#" + raw]) {
+      var input = document.getElementById(hashToTab["#" + raw]);
+      if (input) input.checked = true;
+    }
+    if (scroll) {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href^='#']");
+    if (!link) return;
+    var href = link.getAttribute("href");
+    if (!href || href === "#") return;
+    e.preventDefault();
+    if (location.hash !== href) history.pushState(null, "", href);
+    route(true);
+  });
+  document.querySelectorAll(".day-chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var href = "#" + chip.dataset.day;
+      if (location.hash !== href) history.pushState(null, "", href);
+      route(true);
+    });
+  });
+  window.addEventListener("popstate", function () { route(true); });
+  window.addEventListener("hashchange", function () { route(true); });
+  route(false);
 })();
 </script>
 </body>
